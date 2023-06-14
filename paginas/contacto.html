@@ -6,6 +6,79 @@
   <title>Charly Garcia-Contacto</title>
 </head>
 <body>
+
+  <!--Etiquetas Semánticas-->
+<nav>
+  <!--Listas desordenadas-->
+  <ul>
+    <li>
+      <a href="../index.html">Home</a>
+    </li>
+  <!--Ruta interna-->
+    <li>
+      <a href="./biografia.html">Biografía</a>
+    </li>
+  <!--Link externo-->
+    <li>
+      <a href="https://www.infinita.cl/que-hacer/2021/10/22/charly-garcia-todos-sus-discos-solistas-del-peor-al-mejor.html" target="_blank">Discografía</a>
+    </li>
+    <li>
+      <a href="./tickets.html">Tickets</a>
+    </li>
+    <li>
+      <a href="#">Contacto</a>
+    </li>
+  </ul>
+</nav> 
+
+<main>
+  <!--Formularios-->
+  <h1>¡Decínos hola!</h1>
+  <h2>Dejanos tu mensaje</h2>
+  
+  <form action="procesar.php" method="post">
+    
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" placeholder="juan" required>
+    </div>
+    
+
+    <div>
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="apellido" placeholder="perez">
+    </div>
+
+    <div>
+      <label for="correo">Email:</label>
+      <input type="email" name="correo" placeholder="hola@servidor.com" required>
+    </div>
+
+    <div>
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" name="telefono" placeholder="+54 11 47478477">
+    </div>
+
+    <div>
+      <label for=pass">Contraseña:</label>
+      <input type="password" name="pass" placeholder="+54 11 47478477">
+    </div>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Borrar Formulario</button>
+    <button type="button">Boton para JS</button>
+  
+  </form>
+
+</main>
+
+<footer>
+  &copy; 2021 Todos los derechos reservados | Des
+</footer>
+
+
+
+
   
 </body>
 </html>
