@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootstrap Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!--CSS-->
+  <link rel="stylesheet" href="../css/estilos.css">
   <title>Charly Garcia-Contacto</title>
 </head>
 <body>
@@ -36,7 +40,7 @@
   <h1>¡Decínos hola!</h1>
   <h2>Dejanos tu mensaje</h2>
   
-  <form action="procesar.php" method="post">
+  <form action="procesar.php" method="get">
     
     <div>
       <label for="nombre">Nombre:</label>
@@ -64,6 +68,45 @@
       <input type="password" name="pass" placeholder="+54 11 47478477">
     </div>
 
+    <!--RADIO-->
+    <h3>Seleccione su género</h3>
+    
+    <div>
+
+    <label for="genero">Femenino</label>
+    <input type="radio" name="genero" value="femenino">
+
+    <label for="genero">Masculino</label>
+    <input type="radio" name="genero" value="masculino">
+
+    <label for="genero">Otro</label>
+    <input type="radio" name="genero" value="otro">
+    </div>
+
+    <!--CHECKBOX-->
+    <div>
+      <h3>¿Qué disco querés escuchar?</h3>
+
+      <label for="disco">Clics Modernos</label>
+      <input type="checkbox" name="disco" value="clics_modernos">
+      <label for="disco">Piano Bar</label>
+      <input type="checkbox" name="disco" value="piano_bar">
+      <label for="disco">Yendo de la cama al living</label>
+      <input type="checkbox" name="disco" value="yendo_de_la_cama">
+
+    </div>
+
+    <!--Desplegable-->
+    <h3>¿Cómo te gusta gusta escuchar música?</h3>
+    <select name="tipo">
+      <option value="cassete">Cassete</option>
+      <option value="vinilo">Vinilo</option>
+      <option value="streaming">Streaming</option>
+    </select>
+
+    <!--Textarea-->
+    <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+
     <button type="submit">Enviar</button>
     <button type="reset">Borrar Formulario</button>
     <button type="button">Boton para JS</button>
@@ -73,7 +116,8 @@
 </main>
 
 <footer>
-  &copy; 2021 Todos los derechos reservados | Des
+  &copy; 2021 Todos los derechos reservados
+  <i class="bi bi-instagram"></i>
 </footer>
 
 

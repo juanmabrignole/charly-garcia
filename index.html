@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--Favicon-->
   <link rel="shortcut icon" href="./assets/icons/Charly Garcia.jpeg" type="image/x-icon">
+  <!--Bootstrap Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!--CSS-->
   <link rel="stylesheet" href="./css/estilos.css">
   <title>Charly Garcia-Home</title>
@@ -13,7 +15,7 @@
 <body>
 
   <!--Etiquetas Semánticas-->
-<nav>
+<nav id="navegacion">
   <!--Listas desordenadas-->
   <ul>
     <li>
@@ -39,10 +41,10 @@
 <!--Listas ordenadas-->
 <h3>Los discos solistas de Charly García del mejor al peor</h3>
 <ol type="1" start="5">
-  <li>Clics Modernos (1983)</li>
-  <li>Piano Bar (1984)</li>
-  <li>Yendo De La Cama Al Living (1982)</li>
-  <li>Parte De La Religión (1987)</li>
+  <li class="links">Clics Modernos (1983)</li>
+  <li class="links">Piano Bar (1984)</li>
+  <li class="links">Yendo De La Cama Al Living (1982)</li>
+  <li class="links">Parte De La Religión (1987)</li>
 </ol>
 
 <!--tablas HTML-->
@@ -72,10 +74,12 @@
 
 
 <header>
-  <h1>Charly Garcia</h1>
+  <nav>
+    <h1>Charly Garcia</h1>
+  </nav>
 </header>
 
-<main>
+<main id="principal">
   <section>
     <h1>La Vida de Charly</h1>
     <article>
@@ -89,12 +93,13 @@
   </section>
 </main>
 
-<aside>
+<aside id="barra_lateral">
   <p>Publicidad, banners</p>
 </aside>
 
 <footer>
   <p>Copyright © 2023 Martín Herman</p>
+  <i class="bi bi-instagram"></i>
 </footer>
 
 
