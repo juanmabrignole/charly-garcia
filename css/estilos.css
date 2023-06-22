@@ -50,3 +50,75 @@ font-size: 18px;
 #barra_lateral{
   background-color: aqua;
 }
+
+/*Boxmodeling*/
+.encabezado{
+  font-family: 'Poppins', sans-serif;
+  font-size: 5rem;
+  border: 5px solid #371972d0;
+  background-color: #12d372b2;
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.encabezado__titulo{
+  border: 5px dotted #000;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+.encabezado__texto{
+  border: 5px double #b8511dd0;
+  width: 50%;
+  margin: 20px 20px 20px 20px;
+}
+
+/* .caja{
+  border: 1px solid #000;
+  background-color: #371972d0;
+  color:#fff;
+  width: 250px;
+  height: 250px;
+  margin: 20px 20px 20px 20px;
+  padding: 50px 50px 50px 50px;
+} */
+
+/*display*/
+
+.elemento-bloque{
+  display: none;
+  border: 2px solid #000;
+  margin: 30px 30px 30px 30px;
+  padding: 20px 20px 20px 20px;
+}
+
+.elemento-linea1,
+.elemento-linea2,
+.elemento-linea3 {
+  display: inline-block;
+  border: 2px solid #000;
+  /*de liínea no puedo definirle el ancho y alto*/
+  width: 250px;
+  height: 250px;
+  /*Ni tampoco, margin y padding arriba y abajo*/
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-left: 40px;
+  background-color: #371972d0;
+}
+
+
+
+
+
+/* .discografia{
+  width: 80%;
+  border: 8px solid #371972d0;
+}
+
+.imagen-discografia{
+  width: 50%;
+} */
+
