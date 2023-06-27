@@ -30,10 +30,10 @@ h1{
 }
 
 /*herencia*/
-nav h1{
+/* nav h1{
   font-size: 3rem;
   font-family: 'Roboto', sans-serif;
-}
+} */
 
 /*Selectores de Clase*/
 .links{
@@ -109,10 +109,6 @@ font-size: 18px;
   background-color: #371972d0;
 }
 
-
-
-
-
 /* .discografia{
   width: 80%;
   border: 8px solid #371972d0;
@@ -122,3 +118,82 @@ font-size: 18px;
   width: 50%;
 } */
 
+/*Flexbox*/
+.aprendiendo{
+  text-align: center;
+}
+
+/*Contenedor padre*/
+.flex-container{
+  /*Activamos Flexbox*/
+  display: flex;
+  /*Definimos cual va a ser nuestro main axis, o si fila o columna*/
+  flex-direction: row;
+  /*dispone los elementos flexibles en el eje principal*/
+  justify-content: flex-start; 
+  /*dispone los elementos flexibles en el eje secundario*/
+  /* align-items: flex-end; */
+  /*Defino el desborde de los flex items*/
+  flex-wrap: wrap;
+  /*Espacio entre líneas - necesito tener wrap*/
+  align-content: space-between;
+
+  border: 1px solid #000;
+  background-color: #ccc;
+  padding: 20px;
+  margin: 10px;
+  height: 800px;
+
+}
+
+.caja{
+
+  /*Box-modeling*/
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin: 5px;
+
+  /*tipografia*/
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.c1{
+  background-color: #12d372b2;
+  /*Defino el orden de aparicion*/
+  order: 2;
+  /*Derecho a crecer*/
+  flex-grow: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c2{
+  background-color: #371972d0;
+  order: 3;
+  flex-grow: 1;
+}
+
+.c3{
+  background-color: #b8511dd0;
+  order: 1;
+  flex-grow: 1;
+}
+
+/*navbar con flexbox*/
+
+.charly-icon{
+  width: 50px;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
