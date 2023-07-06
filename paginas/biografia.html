@@ -3,23 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--favicon-->
+  <link rel="shortcut icon" href="../assets/icons/Charly Garcia.jpeg" type="image/x-icon">
+  <!--CSS Bootstrap descarga-->
+  <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+  <!--linkeo via CDN CSS Bootstrap-->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+  <!--CSS-->
+  <link rel="stylesheet" href="../css/estilos.css">
   <title>Charly Garcia- Biografia</title>
 </head>
 <body>
+
+  <!--Navbar con Bootstrap-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img class="img-nav" src="../assets/icons/Charly Garcia.jpeg" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Biografia</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Discografia</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tickets</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Productos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Hombre</a></li>
+              <li><a class="dropdown-item" href="#">Mujer</a></li>
+              <li><a class="dropdown-item" href="#">Niño</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   
    <!--Etiquetas Semánticas-->
-<nav>
-  <a href="../index.html">Home</a>
-  <!--Ruta-linkeo interna-->
-  <a href="#">Biografía</a>
-  <!--link externo-->
-  <a href="https://www.infinita.cl/que-hacer/2021/10/22/charly-garcia-todos-sus-discos-solistas-del-peor-al-mejor.html" target="_blank">Discografía</a>
-  <a href="./tickets.html">Tickets</a>
-  <a href="./contacto.html">Contacto</a>
-</nav>
+   <!-- <nav>
 
-<aside id="barra_lateral">
+    <a href="../index.html">
+      <img class="charly-icon" src="../assets/icons/Charly Garcia.jpeg" alt="charly-icon">
+    </a>
+  
+      <a href="../index.html">Home</a>
+  
+      <a href="../paginas/biografia.html">Biografia</a>
+  
+      <a href="../paginas/discografia.html">Discografia</a>
+  
+      <a href="../paginas/tickets.html">Tickets</a>
+  
+      <a href="../paginas/contacto.html">Contacto</a>
+   
+  </nav> -->
 
-</aside>
+  <!--Dropdown de boostrap-->
+  <!-- <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div> -->
+
+  <!--CSS GRID TEORÍA-->
+  <div class="header">
+    <p>CSS GRID TEORIA</p>
+  </div>
+
+  <div class="grid-container">
+    <div>
+      <img class="img-grid" src="../assets/img/Charly_Garcia-Clics_Modernos-Frontal.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, porro.</p>
+      <button class="escuchar">
+        <a href="https://open.spotify.com/album/3OyBf97NOuJjhEpQHY920H?si=ucBHqHFPTo-EpIJbTK9Z5g&nd=1" target="_blank">Escuchar</a>
+      </button>
+    </div>
+    <div>
+      <img class="img-grid" src="../assets/img/Charly_Garcia-Parte_De_La_Religion-Frontal.jpg" alt="foto-parte-religion">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, porro.</p>
+      <button class="escuchar">
+        <a href="https://open.spotify.com/album/3OyBf97NOuJjhEpQHY920H?si=ucBHqHFPTo-EpIJbTK9Z5g&nd=1" target="_blank">Escuchar</a>
+      </button>
+    </div>
+    <div>
+      <img class="img-grid" src="../assets/img/Charly_Garcia-Piano_Bar-Frontal.jpg" alt="foto-parte-religion">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, porro.</p>
+      <button class="escuchar">Escuchar</button>
+    </div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+  <!--Grid Template Areas-->
+  <main id="biografia-template">
+    <section class="contenedor-grid">
+
+      <article class="items item1">
+        HEADER
+      </article>
+
+      <article class="items item2">
+        NAVBAR
+      </article>
+
+      <article class="items item3">
+        MAIN
+      </article>
+
+      <article class="items item4">
+        ASIDE
+      </article>
+
+      <article class="items item5">
+        FOOTER
+      </article>
+
+    </section>
+  </main>
+
+  <!--Encabezados-->
+  <div class="display-1">Encabezado Bootstrap</div>
+
+  <!--Cards Bootstrap-->
+  <div class="card" style="width: 18rem;">
+    <img src="../assets/img/Charly_Garcia-Pubis_Angelical_Yendo_De_La_Cama_Al_Living-Frontal.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+
+
+  <!--JS Bootstrap-->
+  <!--JS boostrap descarga-->
+  <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!--Linkeo via cdn JS-->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
 </body>
 </html>
