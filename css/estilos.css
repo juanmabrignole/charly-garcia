@@ -474,4 +474,7 @@ a{
   height: 100px;
 }
 
+.carousel-item{
+  max-height: 50rem;
+}
 
