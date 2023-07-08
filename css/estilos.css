@@ -214,11 +214,7 @@ a{
 
 /*CSS GRID*/
 /*CSS GRID TEORIA*/
-<<<<<<< HEAD
 .header{
-=======
-.header p{
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
   font-size: 50px;
   text-align: center;
   padding: 20px 0;
@@ -230,7 +226,6 @@ a{
   border: 10px solid #fff;
   margin: auto;
   font-size: 50px;
-<<<<<<< HEAD
   line-height: 35px;
   text-align: center;
 
@@ -250,28 +245,6 @@ a{
   color: #fff;
   background: #f08080;
   box-shadow: 10px 5px 5px black;
-=======
-  line-height: 50px;
-  text-align: center;
-
-  /*aplicamos grid*/
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
-}
-
-.grid-container > div {
-  display: block;
-  padding: 20px;
-  color: #fff;
-  background: #F08080;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, .25);
-}
-
-.img-grid{
-  width: 300px;
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
 }
 
 .escuchar{
@@ -286,7 +259,6 @@ a{
 	border-radius: 100px;
 	font-family: 'Poppins', sans-serif;
 	cursor: pointer;
-<<<<<<< HEAD
   color: #fff;
 }
 
@@ -299,24 +271,6 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-=======
-}
-
-
-/*CSS GRID PRACTICA*/
-body{
-  background: #1d202b;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
-
-}
-
-#main-concert{
-  display: flex;
-  justify-content: center;
-  align-items: center; 
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
 }
 
 .contenedor{
@@ -325,47 +279,24 @@ body{
   margin: auto;
   padding: 40px 0;
 
-<<<<<<< HEAD
   /*flex*/
   /* display: flex;
   gap: 20px; */
 
   /*grid*/
-=======
-  /*Felxbox*/
-  /* display: flex;
-  gap: 20px; */
-
-  /*Grid*/
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
 }
 
-<<<<<<< HEAD
 .contenedor-conciertos{
-=======
-/* .titulo {
-	font-size: 24px;
-	padding: 20px 0;
-} */
-
-.contenedor-conciertos {
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
   /*grid*/
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 20px;
-<<<<<<< HEAD
 
   /*flexbox*/
   /* width: 70%;
-=======
-  
-  /*Flexbox*/
-	/* width: 70%;
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
   display: flex;
   flex-wrap: wrap;
   gap: 20px; */
@@ -383,24 +314,15 @@ body{
   /* width: calc(28% - 12px) ; */
 }
 
-<<<<<<< HEAD
 .card .textos{
   /*debo definirle un alto*/
   height: 100%;
 
   /*flexbox a los textos*/
-=======
-.card .textos {
-	/*debo definirle un alto*/
-  height: 100%;	
-  
-  /*Flebox a los textos*/
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-<<<<<<< HEAD
 }
 
 
@@ -413,28 +335,10 @@ body{
   padding: 20px;
 
   /*flexbox*/
-=======
-  /*Grid*/
-  /* display: grid;
-  grid-template-rows: 1fr auto; */
-
-}
-
-.banner {
-  background-image: url('../assets/img/conciertos/banner/banner-foto-02.jpg');
-	background-size: cover;
-	background-position: center center;
-	border-radius: 10px;
-	text-align: center;
-	padding: 20px;
-
-  /*Flexbox*/
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
   /* width: 30%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-<<<<<<< HEAD
 }
 
 .banner ul{
@@ -444,22 +348,6 @@ body{
 .banner ul li{
   margin: 15px;
   font-weight: bold;
-=======
-
-  /*grid*/
-  /* display: grid;
-  grid-template-rows: auto auto auto;
-  align-items: center; */
-}
-
-.banner ul {
-	list-style: none;
-}
-
-.banner ul li {
-	margin: 15px;
-	font-weight: bold;
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
 }
 
 .banner .boton {
@@ -476,23 +364,12 @@ body{
 	cursor: pointer;
 }
 
-<<<<<<< HEAD
-
-
-
 /*background-image*/
 /*Fotos recitales*/
 .luna{
   background-image: url('../assets/img/conciertos/luna.webp');
   background-size: cover;
   background-position: center center;
-=======
-/*fotos recitales*/
-.luna{
-  background-image: url('../assets/img/conciertos/luna.webp');
-  background-size: cover;
-	background-position: center center;
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
   background-repeat: no-repeat;
 }
 
@@ -531,7 +408,6 @@ body{
   background-repeat: no-repeat;
 }
 
-<<<<<<< HEAD
 /*grid template areas*/
 .contenedor-grid{
   /*tipografía*/
@@ -599,5 +475,3 @@ body{
 }
 
 
-=======
->>>>>>> c1c234c29d2d15cc1ad99108fd2dbb0d4e32ab9d
