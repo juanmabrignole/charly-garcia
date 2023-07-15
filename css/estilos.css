@@ -214,10 +214,14 @@ a{
 
 /*CSS GRID*/
 /*CSS GRID TEORIA*/
-.header{
+.header p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 50px;
-  text-align: center;
+  /* text-align: center; */
   padding: 20px 0;
+  color: #FFD600;
 }
 
 .grid-container{
@@ -478,3 +482,40 @@ a{
   max-height: 50rem;
 }
 
+.row > div {
+  border: 4px solid black;
+  height: 40px;
+}
+
+.row {
+  height: 200px;
+  background: yellowgreen;
+}
+
+
+/*media queries*/
+@media screen and (max-width: 480px) {
+  
+  .header p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 2rem;
+    /* text-align: center; */
+    padding: 20px 0;
+    color: #0698c1;
+  }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .header p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 3rem;
+    /* text-align: center; */
+    padding: 20px 0;
+    color: #c14529;
+  }
+}
