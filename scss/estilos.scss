@@ -1,38 +1,44 @@
-@charset "UTF-8";
 /*imports*/
-/*fuentes*/
-/*colores*/
+@import "fonts";
+@import "colores";
+
 /*variables sass*/
 /*relleno*/
+$relleno: 5px 10px;
+
 /*nesting*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap");
-nav {
-  background-color: rgba(184, 81, 29, 0.8156862745);
+nav{
+  background-color:$color-back ;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: $font-principal-size;
   text-transform: lowercase;
-}
-nav ul {
-  display: flex;
+    ul{
+    display: flex;
   list-style-type: none;
-}
-nav ul li {
-  list-style: none;
-}
-nav ul li a {
-  text-decoration: none;
+      li{
+    list-style: none;
+        a{
+          text-decoration: none
+        }
+  }
+  }
 }
 
+
 /*Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
 /*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
 /*Montserrat*/
 @font-face {
-  font-family: "montserrat-medium", sans-serif;
-  src: url("../assets/fonts/Montserrat-Medium.ttf");
+  font-family: 'montserrat-medium', sans-serif;
+  src: url('../assets/fonts/Montserrat-Medium.ttf');
 }
+
 /*Selector Universal o reset*/
-* {
+*{
   margin: 0;
   padding: 0;
 }
@@ -44,22 +50,23 @@ nav ul li a {
   font-family: 'Roboto', sans-serif;
   text-align: center;
 } */
-p {
-  font-size: 1.2rem;
+
+p{
+  font-size: $font-principal-size;
   font-family: "Poppins", sans-serif;
-  padding: 5px 10px;
+  padding: $relleno;
 }
 
-h1 {
-  font-size: 1.2rem;
-  font-family: "montserrat-medium", sans-serif;
-  text-transform: uppercase;
+h1{
+  font-size: $font-principal-size;
+  font-family: $fuente-secundaria;
+  text-transform: $text-transform;
 }
 
-body {
-  background: rgba(39, 144, 32, 0.8156862745);
+body{
+  background: $color-primario;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   min-height: 100vh;
 }
 
@@ -68,41 +75,42 @@ body {
   font-size: 3rem;
   font-family: 'Roboto', sans-serif;
 } */
+
 /*Selectores de Clase*/
-.links {
-  color: brown;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+.links{
+color: brown;
+font-family: 'Roboto', sans-serif;
+font-size: $font-principal-size;
 }
 
 /*Selector ID*/
-#principal {
+#principal{
   background-color: blueviolet;
 }
 
-#barra_lateral {
+#barra_lateral{
   background-color: aqua;
 }
 
 /*Boxmodeling*/
-.encabezado {
-  font-family: "Poppins", sans-serif;
+.encabezado{
+  font-family: 'Poppins', sans-serif;
   font-size: 5rem;
-  border: 5px solid rgba(55, 25, 114, 0.8156862745);
-  background-color: rgba(18, 211, 114, 0.6980392157);
+  border: 5px solid #371972d0;
+  background-color: #12d372b2;
   width: 80%;
   margin-top: 20px;
   margin-left: 20px;
 }
 
-.encabezado__titulo {
+.encabezado__titulo{
   border: 5px dotted #000;
   margin: 20px 20px 20px 20px;
   padding: 20px 20px 20px 20px;
 }
 
-.encabezado__texto {
-  border: 5px double rgba(184, 81, 29, 0.8156862745);
+.encabezado__texto{
+  border: 5px double #b8511dd0;
   width: 50%;
   margin: 20px 20px 20px 20px;
 }
@@ -116,8 +124,10 @@ body {
   margin: 20px 20px 20px 20px;
   padding: 50px 50px 50px 50px;
 } */
+
 /*display*/
-.elemento-bloque {
+
+.elemento-bloque{
   display: none;
   border: 2px solid #000;
   margin: 30px 30px 30px 30px;
@@ -137,7 +147,7 @@ body {
   margin-left: 40px;
   margin-right: 40px;
   padding-left: 40px;
-  background-color: rgba(55, 25, 114, 0.8156862745);
+  background-color: #371972d0;
 }
 
 /* .discografia{
@@ -148,39 +158,44 @@ body {
 .imagen-discografia{
   width: 50%;
 } */
+
 /*Flexbox*/
-.aprendiendo {
+.aprendiendo{
   text-align: center;
 }
 
 /*Contenedor padre*/
-.flex-container {
+.flex-container{
   /*Activamos Flexbox*/
   display: flex;
   /*Definimos cual va a ser nuestro main axis, o si fila o columna*/
   flex-direction: row;
   /*dispone los elementos flexibles en el eje principal*/
-  justify-content: flex-start;
+  justify-content: flex-start; 
   /*dispone los elementos flexibles en el eje secundario*/
   /* align-items: flex-end; */
   /*Defino el desborde de los flex items*/
   flex-wrap: wrap;
   /*Espacio entre líneas - necesito tener wrap*/
   align-content: space-between;
+
   border: 1px solid #000;
   background-color: #ccc;
   padding: 20px;
   margin: 10px;
   height: 800px;
+
 }
 
-.caja {
+.caja{
+
   /*Box-modeling*/
   width: 200px;
   height: 200px;
   border: 1px solid #ccc;
   background-color: #fff;
   margin: 5px;
+
   /*tipografia*/
   color: #000;
   font-family: "Poppins", sans-serif;
@@ -188,8 +203,8 @@ body {
   text-align: center;
 }
 
-.c1 {
-  background-color: rgba(18, 211, 114, 0.6980392157);
+.c1{
+  background-color: #12d372b2;
   /*Defino el orden de aparicion*/
   order: 2;
   /*Derecho a crecer*/
@@ -199,25 +214,26 @@ body {
   align-items: center;
 }
 
-.c2 {
-  background-color: rgba(55, 25, 114, 0.8156862745);
+.c2{
+  background-color: #371972d0;
   order: 3;
   flex-grow: 1;
 }
 
-.c3 {
-  background-color: rgba(184, 81, 29, 0.8156862745);
+.c3{
+  background-color: #b8511dd0;
   order: 1;
   flex-grow: 1;
 }
 
 /*navbar con flexbox*/
-.charly-icon {
+
+.charly-icon{
   width: 50px;
   border-radius: 50%;
 }
 
-nav {
+nav{
   margin-top: 10px;
   display: flex;
   flex-direction: row;
@@ -225,14 +241,14 @@ nav {
   align-items: center;
 }
 
-a {
+a{
   text-decoration: none;
   color: #fff;
 }
 
 /*CSS GRID*/
 /*CSS GRID TEORIA*/
-.header p {
+.header p{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -242,7 +258,7 @@ a {
   color: #FFD600;
 }
 
-.grid-container {
+.grid-container{
   width: 90%;
   max-width: 1000px;
   border: 10px solid #fff;
@@ -250,16 +266,17 @@ a {
   font-size: 50px;
   line-height: 35px;
   text-align: center;
+
   /*Activamos Grid*/
   display: grid;
   /*cantidad de columnas y ancho de las mismas*/
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   /*cantidad de filas y alto de las mismas*/
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(6,1fr);
   gap: 20px;
 }
 
-.grid-container > div {
+.grid-container > div{
   border: 1px solid black;
   display: block;
   padding: 20px;
@@ -268,51 +285,54 @@ a {
   box-shadow: 10px 5px 5px black;
 }
 
-.escuchar {
+.escuchar{
   background: #000;
-  display: block;
-  width: 100%;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  padding: 10px;
-  border: none;
-  border-radius: 100px;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 100px;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
   color: #fff;
 }
 
-.img-grid {
+.img-grid{
   width: 50%;
 }
 
 /*GRID PRACTICA*/
-#main-concert {
+#main-concert{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contenedor {
+.contenedor{
   width: 90%;
   max-width: 1200px;
   margin: auto;
   padding: 40px 0;
+
   /*flex*/
   /* display: flex;
   gap: 20px; */
+
   /*grid*/
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
 }
 
-.contenedor-conciertos {
+.contenedor-conciertos{
   /*grid*/
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
+
   /*flexbox*/
   /* width: 70%;
   display: flex;
@@ -321,32 +341,37 @@ a {
 }
 
 .card {
-  border-radius: 10px;
-  min-height: 200px;
-  font-weight: bold;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+
   /*con Flexbox tengo que hacer estas cosas*/
   /* width: calc(28% - 12px) ; */
 }
 
-.card .textos {
+.card .textos{
   /*debo definirle un alto*/
   height: 100%;
+
   /*flexbox a los textos*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 
+
 .banner {
-  background-image: url("../assets/img/conciertos/banner/banner-foto-02.jpg");
+  background-image: url('../assets/img/conciertos/banner/banner-foto-02.jpg');
   background-size: cover;
   background-position: center center;
   border-radius: 10px;
   text-align: center;
   padding: 20px;
+
   /*flexbox*/
   /* width: 30%; */
   display: flex;
@@ -354,132 +379,140 @@ a {
   justify-content: space-between;
 }
 
-.banner ul {
+.banner ul{
   list-style: none;
 }
 
-.banner ul li {
+.banner ul li{
   margin: 15px;
   font-weight: bold;
 }
 
 .banner .boton {
-  background: #FFD600;
-  display: block;
-  width: 100%;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  padding: 10px;
-  border: none;
-  border-radius: 100px;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
+	background: #FFD600;
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 100px;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
 }
 
 /*background-image*/
 /*Fotos recitales*/
-.luna {
-  background-image: url("../assets/img/conciertos/luna.webp");
+.luna{
+  background-image: url('../assets/img/conciertos/luna.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.konex {
-  background-image: url("../assets/img/conciertos/Konex.jpg");
+.konex{
+  background-image: url('../assets/img/conciertos/Konex.jpg');
   background-size: cover;
-  background-position: center center;
+	background-position: center center;
   background-repeat: no-repeat;
 }
 
-.mardel {
-  background-image: url("../assets/img/conciertos/mardelplata.jpg");
+.mardel{
+  background-image: url('../assets/img/conciertos/mardelplata.jpg');
   background-size: cover;
-  background-position: center center;
+	background-position: center center;
   background-repeat: no-repeat;
 }
 
-.niceto {
-  background-image: url("../assets/img/conciertos/niceto.jpg");
+.niceto{
+  background-image: url('../assets/img/conciertos/niceto.jpg');
   background-size: cover;
-  background-position: center center;
+	background-position: center center;
   background-repeat: no-repeat;
 }
 
-.cck {
-  background-image: url("../assets/img/conciertos/CCK.jpg");
+.cck{
+  background-image: url('../assets/img/conciertos/CCK.jpg');
   background-size: cover;
-  background-position: center center;
+	background-position: center center;
   background-repeat: no-repeat;
 }
 
-.movistar {
-  background-image: url("../assets/img/conciertos/movistarArena.jpg");
+.movistar{
+  background-image: url('../assets/img/conciertos/movistarArena.jpg');
   background-size: cover;
-  background-position: center center;
+	background-position: center center;
   background-repeat: no-repeat;
 }
 
 /*grid template areas*/
-.contenedor-grid {
+.contenedor-grid{
   /*tipografía*/
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 25px;
   font-weight: bold;
+
   /*box-modeling*/
   width: 90%;
   height: 600px;
   margin: 40px auto;
   border: 5px groove #fff;
+
   /*grid*/
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(4,1fr);
   gap: 10px;
+  
   /*grid template areas*/
-  grid-template-areas: "header header header" "nav    main   aside" "nav    main   aside" "footer footer footer";
+  grid-template-areas: 
+  "header header header"
+  "nav    main   aside"
+  "nav    main   aside"
+  "footer footer footer"
+  ;
 }
 
-.items {
+.items{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.item1 {
-  background-color: rgba(18, 211, 114, 0.6980392157);
+.item1{
+  background-color: #12d372b2;
   /* grid-column: 1/3;
   grid-row: 1/3; */
   grid-area: header;
 }
 
-.item2 {
-  background-color: rgba(184, 81, 29, 0.8156862745);
+.item2{
+  background-color: #b8511dd0;
   grid-area: nav;
 }
 
-.item3 {
-  background-color: rgba(39, 144, 32, 0.8156862745);
+.item3{
+  background-color: #279020d0;
   grid-area: main;
 }
 
-.item4 {
-  background-color: rgba(160, 236, 18, 0.8156862745);
+.item4{
+  background-color: #a0ec12d0;
   grid-area: aside;
 }
 
-.item5 {
-  background-color: rgba(220, 19, 119, 0.8156862745);
+.item5{
+  background-color: #dc1377d0;
   grid-area: footer;
 }
 
-.img-nav {
+.img-nav{
   width: 100px;
   height: 100px;
 }
 
-.carousel-item {
+.carousel-item{
   max-height: 50rem;
 }
 
@@ -493,9 +526,11 @@ a {
   background: yellowgreen;
 }
 
+
 /*media queries*/
 @media screen and (max-width: 480px) {
-  .header p {
+  
+  .header p{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -504,9 +539,11 @@ a {
     padding: 20px 0;
     color: #0698c1;
   }
+
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .header p {
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .header p{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -516,25 +553,32 @@ a {
     color: #c14529;
   }
 }
-/*Media queries teoría*/
-@media screen and (max-width: 768px) {
-  .grid-container {
-    font-family: "poppins", sans-serif;
-    font-size: 25px;
-    text-transform: uppercase;
-    width: 90%;
-    height: 600px;
-    margin: 40px auto;
-    border: 1px groove black;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "header" "main" "aside" "footer";
-    gap: 10px;
-  }
-  .item2 {
-    display: none;
-  }
-}
 
-/*# sourceMappingURL=estilos.css.map */
+/*Media queries teoría*/
+@media screen and (max-width: 768px){
+  .grid-container{
+      font-family: "poppins", sans-serif;
+      font-size: 25px;
+      text-transform: uppercase;
+  
+      width: 90%;
+      height: 600px;
+      margin: 40px auto;
+      border: 1px groove black;
+  
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4,auto);
+      grid-template-areas: 
+      "header"
+      "main"
+      "aside"
+      "footer"
+      ;
+      gap: 10px;
+  }
+  .item2{
+      display: none;
+  }
+
+}
