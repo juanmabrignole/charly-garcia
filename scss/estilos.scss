@@ -4,7 +4,7 @@
 
 /*variables sass*/
 /*relleno*/
-$relleno: 5px 10px;
+$relleno: 20px;
 
 /*nesting*/
 nav{
@@ -23,6 +23,105 @@ nav{
   }
   }
 }
+
+/*condicionales*/
+$color-home: red;
+$ancho: 100px;
+
+body{
+  /*If Condicional*/
+  @if($color-home == green){
+    background-color: rgb(27, 124, 203);
+    color: #000;
+    width: 100%;
+  } @else if($color-home== blue){
+    background-color: #0698c1;
+  }
+  @else {
+    background-color: #f08080;
+  }
+  padding: $relleno;
+  // width: ($relleno/2) * 3;
+}
+
+/*Bucles o ciclos*/
+$i: 1;
+
+/*ciclo exacto FOR*/
+@for $i from 1 through 6{
+  .h#{$i}{//interpolación
+    font-size: $i * 2rem;
+  }
+}
+
+/*Bucle For Each*/
+/*inicilializamos el array*/
+// $lista1: red, green, yellow, blue, brown;
+
+// @each $color in $lista1{
+//   .#{$color}{
+//     background-color: $color;
+//   }
+// }
+
+/*mapas*/
+$estilos: (
+  color: green,
+  centro: center,
+  tFuente: 35px,
+  1rem: 1rem
+);
+
+
+div{
+  background-color: map-get($map: $estilos , $key: color);
+  text-align: map-get($map: $estilos, $key: centro);
+  padding: map-get($map: $estilos, $key: 1rem);
+  font-size: map-get($map: $estilos, $key: tFuente);
+}
+
+/*extend*/
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  color: #000;
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.cardUsuario{
+  @extend .card;
+}
+
+.titulo2{
+  @extend .title;
+}
+
+/*mixins o funciones*/
+@mixin crearBordes($colorBorde,$tamanio,$colorBack) {
+  border: $tamanio solid $colorBorde;
+  border-radius: $tamanio;
+  background-color: $colorBack;
+}
+
+.principal{
+  @include crearBordes(red,10px, #000);
+}
+
+.links{
+  @include crearBordes(green, 20px, #279020d0);
+  }
+
 
 
 /*Poppins*/
@@ -58,7 +157,7 @@ p{
 }
 
 h1{
-  font-size: $font-principal-size;
+  font-size: map-get($map: $estilos , $key: tFuente);
   font-family: $fuente-secundaria;
   text-transform: $text-transform;
 }
