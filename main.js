@@ -83,22 +83,70 @@
 // }
 
 //IF anidados
-let precioProducto = Number(prompt ("Ingrese el precio del producto"));
+// let precioProducto = Number(prompt ("Ingrese el precio del producto"));
 
-if (precioProducto < 20){
-  alert ("Precio menor a 20 pesos")
-} 
-else if (precioProducto < 50){
-  alert ("Precio menor a 50 pesos")
-} 
-else if (precioProducto < 100){
-  alert ("Precio menor a 100 pesos")
-} 
-else {
-  alert ("El precio es mayor a 100")
+// if (precioProducto < 20){
+//   alert ("Precio menor a 20 pesos")
+// } 
+// else if (precioProducto < 50){
+//   alert ("Precio menor a 50 pesos")
+// } 
+// else if (precioProducto < 100){
+//   alert ("Precio menor a 100 pesos")
+// } 
+// else {
+//   alert ("El precio es mayor a 100")
+// }
+
+//variable devuelve true o false
+//VARIABLES BOOLEANAS
+
+// let edad = prompt ("Ingrese su edad: ");
+// //variable booleana
+// const esMayor = (edad >= 16);
+
+// if (esMayor){
+//   alert ("Puedes emitir tu voto");
+// } else{
+//   alert("Eres menor de edad, no puedes votar en esta elección");
+// }
+
+//Operadores lógicos && (and) || (or)
+
+// let nombreIngresado = prompt ("Ingrese su nombre: ");
+// let apellidoIngresado = prompt ("Ingrese su apellido: ");
+
+// if ((nombreIngresado != "") && (apellidoIngresado != "")){
+//   alert("Bienvenido " + nombreIngresado + " " + apellidoIngresado);
+// } else {
+//   alert("Error ingresar nombre y apellido");
+// }
+
+// Condicional Swicht
+
+let color = prompt ("Ingrese un color primario: ");
+
+switch (color){
+
+  case "rojo":
+    case "Rojo":
+    alert("Ingresaste el color rojo");
+    break;
+
+    case "azul":
+      case "Azul":
+      alert("Ingresaste el color azúl");
+      break;
+
+      case "amarillo":
+        case "Amarillo":
+        alert("Ingresaste el color amarillo");
+        break;
+
+        default:
+          alert("No ingresaste un color válido");
+          break;
 }
-
-
 
 
 
