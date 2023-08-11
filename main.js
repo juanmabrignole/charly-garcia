@@ -124,32 +124,91 @@
 
 // Condicional Swicht
 
-let color = prompt ("Ingrese un color primario: ");
+// let color = prompt ("Ingrese un color primario: ");
 
-switch (color){
+// switch (color){
 
-  case "rojo":
-    case "Rojo":
-    alert("Ingresaste el color rojo");
-    break;
+//   case "rojo":
+//     case "Rojo":
+//     alert("Ingresaste el color rojo");
+//     break;
 
-    case "azul":
-      case "Azul":
-      alert("Ingresaste el color azúl");
-      break;
+//     case "azul":
+//       case "Azul":
+//       alert("Ingresaste el color azúl");
+//       break;
 
-      case "amarillo":
-        case "Amarillo":
-        alert("Ingresaste el color amarillo");
-        break;
+//       case "amarillo":
+//         case "Amarillo":
+//         alert("Ingresaste el color amarillo");
+//         break;
 
-        default:
-          alert("No ingresaste un color válido");
-          break;
-}
+//         default:
+//           alert("No ingresaste un color válido");
+//           break;
+// }
 
+/*CICLOS FOR, WHILE y DO WHILE*/
 
+//CICLO FOR INCREMENTO
+// for (let i=1; i<=5;i++){
+//   console.log("Estás en la vuelta N°: " + i);
+// }
 
+// console.log("Ha terminado la carrera!");
+
+//CICLO FOR DECREMENTO
+// for (let x=5; x>=1; x--){
+//   console.log("Estás en la vuelta N°: " + x);
+// }
+
+// console.log("Ha terminado la carrera!");
+
+//CICLO WHILE
+
+// let nota = Number (prompt ("Ingrese una nota: "));
+
+// while (nota != "ESC"){
+//   console.log("Ingresaste: " + nota);
+ 
+//   nota = prompt ("Ingrese otra nota: ");
+// }
+
+//inicializamos la variable afuera del while
+// let i= 1;
+
+// //definimos la condición de corte del while
+// while(i<=10){
+//   console.log("Estás en la vuelta: " + i);
+//   //cargamos el contador en cada vuelta
+//   i++;
+// }
+
+// console.log("Estas afuera del ciclo while");
+
+// let x = 11;
+
+// do{
+//   console.log("Estás en la vuelta: " + x);
+//   x++;
+// } while(x<=10)
+
+// console.log("Estás afuera del ciclo Do While");
+
+//CICLO DO WHILE CON VALIDACION
+
+let edad;
+
+do {
+  edad = prompt("Ingrese una edad: ");
+
+  if (edad < 0) {
+    alert("Ingrese una edad válida")
+  }
+  else{
+    alert("La edad ingresa es: " + edad);
+  }
+} while(edad != 0);
 
 
 

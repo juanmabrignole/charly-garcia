@@ -56,13 +56,13 @@ $i: 1;
 
 /*Bucle For Each*/
 /*inicilializamos el array*/
-// $lista1: red, green, yellow, blue, brown;
+$lista1: red, green, yellow, blue, brown;
 
-// @each $color in $lista1{
-//   .#{$color}{
-//     background-color: $color;
-//   }
-// }
+@each $color in $lista1{
+  .#{$color}{
+    background-color: $color;
+  }
+}
 
 /*mapas*/
 $estilos: (
