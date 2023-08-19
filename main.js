@@ -197,23 +197,100 @@
 
 //CICLO DO WHILE CON VALIDACION
 
-let edad;
+// let edad;
 
-do {
-  edad = prompt("Ingrese una edad: ");
+// do {
+//   edad = prompt("Ingrese una edad: ");
 
-  if (edad < 0) {
-    alert("Ingrese una edad válida")
-  }
-  else{
-    alert("La edad ingresa es: " + edad);
-  }
-} while(edad != 0);
+//   if (edad < 0) {
+//     alert("Ingrese una edad válida")
+//   }
+//   else{
+//     alert("La edad ingresa es: " + edad);
+//   }
+// } while(edad != 0);
 
+//FUNCIONES
+//TIPO DE FUNCIONES
 
+//FUNCIONES DECLARADAS, QUE TIENEN UN NOMBRE
 
+//Función que saluda
+//Declarando la función
+function saludo(){
+  console.log("Hola Mundo");
+}
 
+//llamado a la función
+saludo();
 
+//función que suma dos números, pero con parámetros
+sumar(20000,3500);
 
+function sumar(numero1,numero2){
+  console.log(numero1 + numero2);
+}
 
+//llamo a la función, y le envío los argumentos
+sumar(10,30);
+sumar(20,150000);
 
+//función para ver si un número es par o impar (true or false)
+function esPar(numero){
+  return numero % 2 === 0;
+}
+
+const resultadoUno = esPar(15);
+console.log(resultadoUno);
+
+const resultadoDos = esPar(10);
+console.log(resultadoDos);
+
+//FUNCIONES ANONIMAS
+// función anónima, asignada a una variable o constante
+
+const saludame = function (nombre){
+  console.log(`Hola, ${nombre}, buenas tardes`);
+}
+
+saludame("María");
+saludame("Bruno");
+
+//función anónima dentro de una expresión
+let sumame = function (num1,num2){
+  return num1 + num2;
+}
+
+let resultadoSuma = sumame(4,4);
+console.log(resultadoSuma);
+
+//FUNCIONES FLECHA
+
+//Función flecha sin parámetros, de sólo una instruciión, sin llaves {}
+
+let saludando = () => console.log("Hola mundo");
+
+saludando();
+
+//funciones flecha con 1 parámetro
+// let cuadrado = (primerNumero) => {
+//   return primerNumero * primerNumero;
+// }
+
+// let resultado = cuadrado(8);
+// console.log(resultado);
+
+let cuadrado = (primerNumero, segundoNumero) => {
+  return primerNumero / segundoNumero;
+}
+
+let resultadoDivision = cuadrado(10,2);
+console.log("El resultado de la división es: " + resultadoDivision);
+
+//funciones flecha con las comillas invertidas
+let restados = (n1,n2) => {
+  let resta = n1 - n2;
+  console.log(`El resultado de restar ${n1} y ${n2} es: ` + resta)
+}
+
+restados(8,4);
