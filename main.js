@@ -217,80 +217,160 @@
 
 //Función que saluda
 //Declarando la función
-function saludo(){
-  console.log("Hola Mundo");
-}
-
-//llamado a la función
-saludo();
-
-//función que suma dos números, pero con parámetros
-sumar(20000,3500);
-
-function sumar(numero1,numero2){
-  console.log(numero1 + numero2);
-}
-
-//llamo a la función, y le envío los argumentos
-sumar(10,30);
-sumar(20,150000);
-
-//función para ver si un número es par o impar (true or false)
-function esPar(numero){
-  return numero % 2 === 0;
-}
-
-const resultadoUno = esPar(15);
-console.log(resultadoUno);
-
-const resultadoDos = esPar(10);
-console.log(resultadoDos);
-
-//FUNCIONES ANONIMAS
-// función anónima, asignada a una variable o constante
-
-const saludame = function (nombre){
-  console.log(`Hola, ${nombre}, buenas tardes`);
-}
-
-saludame("María");
-saludame("Bruno");
-
-//función anónima dentro de una expresión
-let sumame = function (num1,num2){
-  return num1 + num2;
-}
-
-let resultadoSuma = sumame(4,4);
-console.log(resultadoSuma);
-
-//FUNCIONES FLECHA
-
-//Función flecha sin parámetros, de sólo una instruciión, sin llaves {}
-
-let saludando = () => console.log("Hola mundo");
-
-saludando();
-
-//funciones flecha con 1 parámetro
-// let cuadrado = (primerNumero) => {
-//   return primerNumero * primerNumero;
+// function saludo(){
+//   console.log("Hola Mundo");
 // }
 
-// let resultado = cuadrado(8);
-// console.log(resultado);
+// //llamado a la función
+// saludo();
 
-let cuadrado = (primerNumero, segundoNumero) => {
-  return primerNumero / segundoNumero;
+// //función que suma dos números, pero con parámetros
+// sumar(20000,3500);
+
+// function sumar(numero1,numero2){
+//   console.log(numero1 + numero2);
+// }
+
+// //llamo a la función, y le envío los argumentos
+// sumar(10,30);
+// sumar(20,150000);
+
+// //función para ver si un número es par o impar (true or false)
+// function esPar(numero){
+//   return numero % 2 === 0;
+// }
+
+// const resultadoUno = esPar(15);
+// console.log(resultadoUno);
+
+// const resultadoDos = esPar(10);
+// console.log(resultadoDos);
+
+// //FUNCIONES ANONIMAS
+// // función anónima, asignada a una variable o constante
+
+// const saludame = function (nombre){
+//   console.log(`Hola, ${nombre}, buenas tardes`);
+// }
+
+// saludame("María");
+// saludame("Bruno");
+
+// //función anónima dentro de una expresión
+// let sumame = function (num1,num2){
+//   return num1 + num2;
+// }
+
+// let resultadoSuma = sumame(4,4);
+// console.log(resultadoSuma);
+
+// //FUNCIONES FLECHA
+
+// //Función flecha sin parámetros, de sólo una instruciión, sin llaves {}
+
+// let saludando = () => console.log("Hola mundo");
+
+// saludando();
+
+// //funciones flecha con 1 parámetro
+// // let cuadrado = (primerNumero) => {
+// //   return primerNumero * primerNumero;
+// // }
+
+// // let resultado = cuadrado(8);
+// // console.log(resultado);
+
+// let cuadrado = (primerNumero, segundoNumero) => {
+//   return primerNumero / segundoNumero;
+// }
+
+// let resultadoDivision = cuadrado(10,2);
+// console.log("El resultado de la división es: " + resultadoDivision);
+
+// //funciones flecha con las comillas invertidas
+// let restados = (n1,n2) => {
+//   let resta = n1 - n2;
+//   console.log(`El resultado de restar ${n1} y ${n2} es: ` + resta)
+// }
+
+// restados(8,4);
+
+//OBJETOS
+let nombre = "Martín";
+let apellido = "Herman";
+let edad = 35;
+let calle = "Libertador 2035";
+// console.log(nombre);
+
+//OBJETOS LITERALES
+const usuarioMartin = {
+  //propiedades o atributos
+  //clave : valor 
+  nombre: "Martín",
+  apellido: "Herman",
+  edad: 35,
+  calle: "Libertador 2035",
 }
 
-let resultadoDivision = cuadrado(10,2);
-console.log("El resultado de la división es: " + resultadoDivision);
-
-//funciones flecha con las comillas invertidas
-let restados = (n1,n2) => {
-  let resta = n1 - n2;
-  console.log(`El resultado de restar ${n1} y ${n2} es: ` + resta)
+const usuarioJuanma = {
+  //propiedades o atributos
+  //clave : valor 
+  nombre: "Juan Manuel",
+  apellido: "Brignole",
+  edad: 39,
+  calle: "Centenario 921",
 }
 
-restados(8,4);
+//averiguamos que valores alojan las variables, en este caso los objetos
+console.log(typeof usuarioMartin);
+console.log(typeof usuarioJuanma);
+
+//obteniendo valores del objeto 01
+console.log(usuarioJuanma.edad);
+console.log(usuarioJuanma.calle);
+console.log(usuarioMartin.edad);
+
+//obteniendo valores del objeto 02
+console.log(usuarioMartin["nombre"]);
+console.log(usuarioMartin["edad"]);
+
+//Reasignar valores a propiedades de los objetos 01
+//nombreObjeto["propiedad"] = nuevoValor
+usuarioJuanma["edad"] = 40;
+console.log(usuarioJuanma.edad);
+console.log(usuarioJuanma.apellido);
+
+//Reasignar valores a propiedades de los objetos 02
+//nombreObjeto.propiedadAModificar = nuevoValor
+usuarioJuanma.apellido = "Alderete";
+console.log(usuarioJuanma.apellido);
+
+//FUNCIÓN CONSTRUCTORA
+//CREAMOS LA CLASE PERSONA
+function Persona (nombre, apellido, dni, club){
+  this.nombre = nombre;
+  this.apellido = apellido;
+  this.dni = dni;
+  this.club = club;
+  //métodos
+  this.hablar = function(){
+    console.log("Hola buen día, yo soy: " + this.nombre + " " + this.apellido)
+  }
+}
+
+
+//instanciamos, creamos, un objeto de la clase Persona
+//le enviamos a los parámetros de la clase, los argumentos
+const persona1 = new Persona ("Lionel", "Messi", 35203455, "Barcelona");
+console.log(persona1.nombre);
+persona1.hablar();
+
+const persona2 = new Persona ("Cristiano", "Ronaldo", 34203455, "Real Madrid");
+console.log(persona2.apellido);
+console.log(persona2.club);
+persona2.hablar();
+
+
+
+
+
