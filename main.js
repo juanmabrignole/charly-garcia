@@ -295,82 +295,139 @@
 
 // restados(8,4);
 
-//OBJETOS
-let nombre = "Martín";
-let apellido = "Herman";
-let edad = 35;
-let calle = "Libertador 2035";
-// console.log(nombre);
+// //OBJETOS
+// let nombre = "Martín";
+// let apellido = "Herman";
+// let edad = 35;
+// let calle = "Libertador 2035";
+// // console.log(nombre);
 
-//OBJETOS LITERALES
-const usuarioMartin = {
-  //propiedades o atributos
-  //clave : valor 
-  nombre: "Martín",
-  apellido: "Herman",
-  edad: 35,
-  calle: "Libertador 2035",
-}
+// //OBJETOS LITERALES
+// const usuarioMartin = {
+//   //propiedades o atributos
+//   //clave : valor 
+//   nombre: "Martín",
+//   apellido: "Herman",
+//   edad: 35,
+//   calle: "Libertador 2035",
+// }
 
-const usuarioJuanma = {
-  //propiedades o atributos
-  //clave : valor 
-  nombre: "Juan Manuel",
-  apellido: "Brignole",
-  edad: 39,
-  calle: "Centenario 921",
-}
+// const usuarioJuanma = {
+//   //propiedades o atributos
+//   //clave : valor 
+//   nombre: "Juan Manuel",
+//   apellido: "Brignole",
+//   edad: 39,
+//   calle: "Centenario 921",
+// }
 
-//averiguamos que valores alojan las variables, en este caso los objetos
-console.log(typeof usuarioMartin);
-console.log(typeof usuarioJuanma);
+// //averiguamos que valores alojan las variables, en este caso los objetos
+// console.log(typeof usuarioMartin);
+// console.log(typeof usuarioJuanma);
 
-//obteniendo valores del objeto 01
-console.log(usuarioJuanma.edad);
-console.log(usuarioJuanma.calle);
-console.log(usuarioMartin.edad);
+// //obteniendo valores del objeto 01
+// console.log(usuarioJuanma.edad);
+// console.log(usuarioJuanma.calle);
+// console.log(usuarioMartin.edad);
 
-//obteniendo valores del objeto 02
-console.log(usuarioMartin["nombre"]);
-console.log(usuarioMartin["edad"]);
+// //obteniendo valores del objeto 02
+// console.log(usuarioMartin["nombre"]);
+// console.log(usuarioMartin["edad"]);
 
-//Reasignar valores a propiedades de los objetos 01
-//nombreObjeto["propiedad"] = nuevoValor
-usuarioJuanma["edad"] = 40;
-console.log(usuarioJuanma.edad);
-console.log(usuarioJuanma.apellido);
+// //Reasignar valores a propiedades de los objetos 01
+// //nombreObjeto["propiedad"] = nuevoValor
+// usuarioJuanma["edad"] = 40;
+// console.log(usuarioJuanma.edad);
+// console.log(usuarioJuanma.apellido);
 
-//Reasignar valores a propiedades de los objetos 02
-//nombreObjeto.propiedadAModificar = nuevoValor
-usuarioJuanma.apellido = "Alderete";
-console.log(usuarioJuanma.apellido);
+// //Reasignar valores a propiedades de los objetos 02
+// //nombreObjeto.propiedadAModificar = nuevoValor
+// usuarioJuanma.apellido = "Alderete";
+// console.log(usuarioJuanma.apellido);
 
 //FUNCIÓN CONSTRUCTORA
 //CREAMOS LA CLASE PERSONA
-function Persona (nombre, apellido, dni, club){
-  this.nombre = nombre;
-  this.apellido = apellido;
-  this.dni = dni;
-  this.club = club;
-  //métodos
-  this.hablar = function(){
-    console.log("Hola buen día, yo soy: " + this.nombre + " " + this.apellido)
-  }
-}
+// function Persona (nombre, apellido, dni, club){
+//   this.nombre = nombre;
+//   this.apellido = apellido;
+//   this.dni = dni;
+//   this.club = club;
+//   //métodos
+//   this.hablar = function(){
+//     console.log("Hola buen día, yo soy: " + this.nombre + " " + this.apellido)
+//   }
+// }
 
 
-//instanciamos, creamos, un objeto de la clase Persona
-//le enviamos a los parámetros de la clase, los argumentos
-const persona1 = new Persona ("Lionel", "Messi", 35203455, "Barcelona");
-console.log(persona1.nombre);
-persona1.hablar();
+// //instanciamos, creamos, un objeto de la clase Persona
+// //le enviamos a los parámetros de la clase, los argumentos
+// const messi = new Persona ("Lionel", "Messi", 35203455, "Barcelona");
+// console.log(messi.nombre);
+// messi.hablar();
 
-const persona2 = new Persona ("Cristiano", "Ronaldo", 34203455, "Real Madrid");
-console.log(persona2.apellido);
-console.log(persona2.club);
-persona2.hablar();
+// const persona2 = new Persona ("Cristiano", "Ronaldo", 34203455, "Real Madrid");
+// console.log(persona2.apellido);
+// console.log(persona2.club);
+// persona2.hablar();
 
+//CLASES EN EMAC6 QUE REEMPLAZA A LA FUNCIÓN CONSTRUCTORA
+//INSTANCIAMOS LA CLASE USUARIO
+// class Usuario {
+//   //Atributos de la clase Usuario
+//   constructor (nombre, apellido, edad){
+//     this.nombre = nombre;
+//     this.apellido= apellido;
+//     this.edad = edad;
+//   }
+//   //método de la clase Usuario
+//   hablar(){
+//     console.log("Hola yo soy " + this.nombre + " y mi edad es " + this.edad + " años.")
+//   }
+// }
 
+// //INSTANCIAMOS EL OBJETO USUARIO 1 A PARTIR DE LA CLASE USUARIO
+// const usuario1 = new Usuario ("Magali", "Nieva", 30);
+// console.log(usuario1.edad);
+// usuario1.hablar();
+
+/*----------------ARRAYS--------------*/
+//Instanciar un arreglo vacío
+const vacio = [];
+console.log(typeof vacio);
+console.log(vacio);
+
+const numeros = [230, 500, 1500, 2000];
+
+//array de productos
+const productos = ["fideo", "arroz", "azucar", "leche", "harina"];
+
+//ACCEDO A LAS POSICIONES DEL ARRAY
+console.log(productos[4]);
+
+//METODOS PARA MODIFICAR O INTERVENIR ARREGLOS
+//METODO LENGTH
+console.log(productos.length);
+
+//METODO PUSH (AGREGA UN NUEVO ELEMENTO EN LA POSICION FINAL DEL ARRAY)
+productos.push("yerba");
+console.log(productos.length);
+console.log(productos);
+console.log(productos[5]);
+
+//METODO UNSHIFT (AGREGA UN NUEVO ELEMENTO EN LA POSICION 0 O PRIMER POSICIÓN DEL ARRAY)
+productos.unshift("aceite");
+console.log(productos);
+console.log(productos[0]);
+console.log(productos.length);
+
+//METODO SHIFT PARA QUITAR EL PRIMER ELEMENTO DEL ARRAY
+productos.shift();
+console.log(productos);
+
+//METODO POP PARA QUITAR EL ULTIMO ELEMENTO DEL ARRAY
+productos.pop();
+console.log(productos);
+console.log(productos.length);
 
 
 
