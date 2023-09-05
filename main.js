@@ -392,42 +392,93 @@
 
 /*----------------ARRAYS--------------*/
 //Instanciar un arreglo vacío
-const vacio = [];
-console.log(typeof vacio);
-console.log(vacio);
+// const vacio = [];
+// console.log(typeof vacio);
+// console.log(vacio);
 
-const numeros = [230, 500, 1500, 2000];
+// const numeros = [230, 500, 1500, 2000];
 
-//array de productos
-const productos = ["fideo", "arroz", "azucar", "leche", "harina"];
+// //array de productos
+// const productos = ["fideo", "arroz", "azucar", "leche", "harina"];
 
-//ACCEDO A LAS POSICIONES DEL ARRAY
-console.log(productos[4]);
+// //ACCEDO A LAS POSICIONES DEL ARRAY
+// console.log(productos[4]);
 
-//METODOS PARA MODIFICAR O INTERVENIR ARREGLOS
-//METODO LENGTH
-console.log(productos.length);
+// //METODOS PARA MODIFICAR O INTERVENIR ARREGLOS
+// //METODO LENGTH
+// console.log(productos.length);
 
-//METODO PUSH (AGREGA UN NUEVO ELEMENTO EN LA POSICION FINAL DEL ARRAY)
-productos.push("yerba");
-console.log(productos.length);
-console.log(productos);
-console.log(productos[5]);
+// //METODO PUSH (AGREGA UN NUEVO ELEMENTO EN LA POSICION FINAL DEL ARRAY)
+// productos.push("yerba");
+// console.log(productos.length);
+// console.log(productos);
+// console.log(productos[5]);
 
-//METODO UNSHIFT (AGREGA UN NUEVO ELEMENTO EN LA POSICION 0 O PRIMER POSICIÓN DEL ARRAY)
-productos.unshift("aceite");
-console.log(productos);
-console.log(productos[0]);
-console.log(productos.length);
+// //METODO UNSHIFT (AGREGA UN NUEVO ELEMENTO EN LA POSICION 0 O EN LA PRIMER POSICIÓN DEL ARRAY)
+// productos.unshift("aceite");
+// productos.unshift("atun");
+// console.log(productos);
+// console.log(productos[0]);
+// console.log(productos.length);
 
-//METODO SHIFT PARA QUITAR EL PRIMER ELEMENTO DEL ARRAY
-productos.shift();
-console.log(productos);
+// // //METODO SHIFT PARA QUITAR EL PRIMER ELEMENTO DEL ARRAY
+// productos.shift();
+// console.log(productos);
+// productos.shift();
+// console.log(productos);
 
-//METODO POP PARA QUITAR EL ULTIMO ELEMENTO DEL ARRAY
-productos.pop();
-console.log(productos);
-console.log(productos.length);
+// //METODO POP PARA QUITAR EL ULTIMO ELEMENTO DEL ARRAY
+// productos.pop();
+// console.log(productos);
+// productos[2] = "aceite";
+// console.log(productos);
+
+//METODO SPLICE PERMITE ELIMINAR 1 O MÁS ELEMENTOS DEL ARRAY
+// const productos = ["fideo", "arroz", "azucar", "leche", "harina"];
+// // productos.splice(0,3);
+// // console.log(productos);
+
+// //METODO JOIN PERMITE SEPARAR ELEMENTOS DEL ARRAY
+// console.log(productos.join("------"));
+// console.log(productos.join("*"));
+
+//METODO CONCAT PERMITE CONCATENAR 2 ARRAYS DIFERENTES
+// const productos = ["fideo", "arroz", "azucar", "leche", "harina"];
+
+// //METODO REVERSE PERMITE INVERTIR LAS POSICIONES DE LOS ELEMENTOS DEL ARRAY
+// console.log(productos);
+// productos.reverse();
+// console.log(productos);
+
+// const cervezas = ["Corona", "Brahma", "Quilmes", "Estela", "Andes"];
+
+// //CONCATENAMOS LOS ARRAYS
+// const masVendidos = productos.concat(cervezas);
+// console.log(masVendidos.join("---"));
+
+// //METODO INDEXOF RETORNA LA POSICION DE UN ELEMNTO EN EL ARRAY
+// console.log(masVendidos.indexOf("Brahma"));
+
+//USOS DEL LENGTH
+const cervezas = ["Corona", "Brahma", "Quilmes", "Estela", "Andes"];
+
+// for (let i= 0; i < 5; i = i + 1){
+//     console.log(cervezas[i]);
+// }
+
+for (let i =0; i < cervezas.length; i++){
+    console.log(cervezas[i]);
+}
+
+cervezas.push("Patagonia");
+
+for (let i =0; i < cervezas.length; i++){
+    console.log(cervezas[i]);
+}
+
+
+
+
 
 
 
