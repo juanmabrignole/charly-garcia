@@ -466,15 +466,112 @@ const cervezas = ["Corona", "Brahma", "Quilmes", "Estela", "Andes"];
 //     console.log(cervezas[i]);
 // }
 
-for (let i =0; i < cervezas.length; i++){
-    console.log(cervezas[i]);
+// for (let i =0; i < cervezas.length; i++){
+//     console.log(cervezas[i]);
+// }
+
+// cervezas.push("Patagonia");
+
+// for (let i =0; i < cervezas.length; i++){
+//     console.log(cervezas[i]);
+// }
+
+//CLASE ARRAYS + OBJETOS
+
+// const productosTienda = [
+//     {id: 1, nombre: "Arroz"},
+//     {id: 2, nombre: "Fideo"},
+//     {id: 3, nombre: "Pan"},
+//     {id: 4, nombre: "Azúcar"},
+//     {id: 5, nombre: "Yerba"},
+//     {id: 6, nombre: "Harina"}
+// ];
+
+// for (const producto of productosTienda){
+//     console.log(producto.id);
+//     console.log(producto.nombre);
+//     // console.log(producto.producto);
+// }
+
+//EJEMPLO APLICADO OBJETOS, PRODUCTO Y ARRAY
+//EMAC 2015
+
+// class Producto {
+//     constructor (nombre, precio){
+//         //ATRIBUTOS
+//         this.nombre = nombre.toUpperCase();
+//         this.precio = parseFloat(precio);
+//         this.vendido = false;
+//     }
+//         //MÉTODOS
+//         sumaIva(){
+//             console.log(this.precio = this.precio * 1.21);
+//         }
+
+//         vender(){
+//             console.log(this.vendido = true)
+//         }
+// }
+
+// const productosIva = [];
+// // console.log(productosIva);
+// productosIva.push(new Producto ("Chocolate", 500));
+// console.log(productosIva);
+// productosIva.push(new Producto ("Alfajor DDL", 600));
+// productosIva.push(new Producto ("Alfajor Frutilla", 650));
+
+// //ITERAMOS EL ARRAY CON UN FOR OF PARA MODIFICARLOS A TODOS
+// //FOR OF
+// for (const producto of productosIva){
+//     producto.sumaIva();
+//     producto.vender();
+// }
+
+// //ACCEDEMOS A TODOS LOS OBJETOS DEL ARRAY CON SUS NUEVOS PRECIOS
+// console.log(productosIva);
+
+/*--------------FUNCIONES DE ORDEN SUPERIOR--------------------*/
+//ABSTRACCION
+
+//acumulador
+// let total = 0;
+
+// for (let i = 1; i<=10; i++){
+//     total = total +  i;
+//     console.log(total);
+// }
+
+//AHORA LO HACEMOS TODO EN UNA FUNCION, + DINÁMICA
+//LE PODEMOS MANDAR POR PARAMETRO, DIFERENTES VALORES
+
+//LOS PARAMETROS SON VARIABLES, QUE PUEDE ESTAR VACÍOS, Y SE CARGAN CON LO QUE LE ENVIAMOS EN LOS ARGUMENTOS
+function sumarRangos(min, max){
+    //inicializamos el acumularo en 0
+    let total = 0;
+
+    //ciclo for que va a iterar según lo que enviamos a los parametros
+    for (let i = min; i<=max; i++){
+    total = total +  i;
+}
+    return total;
 }
 
-cervezas.push("Patagonia");
+//ENVIAMOS A LA FUNCIÓN LOS ARGUMENTOS QUE CARGAN A LOS PARAMETROS
+// console.log(sumarRangos(3,7));
+// console.log(sumarRangos(2,4));
 
-for (let i =0; i < cervezas.length; i++){
-    console.log(cervezas[i]);
-}
+//LA FUNCIÓN LA PUEDO GUARDAR EN UNA VARIABLE
+const sumaEntreTresYSiete = sumarRangos(3,7);
+console.log(sumaEntreTresYSiete);
+
+const sumaEntreDosYCuatro = sumarRangos(2,4);
+alert(sumaEntreDosYCuatro);
+
+
+
+
+
+
 
 
 
