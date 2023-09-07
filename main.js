@@ -460,7 +460,7 @@
 // console.log(masVendidos.indexOf("Brahma"));
 
 //USOS DEL LENGTH
-const cervezas = ["Corona", "Brahma", "Quilmes", "Estela", "Andes"];
+// const cervezas = ["Corona", "Brahma", "Quilmes", "Estela", "Andes"];
 
 // for (let i= 0; i < 5; i = i + 1){
 //     console.log(cervezas[i]);
@@ -537,6 +537,7 @@ const cervezas = ["Corona", "Brahma", "Quilmes", "Estela", "Andes"];
 // let total = 0;
 
 // for (let i = 1; i<=10; i++){
+//     //aquí se acumula
 //     total = total +  i;
 //     console.log(total);
 // }
@@ -545,36 +546,116 @@ const cervezas = ["Corona", "Brahma", "Quilmes", "Estela", "Andes"];
 //LE PODEMOS MANDAR POR PARAMETRO, DIFERENTES VALORES
 
 //LOS PARAMETROS SON VARIABLES, QUE PUEDE ESTAR VACÍOS, Y SE CARGAN CON LO QUE LE ENVIAMOS EN LOS ARGUMENTOS
-function sumarRangos(min, max){
-    //inicializamos el acumularo en 0
-    let total = 0;
+// function sumarRangos(min, max){
+//     //inicializamos el acumularo en 0
+//     let total = 0;
 
-    //ciclo for que va a iterar según lo que enviamos a los parametros
-    for (let i = min; i<=max; i++){
-    total = total +  i;
-}
-    return total;
-}
+//     //ciclo for que va a iterar según lo que enviamos a los parametros
+//     for (let i = min; i<=max; i++){
+//     total = total +  i;
+// }
+//     return total;
+// }
 
 //ENVIAMOS A LA FUNCIÓN LOS ARGUMENTOS QUE CARGAN A LOS PARAMETROS
 // console.log(sumarRangos(3,7));
 // console.log(sumarRangos(2,4));
 
-//LA FUNCIÓN LA PUEDO GUARDAR EN UNA VARIABLE
-const sumaEntreTresYSiete = sumarRangos(3,7);
-console.log(sumaEntreTresYSiete);
+//LA FUNCIÓN LA PUEDO GUARDAR EN UNA VARIABLE Y LE MANDAMOS LOS ARGUMENTOS
 
-const sumaEntreDosYCuatro = sumarRangos(2,4);
-alert(sumaEntreDosYCuatro);
+// const sumaEntreTresYSiete = sumarRangos(3,7); //25
+// console.log(sumaEntreTresYSiete);
 
+// // console.log(sumarRangos(3,7));
 
+// const sumaEntreDosYCuatro = sumarRangos(2,4); //9
+// console.log(sumaEntreDosYCuatro);
 
+// const resultadoFinal = sumaEntreDosYCuatro * sumaEntreTresYSiete;
+// console.log(resultadoFinal);
 
+//AHORA UNA FUNCION PARA VER SI UN NÚMERO ES MAYOR A CUALQUIER OTRO NUMERO
+//primera función
 
+//FUNCIÓN, QUE RETORNA EL RESULTADO DE OTRA FUNCIÓN
+//FUNCIÓN NOMBRADA DECLARADA
+// function mayorQue (num1){
+//     //mayorQue retorna otra función, en este caso una función flecha
+//     //QUE RETORNA UNA FUNCIÓN FLECHA
+//     return (numero) => {
+//         return numero > num1; // true or false
+//     }
+// }
 
+// //mayorQueDiez hace referencia a la función flecha y mayorQue a la función principal, y le enviamos 10 como argumento que se va a cargar en el parámetro.
+// const mayorQueDiez = mayorQue(10);
+// const resultadoComparacion = mayorQueDiez(8)
+// // console.log(mayorQueDiez(8)); //false
+// console.log(resultadoComparacion);
 
+//METODOS NATIVOS DE JS PARA BÚSQUEDA Y TRANSFORMACIÓN DE OBJETOS
+/*---------FOR EACH (RECORREMOS CON UN CICLO, TODOS LOS ELEMENTOS DE UN ARRAY----------*/
+// const numeros = [20, 30,100,200,45,200, 467,345,100,2000];
+// // console.log(numeros);
 
+// numeros.forEach((numero) => { // let numero = 20/30/100/200/45 
+//     console.log(numero);
+// })
 
+const productos = [
+    {nombre: "Torta Galesa 500gms", precio: 2000},
+    {nombre: "Torta Galesa 1kg", precio: 4000},
+    {nombre: "Alfajor DDL", precio: 700},
+    {nombre: "Alfajor Frutilla", precio: 800},
+    {nombre: "Alfajor Frutilla", precio: 900},
+    {nombre: "Chocolate Sutido", precio: 3300},
+    {nombre: "Chocolate Sutido", precio: 3300},
+    {nombre: "Alfajor de Limón", precio: 750}
+];
+
+//METODO FILTER, PERO CON INCLUDES
+
+const alfajor = productos.filter((producto) => {
+    return producto.nombre.includes("Frutilla");
+})
+
+console.log(alfajor);
+
+//funcion flecha con return + llaves
+// const menorPrecio = productos.filter((producto) => {
+//     return producto.precio < 1000;
+// })
+
+//funcion flecha, sin return y sin llaves
+const menorPrecio = productos.filter((producto) => producto.precio < 1000)
+console.log(menorPrecio);
+
+// productos.forEach((producto) => {
+//     console.log(producto.nombre);
+//     console.log(producto.precio);
+// })
+
+//*------METODO FIND DEVUELVE SOLO EL PRIMER OBJETO QUE CUMPLA CON UNA CONDICION, SINO UNDEFINED----------*/
+// const elegido = productos.find((producto) => {
+//     return producto.nombre === "Alfajor Frutilla";
+// })
+
+// console.log(elegido);
+
+// const productoElegido = prompt("Elija el producto que más se le antoje: ")
+// console.log(productos.find((producto) => {
+//     return producto.nombre === productoElegido;
+// }))
+
+/*---------METODO FILTER, RETORNA UN ARREGLO CON EL O LOS ELEMENTOS QUE CUMPLAN CON LA CONDICION, SINO VACIÓ----------*/
+
+// const cervezas = ["Brahma", "Quilmes", "Corona", "Estela", "Corona", "Corona"]
+
+// const corona = cervezas.filter((cerveza) => {
+//     return cerveza === "Corona";
+// })
+
+// console.log(corona);
 
 
 
