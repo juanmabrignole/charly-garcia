@@ -602,54 +602,57 @@
 //     console.log(numero);
 // })
 
-const productos = [
-    {nombre: "Torta Galesa 500gms", precio: 2000},
-    {nombre: "Torta Galesa 1kg", precio: 4000},
-    {nombre: "Alfajor DDL", precio: 700},
-    {nombre: "Alfajor Frutilla", precio: 800},
-    {nombre: "Alfajor Frutilla", precio: 900},
-    {nombre: "Chocolate Sutido", precio: 3300},
-    {nombre: "Chocolate Sutido", precio: 3300},
-    {nombre: "Alfajor de Limón", precio: 750}
-];
+// const productos = [
+//     {nombre: "Torta Galesa 500gms", precio: 2000},
+//     {nombre: "Torta Galesa 1kg", precio: 4000},
+//     {nombre: "Alfajor DDL", precio: 700},
+//     {nombre: "Alfajor Frutilla", precio: 800},
+//     {nombre: "Alfajor Frutilla", precio: 900},
+//     {nombre: "Chocolate Sutido", precio: 3300},
+//     {nombre: "Chocolate Sutido", precio: 3300},
+//     {nombre: "Alfajor de Limón", precio: 750}
+// ];
 
-//METODO FILTER, PERO CON INCLUDES
+// //METODO FILTER, PERO CON INCLUDES
 
-const alfajor = productos.filter((producto) => {
-    return producto.nombre.includes("Frutilla");
-})
+// const alfajor = productos.filter((producto) => {
+//     return producto.nombre.includes("Frutilla");
+// })
 
-console.log(alfajor);
+// console.log(alfajor);
 
 //funcion flecha con return + llaves
 // const menorPrecio = productos.filter((producto) => {
 //     return producto.precio < 1000;
 // })
 
+//me retorna un array nuevo, con los productos cuyo precio sea menor a 1000
 //funcion flecha, sin return y sin llaves
-const menorPrecio = productos.filter((producto) => producto.precio < 1000)
-console.log(menorPrecio);
+// const menorPrecio = productos.filter((producto) => producto.precio < 1000)
+// console.log(menorPrecio);
 
+
+// //metodo que recorre todo el array de objetos y va imprimiendo en consola nombre y precio
 // productos.forEach((producto) => {
 //     console.log(producto.nombre);
 //     console.log(producto.precio);
 // })
 
-//*------METODO FIND DEVUELVE SOLO EL PRIMER OBJETO QUE CUMPLA CON UNA CONDICION, SINO UNDEFINED----------*/
+/*------METODO FIND DEVUELVE SOLO EL PRIMER OBJETO QUE CUMPLA CON UNA CONDICION, SINO UNDEFINED----------*/
 // const elegido = productos.find((producto) => {
 //     return producto.nombre === "Alfajor Frutilla";
 // })
 
 // console.log(elegido);
 
-// const productoElegido = prompt("Elija el producto que más se le antoje: ")
-// console.log(productos.find((producto) => {
-//     return producto.nombre === productoElegido;
-// }))
+// // const productoElegido = prompt("Elija el producto que más se le antoje: ")
+// // console.log(productos.find((producto) => {
+// //     return producto.nombre === productoElegido;
+// // }))
 
-/*---------METODO FILTER, RETORNA UN ARREGLO CON EL O LOS ELEMENTOS QUE CUMPLAN CON LA CONDICION, SINO VACIÓ----------*/
+// /*---------METODO FILTER, RETORNA UN ARREGLO CON EL O LOS ELEMENTOS QUE CUMPLAN CON LA CONDICION, SINO VACIÓ----------*/
 
-// const cervezas = ["Brahma", "Quilmes", "Corona", "Estela", "Corona", "Corona"]
+// const cervezas = ["Brahma", "Quilmes", "Corona", "Estela", "Corona", "Corona"];
 
 // const corona = cervezas.filter((cerveza) => {
 //     return cerveza === "Corona";
@@ -657,6 +660,107 @@ console.log(menorPrecio);
 
 // console.log(corona);
 
+// /*---------METODO SOME, RETORNA TRUE OR FALSE SI ENCUENTRA O NO, UN ELEMENTO QUE CUMPLA CON UNA CONDICION----------*/
+
+// const quilmes = cervezas.some((cerveza) => cerveza === "Andes");
+// console.log(quilmes);
+
+// /*---------METODO MAP, RECORRE TODO EL ARRAY, Y RETORNA UNO NUEVO CON LOS ELEMENTOS MODIFICADOS----------*/
+
+// const productos = [
+//     {nombre: "Torta Galesa 500gms", precio: 2000},
+//     {nombre: "Torta Galesa 1kg", precio: 4000},
+//     {nombre: "Alfajor DDL", precio: 700},
+//     {nombre: "Alfajor Frutilla", precio: 800},
+//     {nombre: "Alfajor Frutilla", precio: 900},
+//     {nombre: "Chocolate Sutido", precio: 3300},
+//     {nombre: "Chocolate Sutido", precio: 3300},
+//     {nombre: "Alfajor de Limón", precio: 750}
+// ];
+
+// //sirve para recorrer un array, sin necesidad de un ciclo
+// // const nombresDulces = productos.map((producto) => producto.nombre);
+// // console.log(nombresDulces);
+
+// //pero también sirve,l para recorrer un array, modificar sus elementos, y retornar uno nuevo con esas modificaciones
+// const precioActualizado = productos.map((dulce) => {
+//     return {
+//         nombre: dulce.nombre,
+//         precio: dulce.precio * 1.21
+//     }
+// })
+
+// console.log(precioActualizado);
+
+// //map
+
+// const misNumeros = [1,2,3,4,5];
+
+// // const numerosMultiplicados = misNumeros.map((numero) => {
+// //     return numero * 2
+// // })
+
+// // console.log(numerosMultiplicados);
 
 
+// //METODO REDUCE
+// const total = misNumeros.reduce((acumulador,numero) => acumulador + numero,0);
+// console.log(total);
 
+// const misCompras = [20000, 30000, 1500, 2600, 5000];
+// const totalCompra = misCompras.reduce((acumulador, producto) => acumulador + producto, 0);
+// console.log("El total de tu compra fue de: $" + totalCompra);
+
+// //EJEMPLO APLICADO
+
+// const cervezasLatas = [
+//     {
+//       id: 1,
+//       nombre: "patagonia",
+//       precio: 700
+//     },
+//     {
+//       id: 2,
+//       nombre: "estela",
+//       precio: 500
+//     },
+//     {
+//       id: 3,
+//       nombre: "andes origen",
+//       precio: 600
+//     },
+//     {
+//       id: 4,
+//       nombre: "brahma",
+//       precio: 450
+//     },
+//     {
+//       id: 5,
+//       nombre: "corona extra",
+//       precio: 450
+//     },
+//   ];
+
+  //TAREA
+  // 1- METODO FIND BUSQUE UN PRODUCTO CUYO ID SEA 3
+
+  //2-METODO SOME QUE BUSQUE SI ESA LATA EXISTE O NO EN EL ARRAY
+
+  //3-METODO FILTER QUE ME RETORNE UN ARRAY CON LOS PRODUCTOS CUYO PRECIO SEA MENOR A 500
+
+  //4- METODO MAP, QUE ME RETORNE UN NUEVO CON LOS PRECIOS MÁS IVA
+
+  /*--------------DOCUMENT OBJECT MODEL----------*/
+
+// OBJETO DOCUMENT
+// console.log(document.body);
+// console.log(document.head);
+
+//ACCESO A LOS NODOS
+
+let encabezadoJs = document.getElementById("encabezado");
+console.log(encabezadoJs);
+
+//innerText puedo modificar el contenido de un elemento HTML desde JS
+encabezadoJs.innerText = "Conseguí aquí todas las entradas";
+console.log(encabezadoJs);
