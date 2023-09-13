@@ -755,12 +755,78 @@
 // OBJETO DOCUMENT
 // console.log(document.body);
 // console.log(document.head);
-
+// console.dir(document)
 //ACCESO A LOS NODOS
 
-let encabezadoJs = document.getElementById("encabezado");
-console.log(encabezadoJs);
+/*getElementById()*/
+// let principal = document.getElementById("contenido");
+// console.log(principal.innerHTML);
 
-//innerText puedo modificar el contenido de un elemento HTML desde JS
-encabezadoJs.innerText = "Conseguí aquí todas las entradas";
-console.log(encabezadoJs);
+// //CON INNERHTML PUEDO ACCADER Y MODIFICAR ELEMENTOD DEL DOM
+// let encabezado = document.getElementById("titulo");
+// // console.log(encabezado);
+// // encabezado.innerHTML = "<p>Los mejores chocolates del Sur</p>";
+// encabezado.innerHTML = "<h2>Los mejores chocolates del Sur <a href = '#'>Esto es un link</a></h2>";
+// console.log(encabezado);
+
+// /*getElementsByClassName()*/
+// //CON ESTE MÉTODO CONVIERTO LOS ELEMENTOS DEL NODO HTML EN UN ARRAY QUE ESTÁ ALOJADO, DENTRO DE PARRAFOS
+// // let parrafos = document.getElementsByClassName("parrafo");
+// // console.log(parrafos[0].innerText);
+// // // console.log(parrafos[1]);
+// // // console.log(parrafos[2]);
+
+// /*getElementsByTagName()*/
+// let textos = document.getElementsByTagName("p");
+// console.log(textos);
+// //puedo recorrer el array de etiquetas con un ciclo FOR OF
+
+// for (const texto of textos){
+//   console.log(texto.innerHTML);
+// }
+
+// //querySelector() es la mejor forma de capturar elemntos HTML, ya que también nos permite trabajar con los métodos propios de los arrays. Usamos selectores css #para Ids y . para las clases
+
+// const content = document.querySelector("#contenido");
+// console.log(content);
+
+// //oraciones es ahora un array de parrafos
+// const oraciones = document.querySelectorAll(".parrafo");
+// console.log(oraciones);
+// //YA LE PODEMOS APLICAR MÉTODOS PROPIOS DE LOS ARRAYS
+// oraciones.forEach((oracion) => {
+//   console.log(oracion);
+// })
+
+//FORMAS DE AGREGAR, MODIFICAR Y QUITAR CLASES DESDE JS EN HTML
+//CLASSNAME
+// let encabezado = document.querySelector("#titulo");
+// // console.log(encabezado.className);
+// // //le asigno una nueva clase, pero me elimina/pisa la clase anterior
+// // encabezado.className = "nuevoEstilo";
+// // console.log(encabezado.className);
+
+
+
+// //CLASSLIST SE CONVIERTE EN UN ARRAY Y UNA CADA CLASE OCUPA UNA POSICION DENTRO DEL ARRAY
+// console.log(encabezado.classList);
+// //COMO ES UN ARRAY PUEDO AGREGARLE ELEMENTOS
+// encabezado.classList.add("estilos");
+// //TAMBIEN PUEDO REMOVER ELEMENTOS DEL ARRAY
+// encabezado.classList.remove("delicias");
+// // const oraciones = document.querySelectorAll(".parrafo");
+// // console.log(oraciones[1].classList);
+
+const content = document.querySelector("#contenido");
+
+
+//TAMBIEN PODEMOS AGREDAR NODOS CON CREATE ELEMENTS
+let lista = document.createElement("ul");
+lista.classList.add("lista");
+//TODAVIA EXISTE SOLO EN EL DOM
+console.log(lista);
+lista.innerHTML = "<li>Torta galesa</li>";
+lista.innerHTML += "<li>Alfajor Chocolate</li>";
+lista.innerHTML += "<li>Alfajor Frutilla</li>";
+
+content.append(lista);
