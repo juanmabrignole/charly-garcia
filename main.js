@@ -817,16 +817,77 @@
 // // const oraciones = document.querySelectorAll(".parrafo");
 // // console.log(oraciones[1].classList);
 
+//dentro de el contenedor de esta variable, al final, luego de su último hijo se va a hacer el append de los diferentes elementos
 const content = document.querySelector("#contenido");
-
 
 //TAMBIEN PODEMOS AGREDAR NODOS CON CREATE ELEMENTS
 let lista = document.createElement("ul");
 lista.classList.add("lista");
-//TODAVIA EXISTE SOLO EN EL DOM
-console.log(lista);
-lista.innerHTML = "<li>Torta galesa</li>";
-lista.innerHTML += "<li>Alfajor Chocolate</li>";
-lista.innerHTML += "<li>Alfajor Frutilla</li>";
+// //TODAVIA EXISTE SOLO EN EL DOM
+// console.log(lista);
+// lista.innerHTML = "<li>Torta galesa</li>";
+// lista.innerHTML += "<li>Alfajor Chocolate</li>";
+// lista.innerHTML += "<li>Alfajor Frutilla</li>";
+
+// content.append(lista);
+
+//TAMBIÉN PUEDO CREAR UN ARRAY E IR UTILIZANDO SUS POSICIONES EN LA LISTA CON CONCATENACIÓN
+
+const delicias = ["torta galesa", "alfajor de dulce de leche", "alfajor de frutilla", "chocolate en rama"];
+// lista.innerHTML += "<li class ='lista-item'>" + delicias[0] + "</li>";
+// lista.innerHTML += "<li class ='lista-item'>" + delicias[1] + "</li>";
+// lista.innerHTML += "<li class ='lista-item'>" + delicias[2] + "</li>";
+// lista.innerHTML += "<li class ='lista-item'>" + delicias[3] + "</li>";
+
+/*-------TEMPLATE STRINGS--------*/
+//OTRA FORMA MÁS COMODA DE IMPLEMENTAR LA CONCATENACION DE ELEMENTOS DEL ARRAY ES CON LOS BACKTICS O COMILLAS INVERTIDAS. MUY USADO EN REACT.JS
+
+// lista.innerHTML += `<li class="lista-item">${delicias[0]}</li>`
+// lista.innerHTML += `<li class="lista-item">${delicias[1]}</li>`
+// lista.innerHTML += `<li class="lista-item">${delicias[2]}</li>`
+// lista.innerHTML += `<li class="lista-item">${delicias[3]}</li>`
+
+//TODO LO ANTERIOR, LO PUEDO REDUCIR A UN FOR OF
+
+for (delicia of delicias){lista.innerHTML += `<li class="lista-item">${delicia}</li>`;}
 
 content.append(lista);
+
+//CREANDO ELEMENTOS DESDE OBJETOS DEL DOM
+//CREAMOS UN ARRAY DE OBJETOS
+const productos = [
+  {
+    id: 1,
+    nombre: "Arroz",
+    precio: 500
+  },
+  {
+    id: 2,
+    nombre: "Fideo",
+    precio: 600
+  },
+  {
+    id: 3,
+    nombre: "Leche",
+    precio: 300
+  },
+  {
+    id: 4,
+    nombre: "Azucar",
+    precio: 250
+  }
+]
+
+for (const producto of productos){
+  //definimos que vamos a crear un elemento html de tipo div y lo vamos a alojar en la variable contenedor
+  let contenedor = document.createElement("div");
+  //definimos el innerhtml del elemnto con una plantilla de texto o literal
+  contenedor.innerHTML = `
+    <p>ID: ${producto.id}</p>
+    <h3>Producto: ${producto.nombre}</h3>
+    <h4>Precio: $${producto.precio}</h4>
+  `;
+  document.body.append(contenedor);
+}
+
+

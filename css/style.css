@@ -3,3 +3,8 @@
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
 }
+
+.lista-item{
+  font-size: 1.5rem;
+  color: darkblue;
+}
