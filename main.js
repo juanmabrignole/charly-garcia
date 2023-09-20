@@ -818,76 +818,126 @@
 // // console.log(oraciones[1].classList);
 
 //dentro de el contenedor de esta variable, al final, luego de su último hijo se va a hacer el append de los diferentes elementos
-const content = document.querySelector("#contenido");
+// const content = document.querySelector("#contenido");
 
-//TAMBIEN PODEMOS AGREDAR NODOS CON CREATE ELEMENTS
-let lista = document.createElement("ul");
-lista.classList.add("lista");
-// //TODAVIA EXISTE SOLO EN EL DOM
-// console.log(lista);
-// lista.innerHTML = "<li>Torta galesa</li>";
-// lista.innerHTML += "<li>Alfajor Chocolate</li>";
-// lista.innerHTML += "<li>Alfajor Frutilla</li>";
+// //TAMBIEN PODEMOS AGREDAR NODOS CON CREATE ELEMENTS
+// let lista = document.createElement("ul");
+// lista.classList.add("lista");
+// // //TODAVIA EXISTE SOLO EN EL DOM
+// // console.log(lista);
+// // lista.innerHTML = "<li>Torta galesa</li>";
+// // lista.innerHTML += "<li>Alfajor Chocolate</li>";
+// // lista.innerHTML += "<li>Alfajor Frutilla</li>";
+
+// // content.append(lista);
+
+// //TAMBIÉN PUEDO CREAR UN ARRAY E IR UTILIZANDO SUS POSICIONES EN LA LISTA CON CONCATENACIÓN
+
+// const delicias = ["torta galesa", "alfajor de dulce de leche", "alfajor de frutilla", "chocolate en rama"];
+// // lista.innerHTML += "<li class ='lista-item'>" + delicias[0] + "</li>";
+// // lista.innerHTML += "<li class ='lista-item'>" + delicias[1] + "</li>";
+// // lista.innerHTML += "<li class ='lista-item'>" + delicias[2] + "</li>";
+// // lista.innerHTML += "<li class ='lista-item'>" + delicias[3] + "</li>";
+
+// /*-------TEMPLATE STRINGS--------*/
+// //OTRA FORMA MÁS COMODA DE IMPLEMENTAR LA CONCATENACION DE ELEMENTOS DEL ARRAY ES CON LOS BACKTICS O COMILLAS INVERTIDAS. MUY USADO EN REACT.JS
+
+// // lista.innerHTML += `<li class="lista-item">${delicias[0]}</li>`
+// // lista.innerHTML += `<li class="lista-item">${delicias[1]}</li>`
+// // lista.innerHTML += `<li class="lista-item">${delicias[2]}</li>`
+// // lista.innerHTML += `<li class="lista-item">${delicias[3]}</li>`
+
+// //TODO LO ANTERIOR, LO PUEDO REDUCIR A UN FOR OF
+
+// for (delicia of delicias){lista.innerHTML += `<li class="lista-item">${delicia}</li>`;}
 
 // content.append(lista);
 
-//TAMBIÉN PUEDO CREAR UN ARRAY E IR UTILIZANDO SUS POSICIONES EN LA LISTA CON CONCATENACIÓN
+// //CREANDO ELEMENTOS DESDE OBJETOS DEL DOM
+// //CREAMOS UN ARRAY DE OBJETOS
+// const productos = [
+//   {
+//     id: 1,
+//     nombre: "Arroz",
+//     precio: 500
+//   },
+//   {
+//     id: 2,
+//     nombre: "Fideo",
+//     precio: 600
+//   },
+//   {
+//     id: 3,
+//     nombre: "Leche",
+//     precio: 300
+//   },
+//   {
+//     id: 4,
+//     nombre: "Azucar",
+//     precio: 250
+//   }
+// ]
 
-const delicias = ["torta galesa", "alfajor de dulce de leche", "alfajor de frutilla", "chocolate en rama"];
-// lista.innerHTML += "<li class ='lista-item'>" + delicias[0] + "</li>";
-// lista.innerHTML += "<li class ='lista-item'>" + delicias[1] + "</li>";
-// lista.innerHTML += "<li class ='lista-item'>" + delicias[2] + "</li>";
-// lista.innerHTML += "<li class ='lista-item'>" + delicias[3] + "</li>";
+// for (const producto of productos){
+//   //definimos que vamos a crear un elemento html de tipo div y lo vamos a alojar en la variable contenedor
+//   let contenedor = document.createElement("div");
+//   //definimos el innerhtml del elemnto con una plantilla de texto o literal
+//   contenedor.innerHTML = `
+//     <p>ID: ${producto.id}</p>
+//     <h3>Producto: ${producto.nombre}</h3>
+//     <h4>Precio: $${producto.precio}</h4>
+//   `;
+//   document.body.append(contenedor);
+// }
 
-/*-------TEMPLATE STRINGS--------*/
-//OTRA FORMA MÁS COMODA DE IMPLEMENTAR LA CONCATENACION DE ELEMENTOS DEL ARRAY ES CON LOS BACKTICS O COMILLAS INVERTIDAS. MUY USADO EN REACT.JS
+/*-----------------EVENTOS--------------*/
 
-// lista.innerHTML += `<li class="lista-item">${delicias[0]}</li>`
-// lista.innerHTML += `<li class="lista-item">${delicias[1]}</li>`
-// lista.innerHTML += `<li class="lista-item">${delicias[2]}</li>`
-// lista.innerHTML += `<li class="lista-item">${delicias[3]}</li>`
 
-//TODO LO ANTERIOR, LO PUEDO REDUCIR A UN FOR OF
+//EVENTOS DEL MOUSSE
 
-for (delicia of delicias){lista.innerHTML += `<li class="lista-item">${delicia}</li>`;}
+//OPCION01 + RECOMENDADA
+//Mostrar mensaje en un alerta
+//método addEventListener
 
-content.append(lista);
+//capturamos el elemento html
+//con función declarada
+// const boton = document.getElementById("btnPrincipal");
+// // console.log(boton);
+// //asociamos un evento al elemnto del dom (boton)
+// boton.addEventListener("click", respuestaClick);
 
-//CREANDO ELEMENTOS DESDE OBJETOS DEL DOM
-//CREAMOS UN ARRAY DE OBJETOS
-const productos = [
-  {
-    id: 1,
-    nombre: "Arroz",
-    precio: 500
-  },
-  {
-    id: 2,
-    nombre: "Fideo",
-    precio: 600
-  },
-  {
-    id: 3,
-    nombre: "Leche",
-    precio: 300
-  },
-  {
-    id: 4,
-    nombre: "Azucar",
-    precio: 250
+// function respuestaClick(){
+//   alert("Respuesta al evento click desde JS");
+// }
+
+// //OPCION02
+// //metodo onclick, que me permite asociar un sólo evento al nodo del dom
+// const boton2 = document.getElementById("btnPrincipal");
+// boton2.onclick = () => {
+//   console.log("Evento disparado con método onclick");
+// }
+
+// //OPCION04
+// //CON FUNCION ANONIMA
+// let consola = document.querySelector("#consola");
+// consola.addEventListener("click", () => {
+//   console.log("Evento ejecutado con una función anónima")
+// })
+
+//AGREGAR CLASE A UN ELEMENTO // SWICTH COLOR MODE
+const colorModeButton = document.querySelector(".dark-mode");
+const cuerpo = document.body;
+console.log(cuerpo);
+
+colorModeButton.addEventListener("click", cambiarModoColor);
+
+function cambiarModoColor(){
+  cuerpo.classList.toggle("dark-mode");
+
+  if (cuerpo.classList.contains("dark-mode")){
+    colorModeButton.innerText = "Cambiar a light mode";
+  } else {
+    colorModeButton.innerText = "Cambiar a dark mode";
   }
-]
-
-for (const producto of productos){
-  //definimos que vamos a crear un elemento html de tipo div y lo vamos a alojar en la variable contenedor
-  let contenedor = document.createElement("div");
-  //definimos el innerhtml del elemnto con una plantilla de texto o literal
-  contenedor.innerHTML = `
-    <p>ID: ${producto.id}</p>
-    <h3>Producto: ${producto.nombre}</h3>
-    <h4>Precio: $${producto.precio}</h4>
-  `;
-  document.body.append(contenedor);
 }
-
 
