@@ -925,19 +925,102 @@
 // })
 
 //AGREGAR CLASE A UN ELEMENTO // SWICTH COLOR MODE
-const colorModeButton = document.querySelector(".dark-mode");
-const cuerpo = document.body;
-console.log(cuerpo);
+// const colorModeButton = document.querySelector(".dark-mode");
+// const cuerpo = document.body;
+// console.log(cuerpo);
 
-colorModeButton.addEventListener("click", cambiarModoColor);
+// colorModeButton.addEventListener("click", cambiarModoColor);
 
-function cambiarModoColor(){
-  cuerpo.classList.toggle("dark-mode");
+// function cambiarModoColor(){
+//   cuerpo.classList.toggle("dark-mode");
 
-  if (cuerpo.classList.contains("dark-mode")){
-    colorModeButton.innerText = "Cambiar a light mode";
-  } else {
-    colorModeButton.innerText = "Cambiar a dark mode";
-  }
+//   if (cuerpo.classList.contains("dark-mode")){
+//     colorModeButton.innerText = "Cambiar a light mode";
+//   } else {
+//     colorModeButton.innerText = "Cambiar a dark mode";
+//   }
+// }
+
+//EVENTOS DEL TECLADO
+let input1 = document.querySelector("#nombre");
+let input2 = document.querySelector("#edad");
+
+//método "keyup" registra el evento de levantar la tecla
+// input1.onkeyup = () => {
+//   console.log("evento captura con keyup");
+// }
+
+// //método "keydown" es el evento de mantener la tecla presionada
+// input2.onkeydown = () => {
+//   console.log("evento que captura con keydown")
+// }
+
+//EVENTO CHANGE
+// input1.onchange = () => {
+//   alert("Hola " + input1.value + " bienvenido/a a mi sitio web");
+// }
+
+// input2.onchange = () => {
+//   alert(" y tu edad es: " + input2.value + " años.");
+// }
+
+// //EVENTO INPUT
+// //captura el value ingresado en el input
+// let input3 = document.querySelector("#input");
+// let resultado = document.querySelector("#result")
+
+// input3.oninput = () => {resultado.innerHTML = `<h3> ${input3.value} </h3>`;}
+
+//EVENTO SUBMIT
+// let miFormulario = document.querySelector("#formulario");
+// //definimos el evento submit
+// miFormulario.addEventListener("submit", validarFormulario);
+
+// function validarFormulario(evento){
+//   //cancelamos el evento por default
+//   evento.preventDefault();
+//   //obtenemos el elemento desde el cual se disparó el evento
+//   let formulario = evento.target;
+//   //obtengo el valor del primer hijo <input type="text"
+//   console.log(formulario.children[0].value);
+//   console.log(formulario.children[1].value);
+// }
+
+//con validacion
+
+// function validarFormulario(evento){
+//   //cancelamos el evento por default
+//   evento.preventDefault();
+//   let nombre = document.querySelector("#nombre").value;
+//   let correo = document.querySelector("#email").value;
+
+//   //Validamos que se hayan completado los campos del form
+//   if (nombre.trim() === "" || correo.trim() === ""){
+//     alert("Por favor, completá los campos del formulario")
+//   } else {
+//     alert("¡Formulario enviado correctamente!")
+//   }  
+// }
+
+//FUNCIONES CALLBACK
+function ejecutarDespuesDeTiempo(tiempo, callback){
+  setTimeout( function () {
+    console.log(`La función se ejecutó luego de ${tiempo} milisegundos`);
+    callback(); //llamada a la función callback despues del tiempo especificado
+  },tiempo);
 }
+
+function miCallBack(){
+  console.log("El callback se ha ejecutado")
+}
+
+ejecutarDespuesDeTiempo(2000, miCallBack);
+
+
+
+
+
+
+
+
 
