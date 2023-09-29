@@ -942,8 +942,8 @@
 // }
 
 //EVENTOS DEL TECLADO
-let input1 = document.querySelector("#nombre");
-let input2 = document.querySelector("#edad");
+// let input1 = document.querySelector("#nombre");
+// let input2 = document.querySelector("#edad");
 
 //método "keyup" registra el evento de levantar la tecla
 // input1.onkeyup = () => {
@@ -1003,23 +1003,328 @@ let input2 = document.querySelector("#edad");
 // }
 
 //FUNCIONES CALLBACK
-function ejecutarDespuesDeTiempo(tiempo, callback){
-  setTimeout( function () {
-    console.log(`La función se ejecutó luego de ${tiempo} milisegundos`);
-    callback(); //llamada a la función callback despues del tiempo especificado
-  },tiempo);
+
+//JS Síncrono
+// let numeroFinal = 0;
+
+// for (let i = 0; i < 200000000; i++){
+//   numeroFinal += 5;
+// }
+
+// console.log(numeroFinal);
+// console.log("Ultima tarea");
+
+// //argumentos y funciones
+
+// //parametros
+// function sumar(num1,num2){
+//   resultado = num1 + num2
+//   return resultado
+// }
+
+// //argumentos
+// sumar(7,10);
+
+//La función Callback, es una función que se le envía a otra función como argumento
+
+// function modificar(array,callback){
+//   array.push("Maradona");
+//   setTimeout(function(){
+//     callback(array)
+//   }, 3000)
+// }
+
+// const jugadores = ["Messi", "Ronaldo", "Neymar"];
+
+// modificar(jugadores, function(array){
+//   console.log(`Modifiqué el array y ahora tiene ${array.length} elementos`);
+// })
+
+// //esto también es un callback
+
+// jugadores.forEach(
+//   jugador => {
+//     console.log(jugador);
+//   }
+// )
+
+//PARAMETROS
+// function operacionAsincronica(parametro, callback){
+//   //realiza una operación asincrónica
+//   setTimeout(function(){
+//     console.log(`Operación completada con el parámetro: ${parametro}`);
+//     callback();
+//   }, 2000)
+// }
+
+// function miCallback(){
+//   console.log("La operación asíncrona terminó");
+// }
+
+// //llamamos a la función operacionAsincronica y pasamos el primer argumento y la función callback
+// //ARGUMENTOS
+// operacionAsincronica("Pepito", miCallback);
+
+// function ejecutarDespuesDeTiempo(tiempo, callback){
+//   setTimeout( function () {
+//     console.log(`La función se ejecutó luego de ${tiempo} milisegundos`);
+//     callback(); //llamada a la función callback despues del tiempo especificado
+//   },tiempo);
+// }
+
+// function miCallBack(){
+//   console.log("El callback se ha ejecutado")
+// }
+
+// ejecutarDespuesDeTiempo(2000, miCallBack);
+
+// let botonAlerta = document.querySelector("#btnPrincipal");
+// botonAlerta.addEventListener("click", function(){
+//   console.log("Se hizo click en el botón");
+// });
+
+// function miCallBack(){
+//   console.log("El botón fué clickeado");
+// }
+
+// document.querySelector("#btnPrincipal").addEventListener("click", miCallBack);
+
+// setTimeout(() => {
+//   console.log("Código asíncrono.");
+// }, 2000);
+
+// console.log("Código síncrono.");
+
+/*--------------PROMESAS JS----------------*/
+//Las promesas son objetos que representan el resultado, eventual, de una operación asíncrona
+//El objeto PROMISE puede tener 3 estados:
+// a) PENDING (pendiente) --> la promesa todavía no se cumplió
+// b) RESOLVED (resuelta) --> la promesa se resolvió
+// c) REJECTED (Rechazada) -- > la promesa fue rechazada
+
+//construcción de una promesa
+
+// let tePortasteBien = true;
+
+// const siMePortoBien = new Promise((resolve,reject) => {
+//   if(tePortasteBien){
+//     const telefono = {
+//       modelo: "iPhone12",
+//       capacidad: "128GB",
+//       color: "rojo"
+//     };
+//     resolve(telefono)
+//   } else {
+//     reject("Te portaste mal")
+//   }
+// })
+
+// // Consumir promesas
+// //antes de consumir la promesa hay que definir dos funciones callback
+
+// const promesaCumplica = (resolvedValue) => {
+//   console.log(`Te regalo tu nuevo teléfono ${resolvedValue.modelo}`)
+// }
+
+// const prometaRota = (rejectedValue) => {
+//   console.log(`No te puedo dar tu regalo porque ${rejectedValue}`);
+// }
+
+// siMePortoBien.then(promesaCumplica, prometaRota);
+
+// const pideRegalo = () => {
+//   siMePortoBien.then(promesaCumplica).catch(prometaRota);
+// }
+
+// pideRegalo();
+
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+/*4️⃣ EJERCICIO 04 4️⃣*/
+
+// ⛔️ Recuerda que debes utilizar el objeto global "Math".
+
+function elevarAlCuadrado(num) {
+  // Retorna el valor de "num" elevado al cuadrado.
+  // Tu código:
+  return num * num;
 }
 
-function miCallBack(){
-  console.log("El callback se ha ejecutado")
+// Ejemplo de uso:
+let numeroPrueba = 10;
+let resultado = elevarAlCuadrado(numeroPrueba);
+console.log(resultado); // Esto imprimirá 25, que es 5 al cuadrado
+
+function elevarAlCubo(num) {
+  // Retorna el valor de "num" elevado al cubo.
+  // Tu código:
+  return Math.pow(numero,3)
 }
 
-ejecutarDespuesDeTiempo(2000, miCallBack);
+let numero = 4;
+let resultado2 = elevarAlCubo(numero);
+console.log(resultado2);
 
 
+function elevar(num, exponent) {
+  // Retorna el valor de "num" elevado al exponente "exponent".
+  // Tu código:
+  return Math.pow(num, exponent);
+}
 
+let numeroElevado = 2;
+let exponente = 3; 
+let resultadoElevar = elevar(numeroElevado, exponente);
+console.log(resultadoElevar);
 
+function redondearNumero(num) {
+  // Redondea "num" al entero más próximo y retórnalo.
+  // Tu código:
+  return Math.round(num);
+}
 
+let numeroRedondeado = -20.5;
+let resultadoNumeroRedondeado = redondearNumero(numeroRedondeado);
+console.log(resultadoNumeroRedondeado);
+
+function redondearHaciaArriba(num) {
+  // Redondea "num" hacia arriba y retórnalo.
+  // Tu código:
+  return Math.ceil(num);
+}
+
+let redondeadoHaciaArriba = 30.3;
+let resultadoNumeroHaciaArriba =  redondearHaciaArriba(redondeadoHaciaArriba);
+console.log(resultadoNumeroHaciaArriba);
+
+function numeroRandom() {
+  // Genera un número al azar entre 0 y 1 y retórnalo.
+  // Tu código:
+  return Math.random()
+}
+
+// let elNumeroRandom = 0.5;
+let resultadoRandom = numeroRandom();
+console.log(resultadoRandom);
+
+/*5️⃣ EJERCICIO 05 5️⃣*/
+
+function esPositivo(num) {
+  // La función recibe un entero. Devuelve como resultado un string que indica si el número
+  // es positivo o negativo.
+  // Si el número es positivo ---> "Es positivo".
+  // Si el número es negativo ---> "Es negativo".
+  // Si el número es 0, devuelve false.
+  // Tu código:
+  if (num === 0){
+    return false;
+  } else if (num < 0){
+    return "En negativo";
+  } else {
+    return "Es positivo";
+  }
+}
+
+let numeroPrueba1 = -5;
+let resultado3 = esPositivo(numeroPrueba1)
+console.log(resultado3);
+
+function agregarSimboloExclamacion(str) {
+  // Agrega un símbolo de exclamación al final del string "str" y retórnalo
+  // Ejemplo: "hello world" ---> "hello world!"
+  // Tu código:
+  return str + "!";
+}
+
+let texto = "Hola, mundo";
+let simboloExclamacion = agregarSimboloExclamacion(texto);
+console.log(simboloExclamacion);
+
+function combinarNombres(nombre, apellido) {
+  // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
+  // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
+  // Tu código:
+  return nombre + " " + apellido;
+}
+
+let elNombre = "Martin";
+let elApellido = "Herman";
+let nombreApellido = combinarNombres(elNombre, elApellido);
+console.log(nombreApellido);
+
+function obtenerSaludo(nombre) {
+  // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
+  // Ejemplo: "Martin" ---> "Hola Martin!"
+  // Tu código:
+  return "Hola " + nombre + "!";
+}
+
+let unNombre = "Martín";
+let saludo = obtenerSaludo(unNombre);
+console.log(saludo);
+
+function obtenerAreaRectangulo(alto, ancho) {
+  // Retornar el área de un rectángulo teniendo su altura y ancho.
+  // Tu código:
+  return "El área del rectángulo es de: " + alto * ancho + " metros";
+}
+
+let elAlto = 30;
+let elAncho = 5;
+let resultadoRectangulo = obtenerAreaRectangulo (elAlto, elAncho);
+console.log(resultadoRectangulo)
+
+function retornarPerimetro(lado) {
+  // La función recibe como argumento la medida de un lado de un cuadrado.
+  // Debes retornar su perímetro.
+  // Tu código:
+  return lado * 4;
+}
+
+let medida = 20;
+let resultadoMedida = retornarPerimetro(medida);
+console.log(resultadoMedida);
+
+function areaDelTriangulo(base, altura) {
+  // Calcula el área de un triángulo y retorna el resultado.
+  // Tu código:
+  return (base * altura) / 2;
+}
+
+let laBase = 10;
+let laAltura = 20;
+let resultadoBasePorAltura = areaDelTriangulo(laBase, laAltura);
+console.log(resultadoBasePorAltura);
+
+function deEuroAdolar(euro) {
+  // Supongamos que 1 euro equivale a 1.20 dólares.
+  // Debes calcular el valor recibido como argumento pasándolo a dolares.
+  // Tu código:
+  return euro * 1.20;
+}
+
+let cantidadEuros = 10;
+let resultadoValor = deEuroAdolar(cantidadEuros);
+console.log(resultadoValor);
+
+function esVocal(letra) {
+  // Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
+  // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
+  // Si no es vocal, tambien debe retornar "Dato incorrecto".
+  // Tu código:
+  if (letra.length !== 1){
+    return "Dato Incorrecto";
+  }
+
+  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+    return "Es Vocal"
+  } else {
+    return "Dato Incorrecto";
+  }
+}
+
+let letra = "Juanma";
+let resultadoVocal = esVocal(letra);
+console.log(resultadoVocal);
 
 
 
