@@ -1143,189 +1143,617 @@
 
 // ⛔️ Recuerda que debes utilizar el objeto global "Math".
 
-function elevarAlCuadrado(num) {
-  // Retorna el valor de "num" elevado al cuadrado.
+// function elevarAlCuadrado(num) {
+//   // Retorna el valor de "num" elevado al cuadrado.
+//   // Tu código:
+//   return num * num;
+// }
+
+// // Ejemplo de uso:
+// let numeroPrueba = 10;
+// let resultado = elevarAlCuadrado(numeroPrueba);
+// console.log(resultado); // Esto imprimirá 25, que es 5 al cuadrado
+
+// function elevarAlCubo(num) {
+//   // Retorna el valor de "num" elevado al cubo.
+//   // Tu código:
+//   return Math.pow(numero,3)
+// }
+
+// let numero = 4;
+// let resultado2 = elevarAlCubo(numero);
+// console.log(resultado2);
+
+
+// function elevar(num, exponent) {
+//   // Retorna el valor de "num" elevado al exponente "exponent".
+//   // Tu código:
+//   return Math.pow(num, exponent);
+// }
+
+// let numeroElevado = 2;
+// let exponente = 3; 
+// let resultadoElevar = elevar(numeroElevado, exponente);
+// console.log(resultadoElevar);
+
+// function redondearNumero(num) {
+//   // Redondea "num" al entero más próximo y retórnalo.
+//   // Tu código:
+//   return Math.round(num);
+// }
+
+// let numeroRedondeado = -20.5;
+// let resultadoNumeroRedondeado = redondearNumero(numeroRedondeado);
+// console.log(resultadoNumeroRedondeado);
+
+// function redondearHaciaArriba(num) {
+//   // Redondea "num" hacia arriba y retórnalo.
+//   // Tu código:
+//   return Math.ceil(num);
+// }
+
+// let redondeadoHaciaArriba = 30.3;
+// let resultadoNumeroHaciaArriba =  redondearHaciaArriba(redondeadoHaciaArriba);
+// console.log(resultadoNumeroHaciaArriba);
+
+// function numeroRandom() {
+//   // Genera un número al azar entre 0 y 1 y retórnalo.
+//   // Tu código:
+//   return Math.random()
+// }
+
+// // let elNumeroRandom = 0.5;
+// let resultadoRandom = numeroRandom();
+// console.log(resultadoRandom);
+
+// /*5️⃣ EJERCICIO 05 5️⃣*/
+
+// function esPositivo(num) {
+//   // La función recibe un entero. Devuelve como resultado un string que indica si el número
+//   // es positivo o negativo.
+//   // Si el número es positivo ---> "Es positivo".
+//   // Si el número es negativo ---> "Es negativo".
+//   // Si el número es 0, devuelve false.
+//   // Tu código:
+//   if (num === 0){
+//     return false;
+//   } else if (num < 0){
+//     return "En negativo";
+//   } else {
+//     return "Es positivo";
+//   }
+// }
+
+// let numeroPrueba1 = -5;
+// let resultado3 = esPositivo(numeroPrueba1)
+// console.log(resultado3);
+
+// function agregarSimboloExclamacion(str) {
+//   // Agrega un símbolo de exclamación al final del string "str" y retórnalo
+//   // Ejemplo: "hello world" ---> "hello world!"
+//   // Tu código:
+//   return str + "!";
+// }
+
+// let texto = "Hola, mundo";
+// let simboloExclamacion = agregarSimboloExclamacion(texto);
+// console.log(simboloExclamacion);
+
+// function combinarNombres(nombre, apellido) {
+//   // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
+//   // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
+//   // Tu código:
+//   return nombre + " " + apellido;
+// }
+
+// let elNombre = "Martin";
+// let elApellido = "Herman";
+// let nombreApellido = combinarNombres(elNombre, elApellido);
+// console.log(nombreApellido);
+
+// function obtenerSaludo(nombre) {
+//   // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
+//   // Ejemplo: "Martin" ---> "Hola Martin!"
+//   // Tu código:
+//   return "Hola " + nombre + "!";
+// }
+
+// let unNombre = "Martín";
+// let saludo = obtenerSaludo(unNombre);
+// console.log(saludo);
+
+// function obtenerAreaRectangulo(alto, ancho) {
+//   // Retornar el área de un rectángulo teniendo su altura y ancho.
+//   // Tu código:
+//   return "El área del rectángulo es de: " + alto * ancho + " metros";
+// }
+
+// let elAlto = 30;
+// let elAncho = 5;
+// let resultadoRectangulo = obtenerAreaRectangulo (elAlto, elAncho);
+// console.log(resultadoRectangulo)
+
+// function retornarPerimetro(lado) {
+//   // La función recibe como argumento la medida de un lado de un cuadrado.
+//   // Debes retornar su perímetro.
+//   // Tu código:
+//   return lado * 4;
+// }
+
+// let medida = 20;
+// let resultadoMedida = retornarPerimetro(medida);
+// console.log(resultadoMedida);
+
+// function areaDelTriangulo(base, altura) {
+//   // Calcula el área de un triángulo y retorna el resultado.
+//   // Tu código:
+//   return (base * altura) / 2;
+// }
+
+// let laBase = 10;
+// let laAltura = 20;
+// let resultadoBasePorAltura = areaDelTriangulo(laBase, laAltura);
+// console.log(resultadoBasePorAltura);
+
+// function deEuroAdolar(euro) {
+//   // Supongamos que 1 euro equivale a 1.20 dólares.
+//   // Debes calcular el valor recibido como argumento pasándolo a dolares.
+//   // Tu código:
+//   return euro * 1.20;
+// }
+
+// let cantidadEuros = 10;
+// let resultadoValor = deEuroAdolar(cantidadEuros);
+// console.log(resultadoValor);
+
+// function esVocal(letra) {
+//   // Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
+//   // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
+//   // Si no es vocal, tambien debe retornar "Dato incorrecto".
+//   // Tu código:
+//   if (letra.length !== 1){
+//     return "Dato Incorrecto";
+//   }
+
+//   if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+//     return "Es Vocal"
+//   } else {
+//     return "Dato Incorrecto";
+//   }
+// }
+
+// let letra = "Juanma";
+// let resultadoVocal = esVocal(letra);
+// console.log(resultadoVocal);
+
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+
+function obtenerMayor(x, y) {
+  // "x" e "y" son números enteros.
+  // Retornar el número más grande.
+  // Si son iguales, retornar cualquiera de los dos.
   // Tu código:
-  return num * num;
+  
+}
+
+function mayoriaDeEdad(edad) {
+  // Determinar si la persona puede ingresar al evento según su edad.
+  // Si tiene 18 años ó más debe retornar el string: "Allowed".
+  // Caso contrario: "Not allowed".
+  // Tu código:
+}
+
+function conection(status) {
+  // El argumento "status" representa el estado de conexión de un usuario.
+  // Si el estado es igual a 1, el usuario está "Online".
+  // Si el estado es igual a 2, el usuario está "Away".
+  // De lo contrario, presumimos que el usuario está "Offline".
+  // Retornar el estado de conexión del usuario.
+  // Tu código:
+}
+
+function saludo(idioma) {
+  // Retornar un saludo en tres diferentes lenguajes:
+  // Si "idioma" es "aleman", devuelve "Guten Tag!".
+  // Si "idioma" es "mandarin", devuelve "Ni Hao!".
+  // Si "idioma" es "ingles", devuelve "Hello!".
+  // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
+  // Tu código:
+}
+
+function colors(color) {
+  // La función recibe un color. Retornar el string correspondiente:
+  // En caso que el color recibido sea "blue"   --> "This is blue".
+  // En caso que el color recibido sea "red"    --> "This is red".
+  // En caso que el color recibido sea "green"  --> "This is green".
+  // En caso que el color recibido sea "orange" --> "This is orange".
+  // Si no es ninguno de esos colores           --> "Color not found".
+  // IMPORTANTE: utilizar el statement SWITCH.
+  // Tu código:
+}
+
+function esDiezOCinco(num) {
+  // Retornar true si "num" es 10 o 5.
+  // De lo contrario, retornar false.
+  // Tu código:
+}
+
+function estaEnRango(num) {
+  // Retornar true si "num" es menor que 50 y mayor que 20.
+  // De lo contrario, retornar false.
+  // Tu código:
+}
+
+// function esEntero(num) {
+//   // Retornar true si "num" es un entero, ya sea positivo, negativo o cero.
+//   // Ejemplo: 0.8   ---> false
+//   // Ejemplo: 1     ---> true
+//   // Ejemplo: (-10) ---> true
+//   // De lo contrario, retorna false.
+//   // Tu código:
+//   return Number.isInteger(num);
+// }
+
+// console.log(esEntero(0));
+// console.log(esEntero(5.5));
+
+// function fizzBuzz(num) {
+//   // Si "num" es divisible entre 3, retorna "fizz".
+//   // Si "num" es divisible entre 5, retorna "buzz".
+//   // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
+//   // De lo contrario, retorna false.
+//   // Tu código:
+//   if (num % 3 === 0 && num % 5 === 0){
+//     return "fizzbuzz";
+//   } else if (num % 3 === 0){
+
+//   }
+// }
+
+// function operadoresLogicos(num1, num2, num3) {
+  // La función recibe tres números distintos.
+  // Si num1 es mayor a num2 y a num3, y además es positivo, retornar ---> "Numero 1 es mayor y positivo".
+  // Si alguno de los tres números es negativo, retornar ---> "Hay negativos".
+  // Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
+  // Si todos los argumentos son cero, retornar ---> "Error".
+  // Si no se cumple ninguna de las condiciones anteriores, retornar false.
+  // Tu código:
+//   if (num1 > 0 && num1 > num2 && num1 > num3){
+//     return "Numero 1 es mayor y positivo";
+//  } else if (num1 < 0 || num2 < 0 || num3 < 0){
+//     return "Hay negativos";
+//  } 
+ 
+//  if (num3 > num1 && num3 > num2){
+//     num3++;
+//     return num3;
+//  } else if (num1 === 0 && num2 === 0 && num3 === 0){
+//     return "error";
+//  } else {
+//     return false;
+//  }
+// }
+
+// //No funciona cuando numero1 es mayor pero hay números negativos
+
+// let numero1 = 20;
+// let numero2 = -10;
+// let numero3 = 5;
+// let numerosLogicos = operadoresLogicos(numero1,numero2,numero3);
+// console.log(numerosLogicos)
+
+
+// function esPrimo(num) {
+//   // Retornar true si "num" es primo.
+//   // De lo contrario retorna false.
+//   // [Pista 1]: un número primo sólo es divisible por sí mismo y por 1.
+//   // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
+//   // [Nota]: los números negativos, 0 y 1 NO son números primos.
+//   // Tu código:
+//   if (num <= 1){
+//     return false;
+//   }
+
+//   for (let i = 2; i <= Math.sqrt(num); i++){
+//     if (num % i == 0){
+//       return false;
+//     }
+//   }
+
+// return true;
+// }
+
+// console.log(esPrimo(7));
+// console.log(esPrimo(12));
+// console.log(esPrimo(5));
+
+function esVerdadero(valor) {
+  // Si "valor" es verdadero retornar "Soy verdadero".
+  // Caso contrario, retornar "Soy falso".
+  // Tu código:
+}
+
+// function tieneTresDigitos(num) {
+//   // Si el número recibido tiene tres dígitos retornar true.
+//   // Caso contrario, retornar false.
+//   // Tu código:
+//   return num >=100 && num <=999;
+// }
+
+// console.log(tieneTresDigitos(1000));
+
+function doWhile(num) {
+  // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
+  // Retornar el valor final.
+  // Utilizar el bucle Do-While.
+  // Tu código:
+  // let contadorVueltas = 0;
+
+  // do {
+  //   //acumula a lo que hay en el parametro num, le acumula 5
+  //   num += 5;
+  //   contadorVueltas++;
+  // } while (contadorVueltas < 8);
+
+  // return num;
+
+  let contador = 0; // contador vueltas
+
+   do{
+   num += 5; //acumula a lo que hay en el parametro num, hasta 5
+   contador++; //este es el que hace la acumulacion
+
+} while (contador < 8)//condicion mientras que contador sea menor a 8
+
+return num;
+
+ }
+
+let resultadoFinal= doWhile(10);
+console.log(resultadoFinal);
+
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+
+function devolverPrimerElemento(array) {
+  // Retornar el primer elemento del arreglo recibido por parámetro.
+  // Tu código:
+  // Verificamos si el arreglo tiene elementos
+ if (array.length > 0) {
+  return array[0]; // Retorna el primer elemento
+} else {
+  return undefined; // Retorna undefined si el arreglo está vacío
+}
 }
 
 // Ejemplo de uso:
-let numeroPrueba = 10;
-let resultado = elevarAlCuadrado(numeroPrueba);
-console.log(resultado); // Esto imprimirá 25, que es 5 al cuadrado
+var miArray = [10, 20, 30, 40, 50];
+var primerElemento = devolverPrimerElemento(miArray);
+console.log(primerElemento); // Salida: 10
 
-function elevarAlCubo(num) {
-  // Retorna el valor de "num" elevado al cubo.
+function devolverUltimoElemento(array) {
+  // Retornar el último elemento del arreglo recibido por parámetro.
   // Tu código:
-  return Math.pow(numero,3)
+  // Verificamos si el arreglo tiene elementos
+ if (array.length > 0) {
+  return array[array.length - 1]; // Retorna el último elemento
+} else {
+  return undefined; // Retorna undefined si el arreglo está vacío
+}
 }
 
-let numero = 4;
-let resultado2 = elevarAlCubo(numero);
-console.log(resultado2);
+// Ejemplo de uso:
+var miArray = [10, 20, 30, 40, 50];
+var ultimoElemento = devolverUltimoElemento(miArray);
+console.log(ultimoElemento); // Salida: 50
+
+function obtenerLargoDelArray(array) {
+   // Retornar la longitud del arreglo recibido por parámetro.
+   // Tu código:
+   return array.length;
+}
+let arrayLargo = [10, 20, 30, 47, 68];
+let obtengoLargo = obtenerLargoDelArray(arrayLargo);
+console.log(obtengoLargo);
 
 
-function elevar(num, exponent) {
-  // Retorna el valor de "num" elevado al exponente "exponent".
+
+function incrementarPorUno(array) {
+  // El arreglo recibido por parámetro contiene números.
+  // Retornar un arreglo con los elementos incrementados en +1.
   // Tu código:
-  return Math.pow(num, exponent);
+  let resultado = array.map(function (elemento){
+    return elemento + 1;
+  })
+
+  return resultado;
 }
 
-let numeroElevado = 2;
-let exponente = 3; 
-let resultadoElevar = elevar(numeroElevado, exponente);
-console.log(resultadoElevar);
+const unArray = [1,2,3,4,5];
+let resultadoMap = incrementarPorUno(unArray);
+//retornamos el array nuevo con los valores modificados
+console.log(resultadoMap);
 
-function redondearNumero(num) {
-  // Redondea "num" al entero más próximo y retórnalo.
+
+function agregarItemAlFinalDelArray(array, elemento) {
+  // Agrega el "elemento" al final del arreglo recibido.
+  // Retorna el arreglo.
   // Tu código:
-  return Math.round(num);
+  //Utilizamos el método push para agregar un elemento al final del array
+  array.push(elemento)
+
+  //retornamos el arreglo modificado
+  return array; 
 }
 
-let numeroRedondeado = -20.5;
-let resultadoNumeroRedondeado = redondearNumero(numeroRedondeado);
-console.log(resultadoNumeroRedondeado);
+const letras = ['a', 'b', 'c','d'];
+let nuevoElemento = 'e';
+//enviamos los argumentos a los parámetros
+let nuevasLetras = agregarItemAlFinalDelArray(letras, nuevoElemento);
+console.log(nuevasLetras);
 
-function redondearHaciaArriba(num) {
-  // Redondea "num" hacia arriba y retórnalo.
-  // Tu código:
-  return Math.ceil(num);
+function elementoAlComienzo(simpsons,personajeNuevo){
+  
+  //utilizamos el método unshift para agregar el personaje nuevo al comienzo del array
+  simpsons.unshift(personajeNuevo);
+
+  //retornamos el nuevo array con marge en la posición inicial
+  return simpsons
+
 }
 
-let redondeadoHaciaArriba = 30.3;
-let resultadoNumeroHaciaArriba =  redondearHaciaArriba(redondeadoHaciaArriba);
-console.log(resultadoNumeroHaciaArriba);
+let personajes = ["Homero", "Lisa", "Bart"];
+let nuevoPersonaje = "Marge";
 
-function numeroRandom() {
-  // Genera un número al azar entre 0 y 1 y retórnalo.
+let nuevosPersonajes = elementoAlComienzo(personajes, nuevoPersonaje);
+console.log(nuevosPersonajes);
+
+
+function dePalabrasAFrase(palabras) {
+  // El argumento "palabras" es un arreglo de strings.
+  // Retornar un string donde todas las palabras estén concatenadas
+  // con un espacio entre cada palabra.
+  // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
   // Tu código:
-  return Math.random()
+  let nuevaFrase = palabras.join(' ');
+  return nuevaFrase;
 }
 
-// let elNumeroRandom = 0.5;
-let resultadoRandom = numeroRandom();
-console.log(resultadoRandom);
+let palabras = ["Hola", "hoy", "es", "jueves"];
+let frase = dePalabrasAFrase(palabras);
+console.log(frase);
 
-/*5️⃣ EJERCICIO 05 5️⃣*/
 
-function esPositivo(num) {
-  // La función recibe un entero. Devuelve como resultado un string que indica si el número
-  // es positivo o negativo.
-  // Si el número es positivo ---> "Es positivo".
-  // Si el número es negativo ---> "Es negativo".
-  // Si el número es 0, devuelve false.
+//la función tiene como parámetros el array y el elemento a buscar
+function arrayContiene(array, elemento) {
+  // Verifica si el elemento existe dentro del arreglo recibido.
+  // Retornar true si está, o false si no está.
   // Tu código:
-  if (num === 0){
-    return false;
-  } else if (num < 0){
-    return "En negativo";
-  } else {
-    return "Es positivo";
-  }
+  return array.includes(elemento);
 }
 
-let numeroPrueba1 = -5;
-let resultado3 = esPositivo(numeroPrueba1)
-console.log(resultado3);
+let equipos = ["Boca", "River", "Racing"];
+let equipoBuscar = "Racing";
+let equipoEncontrado = arrayContiene(equipos,equipoBuscar);
+console.log(equipoEncontrado);
 
-function agregarSimboloExclamacion(str) {
-  // Agrega un símbolo de exclamación al final del string "str" y retórnalo
-  // Ejemplo: "hello world" ---> "hello world!"
+function agregarNumeros(arrayOfNums) {
+  // El parámetro "arrayOfNums" debe ser un arreglo de números.
+  // Suma todos los elementos y retorna el resultado.
   // Tu código:
-  return str + "!";
+  let numerosSumados = arrayOfNums.reduce((acumulador,item) => acumulador += item, 0);
+
+  return numerosSumados;
 }
 
-let texto = "Hola, mundo";
-let simboloExclamacion = agregarSimboloExclamacion(texto);
-console.log(simboloExclamacion);
+let numeros = [20,30,60,200,1400,3000];
+let sumaNumeros = agregarNumeros(numeros);
+console.log(sumaNumeros);
 
-function combinarNombres(nombre, apellido) {
-  // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
-  // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
+function promedioResultadosTest(resultadosTest) {
+  // El parámetro "resultadosTest" es un arreglo de números.
+  // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
   // Tu código:
-  return nombre + " " + apellido;
+  let sumaNotas = resultadosTest.reduce((acumulador, nota) => acumulador += nota, 0);
+
+  let promedioFinal = sumaNotas / resultadosTest.length;
+
+  return promedioFinal;
 }
 
-let elNombre = "Martin";
-let elApellido = "Herman";
-let nombreApellido = combinarNombres(elNombre, elApellido);
-console.log(nombreApellido);
+let notas = [6,8,9,10];
+let promedio = promedioResultadosTest(notas);
+console.log(promedio);
 
-function obtenerSaludo(nombre) {
-  // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
-  // Ejemplo: "Martin" ---> "Hola Martin!"
+function numeroMasGrande(arrayOfNums) {
+  // El parámetro "arrayOfNums" es un arreglo de números.
+  // Retornar el número más grande.
   // Tu código:
-  return "Hola " + nombre + "!";
+  return Math.max(...arrayOfNums);
+
 }
 
-let unNombre = "Martín";
-let saludo = obtenerSaludo(unNombre);
-console.log(saludo);
+let numerosNuevos = [20,8,12,10];
+let elMasGrande = numeroMasGrande(numerosNuevos);
+console.log(elMasGrande);
 
-function obtenerAreaRectangulo(alto, ancho) {
-  // Retornar el área de un rectángulo teniendo su altura y ancho.
+
+function multiplicarArgumentos() {
+  // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
+  // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
+  // [PISTA]: "arguments" es un arreglo.
   // Tu código:
-  return "El área del rectángulo es de: " + alto * ancho + " metros";
 }
 
-let elAlto = 30;
-let elAncho = 5;
-let resultadoRectangulo = obtenerAreaRectangulo (elAlto, elAncho);
-console.log(resultadoRectangulo)
-
-function retornarPerimetro(lado) {
-  // La función recibe como argumento la medida de un lado de un cuadrado.
-  // Debes retornar su perímetro.
+function cuentoElementos(array) {
+  // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
   // Tu código:
-  return lado * 4;
+  let edadesMayoresA18 = array.filter(edad => edad >= 18);
+
+  return edadesMayoresA18;
 }
 
-let medida = 20;
-let resultadoMedida = retornarPerimetro(medida);
-console.log(resultadoMedida);
+let edades = [18,25,5,10,40];
+let edadesElegidas = cuentoElementos(edades);
+console.log(edadesElegidas);
 
-function areaDelTriangulo(base, altura) {
-  // Calcula el área de un triángulo y retorna el resultado.
+function diaDeLaSemana(numeroDeDia) {
+  // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
+  // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
+  // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
   // Tu código:
-  return (base * altura) / 2;
 }
 
-let laBase = 10;
-let laAltura = 20;
-let resultadoBasePorAltura = areaDelTriangulo(laBase, laAltura);
-console.log(resultadoBasePorAltura);
-
-function deEuroAdolar(euro) {
-  // Supongamos que 1 euro equivale a 1.20 dólares.
-  // Debes calcular el valor recibido como argumento pasándolo a dolares.
+function empiezaConNueve(num) {
+  // Esta función recibe por parámetro un número.
+  // Debe retornar true si el entero inicia con 9 y false en otro caso.
   // Tu código:
-  return euro * 1.20;
 }
 
-let cantidadEuros = 10;
-let resultadoValor = deEuroAdolar(cantidadEuros);
-console.log(resultadoValor);
-
-function esVocal(letra) {
-  // Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
-  // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
-  // Si no es vocal, tambien debe retornar "Dato incorrecto".
+function todosIguales(array) {
+  // Si todos los elementos del arreglo son iguales, retornar true.
+  // Caso contrario retornar false.
   // Tu código:
-  if (letra.length !== 1){
-    return "Dato Incorrecto";
-  }
-
-  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
-    return "Es Vocal"
-  } else {
-    return "Dato Incorrecto";
-  }
 }
 
-let letra = "Juanma";
-let resultadoVocal = esVocal(letra);
-console.log(resultadoVocal);
+function mesesDelAño(array) {
+  // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
+  // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
+  // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
+  // Tu código:
+}
 
+function tablaDelSeis() {
+  // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
+  // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
+  // Tu código:
+}
 
+function mayorACien(array) {
+  // La función recibe un arreglo con enteros entre 0 y 200.
+  // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
+  // Tu código:
+}
 
+/* ----------------------------------------------------------------------------------
+💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
+-------------------------------------------------------------------------------------*/
 
+function breakStatement(num) {
+  // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
+  // Guardar cada nuevo valor en un arreglo y retornarlo.
+  // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
+  // la ejecución y retornar el string: "Se interrumpió la ejecución".
+  // [PISTA]: utiliza el statement 'break'.
+  // Tu código:
+}
+
+function continueStatement(num) {
+  // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
+  // Guardar cada nuevo valor en un array y retornarlo.
+  // Cuando el número de iteraciones alcance el valor 5, no se suma ese caso y
+  // se continua con la siguiente iteración.
+  // [PISTA]: utiliza el statement 'continue'.
+  // Tu código:
+}
