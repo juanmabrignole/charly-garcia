@@ -1467,216 +1467,216 @@ function estaEnRango(num) {
 // console.log(esPrimo(12));
 // console.log(esPrimo(5));
 
-function esVerdadero(valor) {
-  // Si "valor" es verdadero retornar "Soy verdadero".
-  // Caso contrario, retornar "Soy falso".
-  // Tu código:
-}
-
-// function tieneTresDigitos(num) {
-//   // Si el número recibido tiene tres dígitos retornar true.
-//   // Caso contrario, retornar false.
+// function esVerdadero(valor) {
+//   // Si "valor" es verdadero retornar "Soy verdadero".
+//   // Caso contrario, retornar "Soy falso".
 //   // Tu código:
-//   return num >=100 && num <=999;
 // }
 
-// console.log(tieneTresDigitos(1000));
+// // function tieneTresDigitos(num) {
+// //   // Si el número recibido tiene tres dígitos retornar true.
+// //   // Caso contrario, retornar false.
+// //   // Tu código:
+// //   return num >=100 && num <=999;
+// // }
 
-function doWhile(num) {
-  // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
-  // Retornar el valor final.
-  // Utilizar el bucle Do-While.
-  // Tu código:
-  // let contadorVueltas = 0;
+// // console.log(tieneTresDigitos(1000));
 
-  // do {
-  //   //acumula a lo que hay en el parametro num, le acumula 5
-  //   num += 5;
-  //   contadorVueltas++;
-  // } while (contadorVueltas < 8);
+// function doWhile(num) {
+//   // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
+//   // Retornar el valor final.
+//   // Utilizar el bucle Do-While.
+//   // Tu código:
+//   // let contadorVueltas = 0;
 
-  // return num;
+//   // do {
+//   //   //acumula a lo que hay en el parametro num, le acumula 5
+//   //   num += 5;
+//   //   contadorVueltas++;
+//   // } while (contadorVueltas < 8);
 
-  let contador = 0; // contador vueltas
+//   // return num;
 
-   do{
-   num += 5; //acumula a lo que hay en el parametro num, hasta 5
-   contador++; //este es el que hace la acumulacion
+//   let contador = 0; // contador vueltas
 
-} while (contador < 8)//condicion mientras que contador sea menor a 8
+//    do{
+//    num += 5; //acumula a lo que hay en el parametro num, hasta 5
+//    contador++; //este es el que hace la acumulacion
 
-return num;
+// } while (contador < 8)//condicion mientras que contador sea menor a 8
 
- }
+// return num;
 
-let resultadoFinal= doWhile(10);
-console.log(resultadoFinal);
+//  }
 
-/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+// let resultadoFinal= doWhile(10);
+// console.log(resultadoFinal);
 
-/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+// /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
-function devolverPrimerElemento(array) {
-  // Retornar el primer elemento del arreglo recibido por parámetro.
-  // Tu código:
-  // Verificamos si el arreglo tiene elementos
- if (array.length > 0) {
-  return array[0]; // Retorna el primer elemento
-} else {
-  return undefined; // Retorna undefined si el arreglo está vacío
-}
-}
+// /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
-// Ejemplo de uso:
-var miArray = [10, 20, 30, 40, 50];
-var primerElemento = devolverPrimerElemento(miArray);
-console.log(primerElemento); // Salida: 10
+// function devolverPrimerElemento(array) {
+//   // Retornar el primer elemento del arreglo recibido por parámetro.
+//   // Tu código:
+//   // Verificamos si el arreglo tiene elementos
+//  if (array.length > 0) {
+//   return array[0]; // Retorna el primer elemento
+// } else {
+//   return undefined; // Retorna undefined si el arreglo está vacío
+// }
+// }
 
-function devolverUltimoElemento(array) {
-  // Retornar el último elemento del arreglo recibido por parámetro.
-  // Tu código:
-  // Verificamos si el arreglo tiene elementos
- if (array.length > 0) {
-  return array[array.length - 1]; // Retorna el último elemento
-} else {
-  return undefined; // Retorna undefined si el arreglo está vacío
-}
-}
+// // Ejemplo de uso:
+// var miArray = [10, 20, 30, 40, 50];
+// var primerElemento = devolverPrimerElemento(miArray);
+// console.log(primerElemento); // Salida: 10
 
-// Ejemplo de uso:
-var miArray = [10, 20, 30, 40, 50];
-var ultimoElemento = devolverUltimoElemento(miArray);
-console.log(ultimoElemento); // Salida: 50
+// function devolverUltimoElemento(array) {
+//   // Retornar el último elemento del arreglo recibido por parámetro.
+//   // Tu código:
+//   // Verificamos si el arreglo tiene elementos
+//  if (array.length > 0) {
+//   return array[array.length - 1]; // Retorna el último elemento
+// } else {
+//   return undefined; // Retorna undefined si el arreglo está vacío
+// }
+// }
 
-function obtenerLargoDelArray(array) {
-   // Retornar la longitud del arreglo recibido por parámetro.
-   // Tu código:
-   return array.length;
-}
-let arrayLargo = [10, 20, 30, 47, 68];
-let obtengoLargo = obtenerLargoDelArray(arrayLargo);
-console.log(obtengoLargo);
+// // Ejemplo de uso:
+// var miArray = [10, 20, 30, 40, 50];
+// var ultimoElemento = devolverUltimoElemento(miArray);
+// console.log(ultimoElemento); // Salida: 50
 
-
-
-function incrementarPorUno(array) {
-  // El arreglo recibido por parámetro contiene números.
-  // Retornar un arreglo con los elementos incrementados en +1.
-  // Tu código:
-  let resultado = array.map(function (elemento){
-    return elemento + 1;
-  })
-
-  return resultado;
-}
-
-const unArray = [1,2,3,4,5];
-let resultadoMap = incrementarPorUno(unArray);
-//retornamos el array nuevo con los valores modificados
-console.log(resultadoMap);
+// function obtenerLargoDelArray(array) {
+//    // Retornar la longitud del arreglo recibido por parámetro.
+//    // Tu código:
+//    return array.length;
+// }
+// let arrayLargo = [10, 20, 30, 47, 68];
+// let obtengoLargo = obtenerLargoDelArray(arrayLargo);
+// console.log(obtengoLargo);
 
 
-function agregarItemAlFinalDelArray(array, elemento) {
-  // Agrega el "elemento" al final del arreglo recibido.
-  // Retorna el arreglo.
-  // Tu código:
-  //Utilizamos el método push para agregar un elemento al final del array
-  array.push(elemento)
 
-  //retornamos el arreglo modificado
-  return array; 
-}
+// function incrementarPorUno(array) {
+//   // El arreglo recibido por parámetro contiene números.
+//   // Retornar un arreglo con los elementos incrementados en +1.
+//   // Tu código:
+//   let resultado = array.map(function (elemento){
+//     return elemento + 1;
+//   })
 
-const letras = ['a', 'b', 'c','d'];
-let nuevoElemento = 'e';
-//enviamos los argumentos a los parámetros
-let nuevasLetras = agregarItemAlFinalDelArray(letras, nuevoElemento);
-console.log(nuevasLetras);
+//   return resultado;
+// }
 
-function elementoAlComienzo(simpsons,personajeNuevo){
+// const unArray = [1,2,3,4,5];
+// let resultadoMap = incrementarPorUno(unArray);
+// //retornamos el array nuevo con los valores modificados
+// console.log(resultadoMap);
+
+
+// function agregarItemAlFinalDelArray(array, elemento) {
+//   // Agrega el "elemento" al final del arreglo recibido.
+//   // Retorna el arreglo.
+//   // Tu código:
+//   //Utilizamos el método push para agregar un elemento al final del array
+//   array.push(elemento)
+
+//   //retornamos el arreglo modificado
+//   return array; 
+// }
+
+// const letras = ['a', 'b', 'c','d'];
+// let nuevoElemento = 'e';
+// //enviamos los argumentos a los parámetros
+// let nuevasLetras = agregarItemAlFinalDelArray(letras, nuevoElemento);
+// console.log(nuevasLetras);
+
+// function elementoAlComienzo(simpsons,personajeNuevo){
   
-  //utilizamos el método unshift para agregar el personaje nuevo al comienzo del array
-  simpsons.unshift(personajeNuevo);
+//   //utilizamos el método unshift para agregar el personaje nuevo al comienzo del array
+//   simpsons.unshift(personajeNuevo);
 
-  //retornamos el nuevo array con marge en la posición inicial
-  return simpsons
+//   //retornamos el nuevo array con marge en la posición inicial
+//   return simpsons
 
-}
+// }
 
-let personajes = ["Homero", "Lisa", "Bart"];
-let nuevoPersonaje = "Marge";
+// let personajes = ["Homero", "Lisa", "Bart"];
+// let nuevoPersonaje = "Marge";
 
-let nuevosPersonajes = elementoAlComienzo(personajes, nuevoPersonaje);
-console.log(nuevosPersonajes);
-
-
-function dePalabrasAFrase(palabras) {
-  // El argumento "palabras" es un arreglo de strings.
-  // Retornar un string donde todas las palabras estén concatenadas
-  // con un espacio entre cada palabra.
-  // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
-  // Tu código:
-  let nuevaFrase = palabras.join(' ');
-  return nuevaFrase;
-}
-
-let palabras = ["Hola", "hoy", "es", "jueves"];
-let frase = dePalabrasAFrase(palabras);
-console.log(frase);
+// let nuevosPersonajes = elementoAlComienzo(personajes, nuevoPersonaje);
+// console.log(nuevosPersonajes);
 
 
-//la función tiene como parámetros el array y el elemento a buscar
-function arrayContiene(array, elemento) {
-  // Verifica si el elemento existe dentro del arreglo recibido.
-  // Retornar true si está, o false si no está.
-  // Tu código:
-  return array.includes(elemento);
-}
+// function dePalabrasAFrase(palabras) {
+//   // El argumento "palabras" es un arreglo de strings.
+//   // Retornar un string donde todas las palabras estén concatenadas
+//   // con un espacio entre cada palabra.
+//   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
+//   // Tu código:
+//   let nuevaFrase = palabras.join(' ');
+//   return nuevaFrase;
+// }
 
-let equipos = ["Boca", "River", "Racing"];
-let equipoBuscar = "Racing";
-let equipoEncontrado = arrayContiene(equipos,equipoBuscar);
-console.log(equipoEncontrado);
+// let palabras = ["Hola", "hoy", "es", "jueves"];
+// let frase = dePalabrasAFrase(palabras);
+// console.log(frase);
 
-function agregarNumeros(arrayOfNums) {
-  // El parámetro "arrayOfNums" debe ser un arreglo de números.
-  // Suma todos los elementos y retorna el resultado.
-  // Tu código:
-  let numerosSumados = arrayOfNums.reduce((acumulador,item) => acumulador += item, 0);
 
-  return numerosSumados;
-}
+// //la función tiene como parámetros el array y el elemento a buscar
+// function arrayContiene(array, elemento) {
+//   // Verifica si el elemento existe dentro del arreglo recibido.
+//   // Retornar true si está, o false si no está.
+//   // Tu código:
+//   return array.includes(elemento);
+// }
 
-let numeros = [20,30,60,200,1400,3000];
-let sumaNumeros = agregarNumeros(numeros);
-console.log(sumaNumeros);
+// let equipos = ["Boca", "River", "Racing"];
+// let equipoBuscar = "Racing";
+// let equipoEncontrado = arrayContiene(equipos,equipoBuscar);
+// console.log(equipoEncontrado);
 
-function promedioResultadosTest(resultadosTest) {
-  // El parámetro "resultadosTest" es un arreglo de números.
-  // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
-  // Tu código:
-  let sumaNotas = resultadosTest.reduce((acumulador, nota) => acumulador += nota, 0);
+// function agregarNumeros(arrayOfNums) {
+//   // El parámetro "arrayOfNums" debe ser un arreglo de números.
+//   // Suma todos los elementos y retorna el resultado.
+//   // Tu código:
+//   let numerosSumados = arrayOfNums.reduce((acumulador,item) => acumulador += item, 0);
 
-  let promedioFinal = sumaNotas / resultadosTest.length;
+//   return numerosSumados;
+// }
 
-  return promedioFinal;
-}
+// let numeros = [20,30,60,200,1400,3000];
+// let sumaNumeros = agregarNumeros(numeros);
+// console.log(sumaNumeros);
 
-let notas = [6,8,9,10];
-let promedio = promedioResultadosTest(notas);
-console.log(promedio);
+// function promedioResultadosTest(resultadosTest) {
+//   // El parámetro "resultadosTest" es un arreglo de números.
+//   // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
+//   // Tu código:
+//   let sumaNotas = resultadosTest.reduce((acumulador, nota) => acumulador += nota, 0);
 
-function numeroMasGrande(arrayOfNums) {
-  // El parámetro "arrayOfNums" es un arreglo de números.
-  // Retornar el número más grande.
-  // Tu código:
-  return Math.max(...arrayOfNums);
+//   let promedioFinal = sumaNotas / resultadosTest.length;
 
-}
+//   return promedioFinal;
+// }
 
-let numerosNuevos = [20,8,12,10];
-let elMasGrande = numeroMasGrande(numerosNuevos);
-console.log(elMasGrande);
+// let notas = [6,8,9,10];
+// let promedio = promedioResultadosTest(notas);
+// console.log(promedio);
+
+// function numeroMasGrande(arrayOfNums) {
+//   // El parámetro "arrayOfNums" es un arreglo de números.
+//   // Retornar el número más grande.
+//   // Tu código:
+//   return Math.max(...arrayOfNums);
+
+// }
+
+// let numerosNuevos = [20,8,12,10];
+// let elMasGrande = numeroMasGrande(numerosNuevos);
+// console.log(elMasGrande);
 
 
 function multiplicarArgumentos() {
@@ -1684,7 +1684,28 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
   // [PISTA]: "arguments" es un arreglo.
   // Tu código:
+  //si no recibimos argumentos, retornamos 0
+  if(arguments.length === 0){
+    return 0;
+  } else if(arguments.length === 1){ //si arguments tiene un sólo elemento, retona el valor del mismo
+    return arguments[0];
+  }
+  
+
+  //inicializamos producto en 1
+  let producto = 1;
+  for (let i = 0; i < arguments.length; i++){
+    producto *= arguments[i];
+  }
+
+  return producto;
 }
+
+console.log(multiplicarArgumentos()); // 0
+console.log(multiplicarArgumentos(5)); // 5
+console.log(multiplicarArgumentos(2,3,4)); //24
+
+
 
 function cuentoElementos(array) {
   // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
@@ -1703,51 +1724,151 @@ function diaDeLaSemana(numeroDeDia) {
   // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
   // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
   // Tu código:
+  if(numeroDeDia === 1 || numeroDeDia === 7){
+    return "Es fin de semana";
+ } else if (numeroDeDia >=2 && numeroDeDia <=6){
+    return "Es dia laboral";
+ } else{
+    return "Dia invalido";
+ }
 }
+
+let diaElegido = 4;
+let diaLaboralOFinDeSemana =diaDeLaSemana(diaElegido);
+console.log(diaLaboralOFinDeSemana);
 
 function empiezaConNueve(num) {
   // Esta función recibe por parámetro un número.
   // Debe retornar true si el entero inicia con 9 y false en otro caso.
   // Tu código:
+  if(num === 9){
+    return true;
+ } else {
+    return false;
+ }
 }
+
+let numero9 = 19;
+let numeroEntero = empiezaConNueve(numero9);
+console.log(numeroEntero);
 
 function todosIguales(array) {
   // Si todos los elementos del arreglo son iguales, retornar true.
   // Caso contrario retornar false.
   // Tu código:
+  //me guardo en una variable el valor que tengo en la primer posición del array
+  let primerElemento = array[0]; //1
+
+  //Comparamos todos los elementos del array con el primer elemento array[0]
+  for (let i = 1; i < array.length; i++){
+    if (array[i] === primerElemento){
+      return true;
+    }
+  }
+  return false;
 }
+
+console.log(todosIguales([1,1,1,1]));
+console.log(todosIguales([1,2,3,4]));
+console.log(todosIguales([5,7,10,4]));
 
 function mesesDelAño(array) {
   // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
   // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
   // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
   // Tu código:
+  //Inicializamos el array vacío para ir cargando los elementos si os encontramos en el array
+  let mesesPedidos = []; // si mesesPedidos tiene 3 elementos, lo retornamos
+
+  //condional 1
+  if (array.includes("Enero")){
+    mesesPedidos.push("Enero");
+  }
+  //condicional 2
+  if (array.includes("Marzo")){
+    mesesPedidos.push("Marzo");
+  }
+  //condicional 3
+  if (array.includes("Noviembre")){
+    mesesPedidos.push("Noviembre");
+  }
+
+  //nos fijamos que hay en mesesPedidos
+  if (mesesPedidos.length === 3){
+    return mesesPedidos;
+  } else {
+    return "No se encontraron los meses pedidos";
+  }
+
 }
+
+let mesesDesordenados = ["Marzo", "Enero", "Diciembre", "Noviembre", "Febrero"];
+let encontreMeses = mesesDelAño(mesesDesordenados);
+console.log(encontreMeses);
 
 function tablaDelSeis() {
   // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
   // Tu código:
+  //Inicializamos el array vacío para ir cargando los valores de la tabla del 6
+  let resultado = [];
+
+
+  //vamos cargando el array
+  for (let i = 0; i<=10; i++){
+    //bloque de proceso
+    let producto = 6 * i;
+    //cargamos nuestros nuevo array con los valores de la tabla del 6
+    resultado.push(producto); 
+  }
+
+  //retornamos el nuevo array sólo con los valores de la tabla del 6
+  return resultado;
 }
+
+let resultadoTabla6 = tablaDelSeis();
+console.log(resultadoTabla6);
 
 function mayorACien(array) {
   // La función recibe un arreglo con enteros entre 0 y 200.
   // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
   // Tu código:
+  let valoresMayoresACien = array.filter(numero => numero > 100);
+  return valoresMayoresACien;
 }
+
+let arregloOriginal = [50,120,90,200,150,101];
+let resultadosMayoresACien = mayorACien(arregloOriginal);
+console.log(resultadosMayoresACien);
 
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
 -------------------------------------------------------------------------------------*/
 
 function breakStatement(num) {
-  // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
+  // Iterar en un bucle aumentando en 2 el número recibido por parametro hasta un límite de 10 veces.
   // Guardar cada nuevo valor en un arreglo y retornarlo.
   // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
   // la ejecución y retornar el string: "Se interrumpió la ejecución".
   // [PISTA]: utiliza el statement 'break'.
   // Tu código:
+  let resultados = [];
+  let suma = num;
+
+  for (let i = 0; i < 10; i++){
+    suma += 2;
+    resultados.push(suma);
+
+    if (suma === i + 1){
+      return "Se interrumpio la ejecución";
+    }
+  }
+
+  return resultados;
 }
+
+console.log(breakStatement(10)); // retorna [12,14,16,18,20]
+console.log(breakStatement(1000));
 
 function continueStatement(num) {
   // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
@@ -1756,4 +1877,18 @@ function continueStatement(num) {
   // se continua con la siguiente iteración.
   // [PISTA]: utiliza el statement 'continue'.
   // Tu código:
+  let resultados = [];
+  let suma = num;
+
+  for (let i = 1; i < 10; i++){
+    if ( i === 5){
+      continue; // debería saltar a la próxima iteración
+    }
+
+    suma += 2;
+    resultados.push(suma);
+  }
+  return resultados;
 }
+
+console.log(continueStatement(10));
