@@ -1679,216 +1679,439 @@ function estaEnRango(num) {
 // console.log(elMasGrande);
 
 
-function multiplicarArgumentos() {
-  // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
-  // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
-  // [PISTA]: "arguments" es un arreglo.
-  // Tu código:
-  //si no recibimos argumentos, retornamos 0
-  if(arguments.length === 0){
-    return 0;
-  } else if(arguments.length === 1){ //si arguments tiene un sólo elemento, retona el valor del mismo
-    return arguments[0];
-  }
+// function multiplicarArgumentos() {
+//   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
+//   // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
+//   // [PISTA]: "arguments" es un arreglo.
+//   // Tu código:
+//   //si no recibimos argumentos, retornamos 0
+//   if(arguments.length === 0){
+//     return 0;
+//   } else if(arguments.length === 1){ //si arguments tiene un sólo elemento, retona el valor del mismo
+//     return arguments[0];
+//   }
   
 
-  //inicializamos producto en 1
-  let producto = 1;
-  for (let i = 0; i < arguments.length; i++){
-    producto *= arguments[i];
+//   //inicializamos producto en 1
+//   let producto = 1;
+//   for (let i = 0; i < arguments.length; i++){
+//     producto *= arguments[i];
+//   }
+
+//   return producto;
+// }
+
+// console.log(multiplicarArgumentos()); // 0
+// console.log(multiplicarArgumentos(5)); // 5
+// console.log(multiplicarArgumentos(2,3,4)); //24
+
+
+
+// function cuentoElementos(array) {
+//   // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
+//   // Tu código:
+//   let edadesMayoresA18 = array.filter(edad => edad >= 18);
+
+//   return edadesMayoresA18;
+// }
+
+// let edades = [18,25,5,10,40];
+// let edadesElegidas = cuentoElementos(edades);
+// console.log(edadesElegidas);
+
+// function diaDeLaSemana(numeroDeDia) {
+//   // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
+//   // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
+//   // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
+//   // Tu código:
+//   if(numeroDeDia === 1 || numeroDeDia === 7){
+//     return "Es fin de semana";
+//  } else if (numeroDeDia >=2 && numeroDeDia <=6){
+//     return "Es dia laboral";
+//  } else{
+//     return "Dia invalido";
+//  }
+// }
+
+// let diaElegido = 4;
+// let diaLaboralOFinDeSemana =diaDeLaSemana(diaElegido);
+// console.log(diaLaboralOFinDeSemana);
+
+// function empiezaConNueve(num) {
+//   // Esta función recibe por parámetro un número.
+//   // Debe retornar true si el entero inicia con 9 y false en otro caso.
+//   // Tu código:
+//   if(num === 9){
+//     return true;
+//  } else {
+//     return false;
+//  }
+// }
+
+// let numero9 = 19;
+// let numeroEntero = empiezaConNueve(numero9);
+// console.log(numeroEntero);
+
+// function todosIguales(array) {
+//   // Si todos los elementos del arreglo son iguales, retornar true.
+//   // Caso contrario retornar false.
+//   // Tu código:
+//   //me guardo en una variable el valor que tengo en la primer posición del array
+//   let primerElemento = array[0]; //1
+
+//   //Comparamos todos los elementos del array con el primer elemento array[0]
+//   for (let i = 1; i < array.length; i++){
+//     if (array[i] === primerElemento){
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(todosIguales([1,1,1,1]));
+// console.log(todosIguales([1,2,3,4]));
+// console.log(todosIguales([5,7,10,4]));
+
+// function mesesDelAño(array) {
+//   // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
+//   // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
+//   // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
+//   // Tu código:
+//   //Inicializamos el array vacío para ir cargando los elementos si os encontramos en el array
+//   let mesesPedidos = []; // si mesesPedidos tiene 3 elementos, lo retornamos
+
+//   //condional 1
+//   if (array.includes("Enero")){
+//     mesesPedidos.push("Enero");
+//   }
+//   //condicional 2
+//   if (array.includes("Marzo")){
+//     mesesPedidos.push("Marzo");
+//   }
+//   //condicional 3
+//   if (array.includes("Noviembre")){
+//     mesesPedidos.push("Noviembre");
+//   }
+
+//   //nos fijamos que hay en mesesPedidos
+//   if (mesesPedidos.length === 3){
+//     return mesesPedidos;
+//   } else {
+//     return "No se encontraron los meses pedidos";
+//   }
+
+// }
+
+// let mesesDesordenados = ["Marzo", "Enero", "Diciembre", "Noviembre", "Febrero"];
+// let encontreMeses = mesesDelAño(mesesDesordenados);
+// console.log(encontreMeses);
+
+// function tablaDelSeis() {
+//   // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
+//   // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
+//   // Tu código:
+//   //Inicializamos el array vacío para ir cargando los valores de la tabla del 6
+//   let resultado = [];
+
+
+//   //vamos cargando el array
+//   for (let i = 0; i<=10; i++){
+//     //bloque de proceso
+//     let producto = 6 * i;
+//     //cargamos nuestros nuevo array con los valores de la tabla del 6
+//     resultado.push(producto); 
+//   }
+
+//   //retornamos el nuevo array sólo con los valores de la tabla del 6
+//   return resultado;
+// }
+
+// let resultadoTabla6 = tablaDelSeis();
+// console.log(resultadoTabla6);
+
+// function mayorACien(array) {
+//   // La función recibe un arreglo con enteros entre 0 y 200.
+//   // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
+//   // Tu código:
+//   let valoresMayoresACien = array.filter(numero => numero > 100);
+//   return valoresMayoresACien;
+// }
+
+// let arregloOriginal = [50,120,90,200,150,101];
+// let resultadosMayoresACien = mayorACien(arregloOriginal);
+// console.log(resultadosMayoresACien);
+
+// /* ----------------------------------------------------------------------------------
+// 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
+// -------------------------------------------------------------------------------------*/
+
+// function breakStatement(num) {
+//   // Iterar en un bucle aumentando en 2 el número recibido por parametro hasta un límite de 10 veces.
+//   // Guardar cada nuevo valor en un arreglo y retornarlo.
+//   // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
+//   // la ejecución y retornar el string: "Se interrumpió la ejecución".
+//   // [PISTA]: utiliza el statement 'break'.
+//   // Tu código:
+//   let resultados = [];
+//   let suma = num;
+
+//   for (let i = 0; i < 10; i++){
+//     suma += 2;
+//     resultados.push(suma);
+
+//     if (suma === i + 1){
+//       return "Se interrumpio la ejecución";
+//     }
+//   }
+
+//   return resultados;
+// }
+
+// console.log(breakStatement(10)); // retorna [12,14,16,18,20]
+// console.log(breakStatement(1000));
+
+// function continueStatement(num) {
+//   // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
+//   // Guardar cada nuevo valor en un array y retornarlo.
+//   // Cuando el número de iteraciones alcance el valor 5, no se suma ese caso y
+//   // se continua con la siguiente iteración.
+//   // [PISTA]: utiliza el statement 'continue'.
+//   // Tu código:
+//   let resultados = [];
+//   let suma = num;
+
+//   for (let i = 1; i < 10; i++){
+//     if ( i === 5){
+//       continue; // debería saltar a la próxima iteración
+//     }
+
+//     suma += 2;
+//     resultados.push(suma);
+//   }
+//   return resultados;
+// }
+
+// console.log(continueStatement(10));
+
+// //Otra versión
+// function continueStatement(num) {
+//   const resultArray = [];
+
+//   for (let i = 0; i < 10; i++) {
+//     if (i === 4) {
+//       // En la quinta iteración (i = 4), se usa 'continue' para omitir la suma.
+//       continue;
+//     }
+
+//     // Sumar 2 al número y guardar en el array.
+//     num += 2;
+//     resultArray.push(num);
+//   }
+
+//   return resultArray;
+// }
+
+// // Ejemplo de uso:
+// const result = continueStatement(3);
+// console.log(result); // Devuelve un array con los valores [5, 9, 13, 17, 21, 25, 29, 33]
+
+// for (let i = 0; i < 5; i++) {
+//   if (i === 2) {
+//     // En la iteración i=2, se utiliza 'continue' para omitir esta iteración.
+//     continue;
+//   }
+//   console.log(`Iteración ${i}`);
+// }
+
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+
+function crearGato(nombre, edad) {
+  // Debes crear un nuevo objeto con las propiedades/atributos/carcateristicas "nombre" y "edad".
+  // Ambas propiedades deben tener el valor correspondiente valor recibido por parámetro.
+  // Además, agregar una propiedad con el nombre "meow".
+  // La propiedad "meow" será una función que retorne el string: "Meow!".
+  // Retornar el objeto.
+  // Tu código:
+  //instanciamos el objeto
+  const gato = {
+    //definimos los valores de los atributos, que le enviaremos por parámetro
+    nombre: nombre,
+    edad: edad,
+    //declaramos el método meow
+    meow: function() {
+      return "Meow!"
+    }
+  };
+
+  return gato;
+  
+}
+
+//guardamos el objeto en una variable (miGato) y le enviamos los argumentos
+const miGato = crearGato("Michi", 3);
+console.log(miGato.nombre);
+console.log(miGato.edad);
+console.log(miGato.meow());
+
+function nuevoUsuario(nombre, email, password) {
+  // Debes crear un nuevo objeto.
+  // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
+  // Retornar el objeto.
+  // Tu código:
+  const usuarioNuevo = {
+    //en blanco el nombre del atributo - en rojo el valor que nos mandaron por parámetro
+    nombre: nombre,
+    email: email,
+    password: password
+  };
+
+  return usuarioNuevo;
+}
+
+const elNuevoUsuario = nuevoUsuario("Martín", "herman@gmail.com", "12345");
+console.log(elNuevoUsuario);
+
+function agregarPropiedad(objeto, atributo) {
+  // Recibirás un objeto por parámetro.
+  // Debes agregarle una propiedad con el nombre recibido por parámetro.
+  // Esta propiedad será igual al valor `null`.
+  // Retornar el objeto.
+  // Tu código:
+  //agregamos la propiedad con el valor null
+  objeto[atributo]= null;
+  return objeto;
+}
+
+//instaciamos el objeto
+const miObjeto = {
+  nombre: "Martín",
+  apellido: "Herman",
+};
+
+agregarPropiedad(miObjeto,"nuevaPropiedad");
+console.log(miObjeto);
+
+function invocarMetodo(objeto, metodo) {
+  // El parámetro "metodo" es un string que coincide con el nombre de una propiedad del objeto recibido.
+  // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
+  // [NOTA]: no necesitar retornar nada.
+  // Tu código:
+  objeto[metodo]();
+}
+
+//instanciamos el objeto
+const miObjeto02 = {
+  saludar: function(){
+    console.log("Hola, muy buenos días")
   }
-
-  return producto;
 }
 
-console.log(multiplicarArgumentos()); // 0
-console.log(multiplicarArgumentos(5)); // 5
-console.log(multiplicarArgumentos(2,3,4)); //24
+invocarMetodo(miObjeto02, "saludar");
 
 
-
-function cuentoElementos(array) {
-  // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
+function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
+  // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
+  // Debes multiplicar este número por 5 y retornar el resultado.
   // Tu código:
-  let edadesMayoresA18 = array.filter(edad => edad >= 18);
-
-  return edadesMayoresA18;
+  //tenemos asignar a una variable el valor del atributo que contiene el número 10
+  let elNumeroMisterioso = objetoMisterioso.adivinaElNumero;
+  return elNumeroMisterioso * 5;
 }
 
-let edades = [18,25,5,10,40];
-let edadesElegidas = cuentoElementos(edades);
-console.log(edadesElegidas);
-
-function diaDeLaSemana(numeroDeDia) {
-  // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
-  // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
-  // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
-  // Tu código:
-  if(numeroDeDia === 1 || numeroDeDia === 7){
-    return "Es fin de semana";
- } else if (numeroDeDia >=2 && numeroDeDia <=6){
-    return "Es dia laboral";
- } else{
-    return "Dia invalido";
- }
+const objetoMisterioso = {
+  adivinaElNumero: 10
 }
 
-let diaElegido = 4;
-let diaLaboralOFinDeSemana =diaDeLaSemana(diaElegido);
-console.log(diaLaboralOFinDeSemana);
+const resultado01 = multiplicarNumeroDesconocidoPorCinco(objetoMisterioso);
+console.log(resultado01);
 
-function empiezaConNueve(num) {
-  // Esta función recibe por parámetro un número.
-  // Debe retornar true si el entero inicia con 9 y false en otro caso.
+function eliminarPropiedad(objeto, propiedad) {
+  // El parámetro "propiedad" es una propiedad del objeto que recibes.
+  // Debes eliminarla del objeto y retornarlo finalmente.
   // Tu código:
-  if(num === 9){
+  delete objeto[propiedad];
+  return objeto;
+}
+
+const miObjeto03 = {
+  nombre: "Juan",
+  edad: 30,
+  ciudad: "Buenos Aires"
+}
+
+eliminarPropiedad(miObjeto03, 'ciudad');
+console.log(miObjeto03);
+
+
+function tieneEmail(objetoUsuario) {
+  // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
+  // En ese caso retornar true. Caso contrario, false.
+  // Tu código:
+}
+
+function tienePropiedad(objeto, propiedad) {
+  //el método hasOwnProperty busca si en el objeto existe la propiedad enviada por parámetro
+  if(objeto.hasOwnProperty(propiedad)){
     return true;
- } else {
-    return false;
- }
-}
-
-let numero9 = 19;
-let numeroEntero = empiezaConNueve(numero9);
-console.log(numeroEntero);
-
-function todosIguales(array) {
-  // Si todos los elementos del arreglo son iguales, retornar true.
-  // Caso contrario retornar false.
-  // Tu código:
-  //me guardo en una variable el valor que tengo en la primer posición del array
-  let primerElemento = array[0]; //1
-
-  //Comparamos todos los elementos del array con el primer elemento array[0]
-  for (let i = 1; i < array.length; i++){
-    if (array[i] === primerElemento){
-      return true;
-    }
-  }
-  return false;
-}
-
-console.log(todosIguales([1,1,1,1]));
-console.log(todosIguales([1,2,3,4]));
-console.log(todosIguales([5,7,10,4]));
-
-function mesesDelAño(array) {
-  // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
-  // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
-  // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
-  // Tu código:
-  //Inicializamos el array vacío para ir cargando los elementos si os encontramos en el array
-  let mesesPedidos = []; // si mesesPedidos tiene 3 elementos, lo retornamos
-
-  //condional 1
-  if (array.includes("Enero")){
-    mesesPedidos.push("Enero");
-  }
-  //condicional 2
-  if (array.includes("Marzo")){
-    mesesPedidos.push("Marzo");
-  }
-  //condicional 3
-  if (array.includes("Noviembre")){
-    mesesPedidos.push("Noviembre");
-  }
-
-  //nos fijamos que hay en mesesPedidos
-  if (mesesPedidos.length === 3){
-    return mesesPedidos;
   } else {
-    return "No se encontraron los meses pedidos";
+    return false;
   }
-
 }
 
-let mesesDesordenados = ["Marzo", "Enero", "Diciembre", "Noviembre", "Febrero"];
-let encontreMeses = mesesDelAño(mesesDesordenados);
-console.log(encontreMeses);
+const miObjeto04 = {
+  nombre: "Juan",
+  edad: 30,
+  ciudad: "Buenos Aires"
+}
 
-function tablaDelSeis() {
-  // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
-  // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
+console.log(tienePropiedad(miObjeto04, "nombre")); // true
+console.log(tienePropiedad(miObjeto04, "email")); // false
+
+function verificarPassword(objetoUsuario, password) {
+  // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
+  // En ese caso retornar true. Caso contrario, false.
   // Tu código:
-  //Inicializamos el array vacío para ir cargando los valores de la tabla del 6
-  let resultado = [];
-
-
-  //vamos cargando el array
-  for (let i = 0; i<=10; i++){
-    //bloque de proceso
-    let producto = 6 * i;
-    //cargamos nuestros nuevo array con los valores de la tabla del 6
-    resultado.push(producto); 
-  }
-
-  //retornamos el nuevo array sólo con los valores de la tabla del 6
-  return resultado;
 }
 
-let resultadoTabla6 = tablaDelSeis();
-console.log(resultadoTabla6);
-
-function mayorACien(array) {
-  // La función recibe un arreglo con enteros entre 0 y 200.
-  // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
+function actualizarPassword(objetoUsuario, nuevaPassword) {
+  // Reemplaza la contrseña guardada en la propiedad "password" del "objetoUsuario".
+  // La nueva contraseña la recibes por parámetro.
+  // Retornar el objeto.
   // Tu código:
-  let valoresMayoresACien = array.filter(numero => numero > 100);
-  return valoresMayoresACien;
 }
 
-let arregloOriginal = [50,120,90,200,150,101];
-let resultadosMayoresACien = mayorACien(arregloOriginal);
-console.log(resultadosMayoresACien);
-
-/* ----------------------------------------------------------------------------------
-💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
--------------------------------------------------------------------------------------*/
-
-function breakStatement(num) {
-  // Iterar en un bucle aumentando en 2 el número recibido por parametro hasta un límite de 10 veces.
-  // Guardar cada nuevo valor en un arreglo y retornarlo.
-  // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
-  // la ejecución y retornar el string: "Se interrumpió la ejecución".
-  // [PISTA]: utiliza el statement 'break'.
+function agregarAmigo(objetoUsuario, nuevoAmigo) {
+  // El parámetro "objetoUsuario" tiene una propiedad llamada "amigos" igual a un arreglo.
+  // Debes agregar el "nuevoAmigo" al final de este arreglo.
+  // Retornar el objeto.
   // Tu código:
-  let resultados = [];
-  let suma = num;
-
-  for (let i = 0; i < 10; i++){
-    suma += 2;
-    resultados.push(suma);
-
-    if (suma === i + 1){
-      return "Se interrumpio la ejecución";
-    }
-  }
-
-  return resultados;
 }
 
-console.log(breakStatement(10)); // retorna [12,14,16,18,20]
-console.log(breakStatement(1000));
-
-function continueStatement(num) {
-  // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
-  // Guardar cada nuevo valor en un array y retornarlo.
-  // Cuando el número de iteraciones alcance el valor 5, no se suma ese caso y
-  // se continua con la siguiente iteración.
-  // [PISTA]: utiliza el statement 'continue'.
+function pasarUsuarioAPremium(objetoMuchosUsuarios) {
+  // El parámetro "objetoMuchosUsuarios" es un arreglo de objetos (usuarios).
+  // Cada usuario tiene una propiedad llamada "esPremium".
+  // Define esta propiedad de todos los usuarios como true.
+  // Retornar el arreglo.
   // Tu código:
-  let resultados = [];
-  let suma = num;
-
-  for (let i = 1; i < 10; i++){
-    if ( i === 5){
-      continue; // debería saltar a la próxima iteración
-    }
-
-    suma += 2;
-    resultados.push(suma);
-  }
-  return resultados;
 }
 
-console.log(continueStatement(10));
+function sumarLikesDeUsuario(objetoUsuario) {
+  // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
+  // Este arreglo contiene objetos (post).
+  // Cada post posee una propiedad llamada "likes". Esta propiedad es un número.
+  // Debes sumar los likes de todos los post y retornar el resultado.
+  // Tu código:
+}
+
+function agregarMetodoCalculoDescuento(objetoProducto) {
+  // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
+  // Esta propiedad debe ser una función que multiplique el precio del producto por el porcentajeDeDescuento.
+  // El "objetoProducto" posee una propiedad "precio" y una propiedad "porcentajeDeDescuento".
+  // Luego debes restar del precio total del producto ese valor de descuento.
+  // Retornar el precio final.
+  // Ejemplo:
+  // Precio ---> 10
+  // PorcentajeDeDescuento ---> 0.2
+  // Precio final ---> 8
+  // Tu código:
+}
