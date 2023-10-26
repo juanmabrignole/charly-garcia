@@ -1923,169 +1923,215 @@ function estaEnRango(num) {
 //   console.log(`Iteración ${i}`);
 // }
 
-/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+// /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
-function crearGato(nombre, edad) {
-  // Debes crear un nuevo objeto con las propiedades/atributos/carcateristicas "nombre" y "edad".
-  // Ambas propiedades deben tener el valor correspondiente valor recibido por parámetro.
-  // Además, agregar una propiedad con el nombre "meow".
-  // La propiedad "meow" será una función que retorne el string: "Meow!".
-  // Retornar el objeto.
-  // Tu código:
-  //instanciamos el objeto
-  const gato = {
-    //definimos los valores de los atributos, que le enviaremos por parámetro
-    nombre: nombre,
-    edad: edad,
-    //declaramos el método meow
-    meow: function() {
-      return "Meow!"
-    }
-  };
+// function crearGato(nombre, edad) {
+//   // Debes crear un nuevo objeto con las propiedades/atributos/carcateristicas "nombre" y "edad".
+//   // Ambas propiedades deben tener el valor correspondiente valor recibido por parámetro.
+//   // Además, agregar una propiedad con el nombre "meow".
+//   // La propiedad "meow" será una función que retorne el string: "Meow!".
+//   // Retornar el objeto.
+//   // Tu código:
+//   //instanciamos el objeto
+//   const gato = {
+//     //definimos los valores de los atributos, que le enviaremos por parámetro
+//     nombre: nombre,
+//     edad: edad,
+//     //declaramos el método meow
+//     meow: function() {
+//       return "Meow!"
+//     }
+//   };
 
-  return gato;
+//   return gato;
   
-}
+// }
 
-//guardamos el objeto en una variable (miGato) y le enviamos los argumentos
-const miGato = crearGato("Michi", 3);
-console.log(miGato.nombre);
-console.log(miGato.edad);
-console.log(miGato.meow());
+// //guardamos el objeto en una variable (miGato) y le enviamos los argumentos
+// const miGato = crearGato("Michi", 3);
+// console.log(miGato.nombre);
+// console.log(miGato.edad);
+// console.log(miGato.meow());
 
-function nuevoUsuario(nombre, email, password) {
-  // Debes crear un nuevo objeto.
-  // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
-  // Retornar el objeto.
-  // Tu código:
-  const usuarioNuevo = {
-    //en blanco el nombre del atributo - en rojo el valor que nos mandaron por parámetro
-    nombre: nombre,
-    email: email,
-    password: password
-  };
+// function nuevoUsuario(nombre, email, password) {
+//   // Debes crear un nuevo objeto.
+//   // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
+//   // Retornar el objeto.
+//   // Tu código:
+//   const usuarioNuevo = {
+//     //en blanco el nombre del atributo - en rojo el valor que nos mandaron por parámetro
+//     nombre: nombre,
+//     email: email,
+//     password: password
+//   };
 
-  return usuarioNuevo;
-}
+//   return usuarioNuevo;
+// }
 
-const elNuevoUsuario = nuevoUsuario("Martín", "herman@gmail.com", "12345");
-console.log(elNuevoUsuario);
+// const elNuevoUsuario = nuevoUsuario("Martín", "herman@gmail.com", "12345");
+// console.log(elNuevoUsuario);
 
-function agregarPropiedad(objeto, atributo) {
-  // Recibirás un objeto por parámetro.
-  // Debes agregarle una propiedad con el nombre recibido por parámetro.
-  // Esta propiedad será igual al valor `null`.
-  // Retornar el objeto.
-  // Tu código:
-  //agregamos la propiedad con el valor null
-  objeto[atributo]= null;
-  return objeto;
-}
+// function agregarPropiedad(objeto, atributo) {
+//   // Recibirás un objeto por parámetro.
+//   // Debes agregarle una propiedad con el nombre recibido por parámetro.
+//   // Esta propiedad será igual al valor `null`.
+//   // Retornar el objeto.
+//   // Tu código:
+//   //agregamos la propiedad con el valor null
+//   objeto[atributo]= null;
+//   return objeto;
+// }
 
-//instaciamos el objeto
-const miObjeto = {
-  nombre: "Martín",
-  apellido: "Herman",
-};
+// //instaciamos el objeto
+// const miObjeto = {
+//   nombre: "Martín",
+//   apellido: "Herman",
+// };
 
-agregarPropiedad(miObjeto,"nuevaPropiedad");
-console.log(miObjeto);
+// agregarPropiedad(miObjeto,"nuevaPropiedad");
+// console.log(miObjeto);
 
-function invocarMetodo(objeto, metodo) {
-  // El parámetro "metodo" es un string que coincide con el nombre de una propiedad del objeto recibido.
-  // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
-  // [NOTA]: no necesitar retornar nada.
-  // Tu código:
-  objeto[metodo]();
-}
+// function invocarMetodo(objeto, metodo) {
+//   // El parámetro "metodo" es un string que coincide con el nombre de una propiedad del objeto recibido.
+//   // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
+//   // [NOTA]: no necesitar retornar nada.
+//   // Tu código:
+//   objeto[metodo]();
+// }
 
-//instanciamos el objeto
-const miObjeto02 = {
-  saludar: function(){
-    console.log("Hola, muy buenos días")
-  }
-}
+// //instanciamos el objeto
+// const miObjeto02 = {
+//   saludar: function(){
+//     console.log("Hola, muy buenos días")
+//   }
+// }
 
-invocarMetodo(miObjeto02, "saludar");
-
-
-function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
-  // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
-  // Debes multiplicar este número por 5 y retornar el resultado.
-  // Tu código:
-  //tenemos asignar a una variable el valor del atributo que contiene el número 10
-  let elNumeroMisterioso = objetoMisterioso.adivinaElNumero;
-  return elNumeroMisterioso * 5;
-}
-
-const objetoMisterioso = {
-  adivinaElNumero: 10
-}
-
-const resultado01 = multiplicarNumeroDesconocidoPorCinco(objetoMisterioso);
-console.log(resultado01);
-
-function eliminarPropiedad(objeto, propiedad) {
-  // El parámetro "propiedad" es una propiedad del objeto que recibes.
-  // Debes eliminarla del objeto y retornarlo finalmente.
-  // Tu código:
-  delete objeto[propiedad];
-  return objeto;
-}
-
-const miObjeto03 = {
-  nombre: "Juan",
-  edad: 30,
-  ciudad: "Buenos Aires"
-}
-
-eliminarPropiedad(miObjeto03, 'ciudad');
-console.log(miObjeto03);
+// invocarMetodo(miObjeto02, "saludar");
 
 
-function tieneEmail(objetoUsuario) {
-  // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
-  // En ese caso retornar true. Caso contrario, false.
-  // Tu código:
-}
+// function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
+//   // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
+//   // Debes multiplicar este número por 5 y retornar el resultado.
+//   // Tu código:
+//   //tenemos asignar a una variable el valor del atributo que contiene el número 10
+//   let elNumeroMisterioso = objetoMisterioso.adivinaElNumero;
+//   return elNumeroMisterioso * 5;
+// }
 
-function tienePropiedad(objeto, propiedad) {
-  //el método hasOwnProperty busca si en el objeto existe la propiedad enviada por parámetro
-  if(objeto.hasOwnProperty(propiedad)){
-    return true;
-  } else {
-    return false;
-  }
-}
+// const objetoMisterioso = {
+//   adivinaElNumero: 10
+// }
 
-const miObjeto04 = {
-  nombre: "Juan",
-  edad: 30,
-  ciudad: "Buenos Aires"
-}
+// const resultado01 = multiplicarNumeroDesconocidoPorCinco(objetoMisterioso);
+// console.log(resultado01);
 
-console.log(tienePropiedad(miObjeto04, "nombre")); // true
-console.log(tienePropiedad(miObjeto04, "email")); // false
+// function eliminarPropiedad(objeto, propiedad) {
+//   // El parámetro "propiedad" es una propiedad del objeto que recibes.
+//   // Debes eliminarla del objeto y retornarlo finalmente.
+//   // Tu código:
+//   delete objeto[propiedad];
+//   return objeto;
+// }
 
-function verificarPassword(objetoUsuario, password) {
-  // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
-  // En ese caso retornar true. Caso contrario, false.
-  // Tu código:
-}
+// const miObjeto03 = {
+//   nombre: "Juan",
+//   edad: 30,
+//   ciudad: "Buenos Aires"
+// }
 
-function actualizarPassword(objetoUsuario, nuevaPassword) {
-  // Reemplaza la contrseña guardada en la propiedad "password" del "objetoUsuario".
-  // La nueva contraseña la recibes por parámetro.
-  // Retornar el objeto.
-  // Tu código:
-}
+// eliminarPropiedad(miObjeto03, 'ciudad');
+// console.log(miObjeto03);
 
-function agregarAmigo(objetoUsuario, nuevoAmigo) {
-  // El parámetro "objetoUsuario" tiene una propiedad llamada "amigos" igual a un arreglo.
-  // Debes agregar el "nuevoAmigo" al final de este arreglo.
-  // Retornar el objeto.
-  // Tu código:
-}
+
+// function tieneEmail(objetoUsuario) {
+//   // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
+//   // En ese caso retornar true. Caso contrario, false.
+//   // Tu código:
+// }
+
+// function tienePropiedad(objeto, propiedad) {
+//   //el método hasOwnProperty busca si en el objeto existe la propiedad enviada por parámetro
+//   if(objeto.hasOwnProperty(propiedad)){
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// const miObjeto04 = {
+//   nombre: "Juan",
+//   edad: 30,
+//   ciudad: "Buenos Aires"
+// }
+
+// console.log(tienePropiedad(miObjeto04, "nombre")); // true
+// console.log(tienePropiedad(miObjeto04, "email")); // false
+
+// function verificarPassword(objetoUsuario, password) {
+//   // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
+//   // En ese caso retornar true. Caso contrario, false.
+//   // Tu código:
+//   if (objetoUsuario.password == password){
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// const elUsuario = {
+//   nombre: "Martín",
+//   email: "mherman@gmail.com",
+//   password: "1234"
+// }
+
+// const otropassword = "otracontrasena";
+// const nuevoPassword = verificarPassword(elUsuario, otropassword);
+// console.log(nuevoPassword);
+
+// function actualizarPassword(objetoUsuario, nuevaPassword) {
+//   // Reemplaza la contrseña guardada en la propiedad "password" del "objetoUsuario".
+//   // La nueva contraseña la recibes por parámetro.
+//   // Retornar el objeto.
+//   // Tu código:
+//   //le asignamos al objeto, la nueva contrseña que nos enviaron por parámetro
+//   objetoUsuario.password = nuevaPassword;
+
+//   return objetoUsuario;
+// }
+
+// //construimos el objeto
+// const otroUsuario = {
+//   nombre: "Martín",
+//   email: "mherman@gmail.com",
+//   password: "1234"
+// }
+
+// //definimos el nuevo valor de la contraseña
+// const nuevaContrasena = "nuevapassword12345";
+// // enviamos como argumentos, el objeto y su nuevo atributo contraseña
+// const contrasenaActualizada = actualizarPassword(otroUsuario, nuevaContrasena);
+// console.log(contrasenaActualizada);
+
+
+// function agregarAmigo(objetoUsuario, nuevoAmigo) {
+//   // El parámetro "objetoUsuario" tiene una propiedad llamada "amigos" igual a un arreglo.
+//   // Debes agregar el "nuevoAmigo" al final de este arreglo.
+//   // Retornar el objeto.
+//   // Tu código:
+//   objetoUsuario.amigos.push(nuevoAmigo);
+
+//   return objetoUsuario;
+// }
+
+// const losAmigos = {
+//   nombre: "Martin",
+//   email: "mherman@gmail",
+//   amigos: ["Juan", "Esteban", "Hernán"]
+// }
+
+// const nuevoAmigo = "Joaquín";
+// const usuarioConNuevoAmigo = agregarAmigo(losAmigos, nuevoAmigo);
+// console.log(usuarioConNuevoAmigo);
 
 function pasarUsuarioAPremium(objetoMuchosUsuarios) {
   // El parámetro "objetoMuchosUsuarios" es un arreglo de objetos (usuarios).
@@ -2093,7 +2139,23 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
   // Define esta propiedad de todos los usuarios como true.
   // Retornar el arreglo.
   // Tu código:
+  for (let i = 0; i < objetoMuchosUsuarios.length; i++){
+    objetoMuchosUsuarios[i].esPremium = true;
+  }
+
+  return objetoMuchosUsuarios;
 }
+
+//creamos el array de objetos
+
+const usuarios = [
+  {nombre: "usuario234", esPremium: false}, // sub o
+  {nombre: "usuario235", esPremium: false}, // sub 1
+  {nombre: "usuario236", esPremium: false} // sub 2
+];
+
+const usuariosPremium = pasarUsuarioAPremium(usuarios);
+console.log(usuariosPremium);
 
 function sumarLikesDeUsuario(objetoUsuario) {
   // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
@@ -2101,7 +2163,34 @@ function sumarLikesDeUsuario(objetoUsuario) {
   // Cada post posee una propiedad llamada "likes". Esta propiedad es un número.
   // Debes sumar los likes de todos los post y retornar el resultado.
   // Tu código:
+  //Inicializamos el acumular de likes en 0
+  let totalLikes = 0;
+
+  for(let i = 0; i < objetoUsuario.posts.length; i++){
+    //guardamos en la variable posteos solo el objeto posts
+    const posteos = objetoUsuario.posts;
+    //acumulamos los likes
+    totalLikes += posteos[i].likes;
+  }
+
+  return totalLikes;
 }
+
+
+//creamos el array de objetos
+const newUsuario = {
+  nombre: "Martín",
+  posts: [
+    {likes: 10},
+    {likes: 15},
+    {likes: 5}
+  ]
+};
+
+const likesTotales = sumarLikesDeUsuario(newUsuario);
+console.log(likesTotales);
+
+
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
   // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
@@ -2113,5 +2202,105 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
   // Precio ---> 10
   // PorcentajeDeDescuento ---> 0.2
   // Precio final ---> 8
+  // Tu código:
+  objetoProducto.calcularPrecioDescuento = function() {
+    // const precioSinDescuento = objetoProducto.precio;
+    // const porcentajeDeDescuento = objetoProducto.porcentajeDeDescuento;
+    const descuento = objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
+    const precioFinal = objetoProducto.precio - descuento;
+    return precioFinal;
+  };
+
+  return objetoProducto.calcularPrecioDescuento();
+}
+
+const producto = {
+  precio: 10,
+  porcentajeDeDescuento: 0.2
+}
+
+const precioFinal = agregarMetodoCalculoDescuento(producto);
+console.log(precioFinal);
+
+
+/*-----------EJERCICIOS HENRY 07-------------*/
+
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+/*1️⃣ EJERCICIO 01 1️⃣*/
+
+function crearUsuario() {
+   // Crea una Clase de ES6 o una función constructora llamada "Usuario".
+   // El constructor de esta clase debe tener las propiedades: "usuario", "nombre", "email" y "password".
+   // El valor de cada propiedad la recibirá por parámetro.
+   // Además, esta clase debe tener un método llamado "saludar".
+   // Este método debe retornar el string: 'Hola, mi nombre es {{nombre}}'.
+   // El valor {{nombre}} debe ser el nombre definido para la instancia de la clase.
+   // Retornar la clase.
+   // Tu código:
+   class Usuario {
+    constructor(usuario,nombre,email,password){
+      //propiedad = el valor de usuario que viene por parámetro
+      this.usuario = usuario;
+      this.nombre = nombre;
+      this.email = email;
+      this.password = password;
+    }
+    saludar(){
+      return `Hola, mi nombre es ${this.nombre} y mi correo es ${this.email}`;
+    }
+   }
+
+   return Usuario;
+}
+
+
+const Usuario = crearUsuario();
+//Objeto 1
+const unNuevoUsuario = new Usuario("usuario2035", "Martín", "mherman@gmail.com", "1234");
+// Objeto 2
+const otroNuevoUsuario = new Usuario("usuario2036", "Juanma", "juanma@gmail.com", "3456");
+console.log(unNuevoUsuario.saludar());
+console.log(otroNuevoUsuario.saludar());
+
+function agregarMetodoPrototype(Usuario) {
+   // Agrega un método al prototipo de "Usuario".
+   // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
+   // Tu código:
+   Usuario.prototype.saludar = function (){
+    return "Hello World!";
+   };
+}
+
+//agregamos el método al prototipo de "usuario"
+agregarMetodoPrototype(Usuario);
+console.log(unNuevoUsuario.saludar());
+
+function agregarStringInvertida() {
+   // Agrega un método al prototipo de "String" que devuelva la misma cadena de caracteres, pero invertida.
+   // El método debe llamarse "reverse".
+   // [PISTA]: necesitarás utilizar el objeto "this".
+}
+
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+/*2️⃣ EJERCICIO 02 2️⃣*/
+
+class Persona {
+  // Crea el constructor de la clase "Persona".
+  // Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio".
+  // Debe tener un método llamado "detalle" que nos devuelva un objeto con las propiedades de la persona y
+  // sus valores.
+}
+
+function crearInstanciaPersona(nombre, apellido, edad, domicilio) {
+  // En este ejercicio debes crear una instancia de la clase construida en el ejercicio anterior.
+  // Recibirás las propiedades por parámetro.
+  // Retornar la instancia creada.
+  // Tu código:
+}
+
+function agregarMetodo() {
+  // La función agrega un método "datos" a la clase "Persona".
+  // Este método toma la propiedad "nombre" y "edad", y devuelve el string:
+  // Ejemplo: "Juan, 22 años".
   // Tu código:
 }
