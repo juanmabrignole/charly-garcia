@@ -2279,28 +2279,168 @@ function agregarStringInvertida() {
    // Agrega un método al prototipo de "String" que devuelva la misma cadena de caracteres, pero invertida.
    // El método debe llamarse "reverse".
    // [PISTA]: necesitarás utilizar el objeto "this".
+   String.prototype.reversa = function () {
+    //1 con split convertimos la cadena de carácteres en un array
+    return this.split('').reverse().join(' ');
+   };
 }
+
+//agrega el método reverse al prototipo de String
+agregarStringInvertida();
+
+const miCadena = "Hola mundo!";
+console.log(miCadena.reversa());
+
 
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 /*2️⃣ EJERCICIO 02 2️⃣*/
 
+//instanciamos la clase Persona
 class Persona {
-  // Crea el constructor de la clase "Persona".
-  // Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio".
-  // Debe tener un método llamado "detalle" que nos devuelva un objeto con las propiedades de la persona y
-  // sus valores.
+  /*Crea el constructor de la clase "Persona".
+  Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio".
+  Debe tener un método llamado "detalle" que nos devuelva un objeto con las propiedades de la persona y
+  sus valores.*/
+  //constructor parametrizado // creamos los campos 8atributos) de la clase persona
+  constructor(nombre, apellido, edad, domicilio){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.domicilio = domicilio;
+  }
+
+  //este es un método que devuelve un objeto de la clase Persona
+  detalle() {
+    return {
+    nombre: this.nombre,
+    apellido: this.apellido,
+    edad: this.edad,
+    domicilioUnico: this.domicilio,
+    }
+  }
+
 }
+
+//le enviamos como argumentos los datos del objeto unaPersona
+const unaPersona = new Persona("Martín", "Herman", 36, "Libertador 3220");
+//guardamos en la varianble dato, los atributos del objeto unaPersona
+const datos = unaPersona.detalle();
+console.log(datos);
+const unaPersona2 = new Persona ("Juan Manuel", "Brignole", 39, "Centenario 921");
+const datos2 = unaPersona2.detalle();
+console.log(datos2);
 
 function crearInstanciaPersona(nombre, apellido, edad, domicilio) {
   // En este ejercicio debes crear una instancia de la clase construida en el ejercicio anterior.
   // Recibirás las propiedades por parámetro.
   // Retornar la instancia creada.
   // Tu código:
+  //Esta función lo que hace, es crear un nuevo objeto a partir de la clase Persona
+  return new Persona(nombre, apellido, edad, domicilio);
 }
 
+const nuevaPersona = crearInstanciaPersona("María", "Silva", 25, "Av. 9 de Julio");
+const ultimaPersona = crearInstanciaPersona("Julián", "Pérez", 25, "Av. Libertador");
+console.log(nuevaPersona.detalle());
+console.log(ultimaPersona.detalle());
+
+
+/*SEGUIR TRABJANDOLO*/
 function agregarMetodo() {
   // La función agrega un método "datos" a la clase "Persona".
   // Este método toma la propiedad "nombre" y "edad", y devuelve el string:
   // Ejemplo: "Juan, 22 años".
   // Tu código:
+  Persona.prototype.datos = function (){
+    return this.nombre + ", " + this.edad ;
+  }
 }
+
+//llamamos a la función agregarMetodo() para agregar el método datos a la clase Persona
+agregarMetodo();
+
+//creamos un nuevo objeto persona
+const nuevaPersona3 = new Persona("Juan", "Brignole", "22 años", "Libertador 500");
+console.log(nuevaPersona3.datos());
+
+
+/*-------------EJERCICIOS HENRY08 CALLBACK--------------*/
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+
+function mayuscula(nombre) {
+  // Esta función recibe un nombre (string).
+  // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
+  // [Ejemplo]: "mario" ----> "Mario".
+  // Tu código:
+  return nombre.charAt(0).toUpperCase() + nombre.slice(1,5);
+
+}
+
+const nombre = "mario";
+const primeraLetraMayuscula = mayuscula(nombre);
+console.log(primeraLetraMayuscula);
+
+function invocarCallback(cb) {
+  // Invoca/ejecuta el callback `cb`.
+  // [NOTA]: no debes reotrnar nada.
+  // Tu código:
+  cb(); // invocamos al callback miCallBack
+}
+
+function miCallBack(){
+  console.log("Invocamos al callback");
+}
+
+invocarCallback(miCallBack);
+
+
+function operacionMatematica(num1, num2, cb) {
+  // En este ejercicio recibirás dos números y un callback.
+  // El callback realiza una operación matemática, por lo que necesita de los dos números.
+  // Retorna el resultado del callback pasándole como parámetros los números.
+  // Tu código:
+  return cb(num1, num2);
+}
+
+function sumaCallback(a,b){
+  return a + b;
+}
+
+function restaCallback(a,b){
+  return a - b;
+}
+
+/*-----TAREA------*/
+//crear los callbacks para la resta, multiplicacion y división
+
+const resultadoSuma = operacionMatematica(4, 10, sumaCallback);
+console.log(resultadoSuma);
+
+function sumarArray(arrayOfNumbers, cb) {
+  // Recibes un arreglo de números y un callback.
+  // Suma todos los números del arreglo.
+  // Este resultado debes pasárselo como argumento al callback recibido.
+  // [NOTA]: no debes reotrnar nada.
+  // Tu código:
+}
+
+function forEach(array, cb) {
+  // Recibes un arreglo y un callback.
+  // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
+  // Debes pasarle el elemento como argumento al callback.
+  // Tu código:
+}
+
+function map(array, cb) {
+  // Debes iterar sobre el arreglo, y cada elemento pasárselo como arguemento al callback.
+  // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
+  // Retorna el nuevo arreglo.
+  // Tu código:
+}
+
+function filter(arrayOfStrings) {
+  // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
+  // Luego retorna un nuevo arreglo con estos elementos.
+  // Tu código:
+}
+
