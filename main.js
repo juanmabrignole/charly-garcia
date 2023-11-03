@@ -2133,314 +2133,460 @@ function estaEnRango(num) {
 // const usuarioConNuevoAmigo = agregarAmigo(losAmigos, nuevoAmigo);
 // console.log(usuarioConNuevoAmigo);
 
-function pasarUsuarioAPremium(objetoMuchosUsuarios) {
-  // El parámetro "objetoMuchosUsuarios" es un arreglo de objetos (usuarios).
-  // Cada usuario tiene una propiedad llamada "esPremium".
-  // Define esta propiedad de todos los usuarios como true.
-  // Retornar el arreglo.
-  // Tu código:
-  for (let i = 0; i < objetoMuchosUsuarios.length; i++){
-    objetoMuchosUsuarios[i].esPremium = true;
-  }
+// function pasarUsuarioAPremium(objetoMuchosUsuarios) {
+//   // El parámetro "objetoMuchosUsuarios" es un arreglo de objetos (usuarios).
+//   // Cada usuario tiene una propiedad llamada "esPremium".
+//   // Define esta propiedad de todos los usuarios como true.
+//   // Retornar el arreglo.
+//   // Tu código:
+//   for (let i = 0; i < objetoMuchosUsuarios.length; i++){
+//     objetoMuchosUsuarios[i].esPremium = true;
+//   }
 
-  return objetoMuchosUsuarios;
-}
+//   return objetoMuchosUsuarios;
+// }
 
-//creamos el array de objetos
+// //creamos el array de objetos
 
-const usuarios = [
-  {nombre: "usuario234", esPremium: false}, // sub o
-  {nombre: "usuario235", esPremium: false}, // sub 1
-  {nombre: "usuario236", esPremium: false} // sub 2
-];
+// const usuarios = [
+//   {nombre: "usuario234", esPremium: false}, // sub o
+//   {nombre: "usuario235", esPremium: false}, // sub 1
+//   {nombre: "usuario236", esPremium: false} // sub 2
+// ];
 
-const usuariosPremium = pasarUsuarioAPremium(usuarios);
-console.log(usuariosPremium);
+// const usuariosPremium = pasarUsuarioAPremium(usuarios);
+// console.log(usuariosPremium);
 
-function sumarLikesDeUsuario(objetoUsuario) {
-  // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
-  // Este arreglo contiene objetos (post).
-  // Cada post posee una propiedad llamada "likes". Esta propiedad es un número.
-  // Debes sumar los likes de todos los post y retornar el resultado.
-  // Tu código:
-  //Inicializamos el acumular de likes en 0
-  let totalLikes = 0;
+// function sumarLikesDeUsuario(objetoUsuario) {
+//   // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
+//   // Este arreglo contiene objetos (post).
+//   // Cada post posee una propiedad llamada "likes". Esta propiedad es un número.
+//   // Debes sumar los likes de todos los post y retornar el resultado.
+//   // Tu código:
+//   //Inicializamos el acumular de likes en 0
+//   let totalLikes = 0;
 
-  for(let i = 0; i < objetoUsuario.posts.length; i++){
-    //guardamos en la variable posteos solo el objeto posts
-    const posteos = objetoUsuario.posts;
-    //acumulamos los likes
-    totalLikes += posteos[i].likes;
-  }
+//   for(let i = 0; i < objetoUsuario.posts.length; i++){
+//     //guardamos en la variable posteos solo el objeto posts
+//     const posteos = objetoUsuario.posts;
+//     //acumulamos los likes
+//     totalLikes += posteos[i].likes;
+//   }
 
-  return totalLikes;
-}
-
-
-//creamos el array de objetos
-const newUsuario = {
-  nombre: "Martín",
-  posts: [
-    {likes: 10},
-    {likes: 15},
-    {likes: 5}
-  ]
-};
-
-const likesTotales = sumarLikesDeUsuario(newUsuario);
-console.log(likesTotales);
+//   return totalLikes;
+// }
 
 
+// //creamos el array de objetos
+// const newUsuario = {
+//   nombre: "Martín",
+//   posts: [
+//     {likes: 10},
+//     {likes: 15},
+//     {likes: 5}
+//   ]
+// };
 
-function agregarMetodoCalculoDescuento(objetoProducto) {
-  // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
-  // Esta propiedad debe ser una función que multiplique el precio del producto por el porcentajeDeDescuento.
-  // El "objetoProducto" posee una propiedad "precio" y una propiedad "porcentajeDeDescuento".
-  // Luego debes restar del precio total del producto ese valor de descuento.
-  // Retornar el precio final.
-  // Ejemplo:
-  // Precio ---> 10
-  // PorcentajeDeDescuento ---> 0.2
-  // Precio final ---> 8
-  // Tu código:
-  objetoProducto.calcularPrecioDescuento = function() {
-    // const precioSinDescuento = objetoProducto.precio;
-    // const porcentajeDeDescuento = objetoProducto.porcentajeDeDescuento;
-    const descuento = objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
-    const precioFinal = objetoProducto.precio - descuento;
-    return precioFinal;
-  };
-
-  return objetoProducto.calcularPrecioDescuento();
-}
-
-const producto = {
-  precio: 10,
-  porcentajeDeDescuento: 0.2
-}
-
-const precioFinal = agregarMetodoCalculoDescuento(producto);
-console.log(precioFinal);
+// const likesTotales = sumarLikesDeUsuario(newUsuario);
+// console.log(likesTotales);
 
 
-/*-----------EJERCICIOS HENRY 07-------------*/
 
-/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
-/*1️⃣ EJERCICIO 01 1️⃣*/
+// function agregarMetodoCalculoDescuento(objetoProducto) {
+//   // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
+//   // Esta propiedad debe ser una función que multiplique el precio del producto por el porcentajeDeDescuento.
+//   // El "objetoProducto" posee una propiedad "precio" y una propiedad "porcentajeDeDescuento".
+//   // Luego debes restar del precio total del producto ese valor de descuento.
+//   // Retornar el precio final.
+//   // Ejemplo:
+//   // Precio ---> 10
+//   // PorcentajeDeDescuento ---> 0.2
+//   // Precio final ---> 8
+//   // Tu código:
+//   objetoProducto.calcularPrecioDescuento = function() {
+//     // const precioSinDescuento = objetoProducto.precio;
+//     // const porcentajeDeDescuento = objetoProducto.porcentajeDeDescuento;
+//     const descuento = objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
+//     const precioFinal = objetoProducto.precio - descuento;
+//     return precioFinal;
+//   };
 
-function crearUsuario() {
-   // Crea una Clase de ES6 o una función constructora llamada "Usuario".
-   // El constructor de esta clase debe tener las propiedades: "usuario", "nombre", "email" y "password".
-   // El valor de cada propiedad la recibirá por parámetro.
-   // Además, esta clase debe tener un método llamado "saludar".
-   // Este método debe retornar el string: 'Hola, mi nombre es {{nombre}}'.
-   // El valor {{nombre}} debe ser el nombre definido para la instancia de la clase.
-   // Retornar la clase.
-   // Tu código:
-   class Usuario {
-    constructor(usuario,nombre,email,password){
-      //propiedad = el valor de usuario que viene por parámetro
-      this.usuario = usuario;
-      this.nombre = nombre;
-      this.email = email;
-      this.password = password;
-    }
-    saludar(){
-      return `Hola, mi nombre es ${this.nombre} y mi correo es ${this.email}`;
-    }
-   }
+//   return objetoProducto.calcularPrecioDescuento();
+// }
 
-   return Usuario;
-}
+// const producto = {
+//   precio: 10,
+//   porcentajeDeDescuento: 0.2
+// }
 
-
-const Usuario = crearUsuario();
-//Objeto 1
-const unNuevoUsuario = new Usuario("usuario2035", "Martín", "mherman@gmail.com", "1234");
-// Objeto 2
-const otroNuevoUsuario = new Usuario("usuario2036", "Juanma", "juanma@gmail.com", "3456");
-console.log(unNuevoUsuario.saludar());
-console.log(otroNuevoUsuario.saludar());
-
-function agregarMetodoPrototype(Usuario) {
-   // Agrega un método al prototipo de "Usuario".
-   // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
-   // Tu código:
-   Usuario.prototype.saludar = function (){
-    return "Hello World!";
-   };
-}
-
-//agregamos el método al prototipo de "usuario"
-agregarMetodoPrototype(Usuario);
-console.log(unNuevoUsuario.saludar());
-
-function agregarStringInvertida() {
-   // Agrega un método al prototipo de "String" que devuelva la misma cadena de caracteres, pero invertida.
-   // El método debe llamarse "reverse".
-   // [PISTA]: necesitarás utilizar el objeto "this".
-   String.prototype.reversa = function () {
-    //1 con split convertimos la cadena de carácteres en un array
-    return this.split('').reverse().join(' ');
-   };
-}
-
-//agrega el método reverse al prototipo de String
-agregarStringInvertida();
-
-const miCadena = "Hola mundo!";
-console.log(miCadena.reversa());
+// const precioFinal = agregarMetodoCalculoDescuento(producto);
+// console.log(precioFinal);
 
 
-/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
-/*2️⃣ EJERCICIO 02 2️⃣*/
+// /*-----------EJERCICIOS HENRY 07-------------*/
 
-//instanciamos la clase Persona
-class Persona {
-  /*Crea el constructor de la clase "Persona".
-  Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio".
-  Debe tener un método llamado "detalle" que nos devuelva un objeto con las propiedades de la persona y
-  sus valores.*/
-  //constructor parametrizado // creamos los campos 8atributos) de la clase persona
-  constructor(nombre, apellido, edad, domicilio){
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.edad = edad;
-    this.domicilio = domicilio;
-  }
+// /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+// /*1️⃣ EJERCICIO 01 1️⃣*/
 
-  //este es un método que devuelve un objeto de la clase Persona
-  detalle() {
-    return {
-    nombre: this.nombre,
-    apellido: this.apellido,
-    edad: this.edad,
-    domicilioUnico: this.domicilio,
-    }
-  }
+// function crearUsuario() {
+//    // Crea una Clase de ES6 o una función constructora llamada "Usuario".
+//    // El constructor de esta clase debe tener las propiedades: "usuario", "nombre", "email" y "password".
+//    // El valor de cada propiedad la recibirá por parámetro.
+//    // Además, esta clase debe tener un método llamado "saludar".
+//    // Este método debe retornar el string: 'Hola, mi nombre es {{nombre}}'.
+//    // El valor {{nombre}} debe ser el nombre definido para la instancia de la clase.
+//    // Retornar la clase.
+//    // Tu código:
+//    class Usuario {
+//     constructor(usuario,nombre,email,password){
+//       //propiedad = el valor de usuario que viene por parámetro
+//       this.usuario = usuario;
+//       this.nombre = nombre;
+//       this.email = email;
+//       this.password = password;
+//     }
+//     saludar(){
+//       return `Hola, mi nombre es ${this.nombre} y mi correo es ${this.email}`;
+//     }
+//    }
 
-}
-
-//le enviamos como argumentos los datos del objeto unaPersona
-const unaPersona = new Persona("Martín", "Herman", 36, "Libertador 3220");
-//guardamos en la varianble dato, los atributos del objeto unaPersona
-const datos = unaPersona.detalle();
-console.log(datos);
-const unaPersona2 = new Persona ("Juan Manuel", "Brignole", 39, "Centenario 921");
-const datos2 = unaPersona2.detalle();
-console.log(datos2);
-
-function crearInstanciaPersona(nombre, apellido, edad, domicilio) {
-  // En este ejercicio debes crear una instancia de la clase construida en el ejercicio anterior.
-  // Recibirás las propiedades por parámetro.
-  // Retornar la instancia creada.
-  // Tu código:
-  //Esta función lo que hace, es crear un nuevo objeto a partir de la clase Persona
-  return new Persona(nombre, apellido, edad, domicilio);
-}
-
-const nuevaPersona = crearInstanciaPersona("María", "Silva", 25, "Av. 9 de Julio");
-const ultimaPersona = crearInstanciaPersona("Julián", "Pérez", 25, "Av. Libertador");
-console.log(nuevaPersona.detalle());
-console.log(ultimaPersona.detalle());
+//    return Usuario;
+// }
 
 
-/*SEGUIR TRABJANDOLO*/
-function agregarMetodo() {
-  // La función agrega un método "datos" a la clase "Persona".
-  // Este método toma la propiedad "nombre" y "edad", y devuelve el string:
-  // Ejemplo: "Juan, 22 años".
-  // Tu código:
-  Persona.prototype.datos = function (){
-    return this.nombre + ", " + this.edad ;
-  }
-}
+// const Usuario = crearUsuario();
+// //Objeto 1
+// const unNuevoUsuario = new Usuario("usuario2035", "Martín", "mherman@gmail.com", "1234");
+// // Objeto 2
+// const otroNuevoUsuario = new Usuario("usuario2036", "Juanma", "juanma@gmail.com", "3456");
+// console.log(unNuevoUsuario.saludar());
+// console.log(otroNuevoUsuario.saludar());
 
-//llamamos a la función agregarMetodo() para agregar el método datos a la clase Persona
-agregarMetodo();
+// function agregarMetodoPrototype(Usuario) {
+//    // Agrega un método al prototipo de "Usuario".
+//    // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
+//    // Tu código:
+//    Usuario.prototype.saludar = function (){
+//     return "Hello World!";
+//    };
+// }
 
-//creamos un nuevo objeto persona
-const nuevaPersona3 = new Persona("Juan", "Brignole", "22 años", "Libertador 500");
-console.log(nuevaPersona3.datos());
+// //agregamos el método al prototipo de "usuario"
+// agregarMetodoPrototype(Usuario);
+// console.log(unNuevoUsuario.saludar());
 
+// function agregarStringInvertida() {
+//    // Agrega un método al prototipo de "String" que devuelva la misma cadena de caracteres, pero invertida.
+//    // El método debe llamarse "reverse".
+//    // [PISTA]: necesitarás utilizar el objeto "this".
+//    String.prototype.reversa = function () {
+//     //1 con split convertimos la cadena de carácteres en un array
+//     return this.split('').reverse().join(' ');
+//    };
+// }
 
-/*-------------EJERCICIOS HENRY08 CALLBACK--------------*/
-/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+// //agrega el método reverse al prototipo de String
+// agregarStringInvertida();
 
-function mayuscula(nombre) {
-  // Esta función recibe un nombre (string).
-  // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
-  // [Ejemplo]: "mario" ----> "Mario".
-  // Tu código:
-  return nombre.charAt(0).toUpperCase() + nombre.slice(1,5);
-
-}
-
-const nombre = "mario";
-const primeraLetraMayuscula = mayuscula(nombre);
-console.log(primeraLetraMayuscula);
-
-function invocarCallback(cb) {
-  // Invoca/ejecuta el callback `cb`.
-  // [NOTA]: no debes reotrnar nada.
-  // Tu código:
-  cb(); // invocamos al callback miCallBack
-}
-
-function miCallBack(){
-  console.log("Invocamos al callback");
-}
-
-invocarCallback(miCallBack);
+// const miCadena = "Hola mundo!";
+// console.log(miCadena.reversa());
 
 
-function operacionMatematica(num1, num2, cb) {
-  // En este ejercicio recibirás dos números y un callback.
-  // El callback realiza una operación matemática, por lo que necesita de los dos números.
-  // Retorna el resultado del callback pasándole como parámetros los números.
-  // Tu código:
-  return cb(num1, num2);
-}
+// /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+// /*2️⃣ EJERCICIO 02 2️⃣*/
 
-function sumaCallback(a,b){
-  return a + b;
-}
+// //instanciamos la clase Persona
+// class Persona {
+//   /*Crea el constructor de la clase "Persona".
+//   Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio".
+//   Debe tener un método llamado "detalle" que nos devuelva un objeto con las propiedades de la persona y
+//   sus valores.*/
+//   //constructor parametrizado // creamos los campos 8atributos) de la clase persona
+//   constructor(nombre, apellido, edad, domicilio){
+//     this.nombre = nombre;
+//     this.apellido = apellido;
+//     this.edad = edad;
+//     this.domicilio = domicilio;
+//   }
 
-function restaCallback(a,b){
-  return a - b;
-}
+//   //este es un método que devuelve un objeto de la clase Persona
+//   detalle() {
+//     return {
+//     nombre: this.nombre,
+//     apellido: this.apellido,
+//     edad: this.edad,
+//     domicilioUnico: this.domicilio,
+//     }
+//   }
 
-/*-----TAREA------*/
-//crear los callbacks para la resta, multiplicacion y división
+// }
 
-const resultadoSuma = operacionMatematica(4, 10, sumaCallback);
-console.log(resultadoSuma);
+// //le enviamos como argumentos los datos del objeto unaPersona
+// const unaPersona = new Persona("Martín", "Herman", 36, "Libertador 3220");
+// //guardamos en la varianble dato, los atributos del objeto unaPersona
+// const datos = unaPersona.detalle();
+// console.log(datos);
+// const unaPersona2 = new Persona ("Juan Manuel", "Brignole", 39, "Centenario 921");
+// const datos2 = unaPersona2.detalle();
+// console.log(datos2);
 
-function sumarArray(arrayOfNumbers, cb) {
+// function crearInstanciaPersona(nombre, apellido, edad, domicilio) {
+//   // En este ejercicio debes crear una instancia de la clase construida en el ejercicio anterior.
+//   // Recibirás las propiedades por parámetro.
+//   // Retornar la instancia creada.
+//   // Tu código:
+//   //Esta función lo que hace, es crear un nuevo objeto a partir de la clase Persona
+//   return new Persona(nombre, apellido, edad, domicilio);
+// }
+
+// const nuevaPersona = crearInstanciaPersona("María", "Silva", 25, "Av. 9 de Julio");
+// const ultimaPersona = crearInstanciaPersona("Julián", "Pérez", 25, "Av. Libertador");
+// console.log(nuevaPersona.detalle());
+// console.log(ultimaPersona.detalle());
+
+
+// /*SEGUIR TRABJANDOLO*/
+// function agregarMetodo() {
+//   // La función agrega un método "datos" a la clase "Persona".
+//   // Este método toma la propiedad "nombre" y "edad", y devuelve el string:
+//   // Ejemplo: "Juan, 22 años".
+//   // Tu código:
+//   Persona.prototype.datos = function (){
+//     return this.nombre + ", " + this.edad ;
+//   }
+// }
+
+// //llamamos a la función agregarMetodo() para agregar el método datos a la clase Persona
+// agregarMetodo();
+
+// //creamos un nuevo objeto persona
+// const nuevaPersona3 = new Persona("Juan", "Brignole", "22 años", "Libertador 500");
+// console.log(nuevaPersona3.datos());
+
+
+// /*-------------EJERCICIOS HENRY08 CALLBACK--------------*/
+// /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+
+// function mayuscula(nombre) {
+//   // Esta función recibe un nombre (string).
+//   // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
+//   // [Ejemplo]: "mario" ----> "Mario".
+//   // Tu código:
+//   return nombre.charAt(0).toUpperCase() + nombre.slice(1,5);
+
+// }
+
+// const nombre = "mario";
+// const primeraLetraMayuscula = mayuscula(nombre);
+// console.log(primeraLetraMayuscula);
+
+// function invocarCallback(cb) {
+//   // Invoca/ejecuta el callback `cb`.
+//   // [NOTA]: no debes reotrnar nada.
+//   // Tu código:
+//   cb(); // invocamos al callback miCallBack
+// }
+
+// function miCallBack(){
+//   console.log("Invocamos al callback");
+// }
+
+// invocarCallback(miCallBack);
+
+
+// function operacionMatematica(num1, num2, cb) {
+//   // En este ejercicio recibirás dos números y un callback.
+//   // El callback realiza una operación matemática, por lo que necesita de los dos números.
+//   // Retorna el resultado del callback pasándole como parámetros los números.
+//   // Tu código:
+//   return cb(num1, num2);
+// }
+
+// function sumaCallback(a,b){
+//   return a + b;
+// }
+
+// function restaCallback(a,b){
+//   return a - b;
+// }
+
+// /*-----TAREA------*/
+// //crear los callbacks para la resta, multiplicacion y división
+
+// const resultadoSuma = operacionMatematica(4, 10, sumaCallback);
+// console.log(resultadoSuma);
+
+function sumarArray(arrayOfNumbers, callback) {
   // Recibes un arreglo de números y un callback.
   // Suma todos los números del arreglo.
   // Este resultado debes pasárselo como argumento al callback recibido.
   // [NOTA]: no debes reotrnar nada.
   // Tu código:
+  const suma = arrayOfNumbers.reduce((reductor, numero) => reductor + numero, 0);
+  //invocar al callback paásanole la suma como argumento
+  callback(suma);
 }
 
-function forEach(array, cb) {
+function nuevoCallBack(resultado) {
+  console.log("El resultado de sumar todos los elementos es: " + resultado);
+}
+
+const otrosNumeros = [1,2,3,4,5];
+sumarArray(otrosNumeros, nuevoCallBack);
+
+
+function forEach(array, callback) {
   // Recibes un arreglo y un callback.
   // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
   // Debes pasarle el elemento como argumento al callback.
   // Tu código:
+  //instaciamos el for que va a recorrer cada elemento del array y va a mostrar el valor de cada una de las posiciones, mediante un callback
+  for (let i = 0; i < array.length; i++){
+    //invocamos al callback que muestra los valores de i del array
+    callback(array[i]);
+  };
 }
 
+function nuevoCallBack(elemento) {
+  console.log("El Elemento es: " + elemento);
+}
+
+//creamos el array de números
+const nuevosNumeros = ["Juan","María","Lorena","Martín","Hernán"];
+//le enviamos como argumentos a la función el array y el callback
+forEach(nuevosNumeros, nuevoCallBack);
+
+
+//SEGUIR PULIÉNDOLO
 function map(array, cb) {
   // Debes iterar sobre el arreglo, y cada elemento pasárselo como arguemento al callback.
   // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
   // Retorna el nuevo arreglo.
   // Tu código:
+  const nuevoArray = [];
+  // for (let i = 0; i < array.length; i++){
+
+  // }
+
+  let dobles = array.map(function (x) {
+    const resultado =  x * 2;
+    nuevoArray.push(resultado)
+  })
+  
+  return nuevoArray;
+
 }
 
+function nuevoCallBack(nuevoArray) {
+  console.log("El Elemento es: " + nuevoArray);
+}
+
+
+//intaciamos el array
+const arrayOriginal = [1,2,3,4,5];
+map(arrayOriginal, nuevoCallBack);
+
+
 function filter(arrayOfStrings) {
-  // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
+  // Debes identificar todos los elementos del arreglo que comiencen con la letra "a".
   // Luego retorna un nuevo arreglo con estos elementos.
+  // Tu código:
+  const comienzaConLetraA = [];
+  for (let i = 0; i < arrayOfStrings.length; i++){
+    const jugador = arrayOfStrings[i];
+
+    if(jugador.toUpperCase().startsWith('A')){
+      comienzaConLetraA.push(jugador);
+    }
+  }
+  return comienzaConLetraA;
+}
+
+const arrayDeJugadores = ["Messi", "Ronaldo", "Arano", "Aguero", "Ortega"];
+const arrayFiltrado = filter(arrayDeJugadores);
+console.log(arrayFiltrado);
+
+
+/*-----------------HENRY09------------------*/
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+
+function deObjetoAarray(objeto) {
+  // Recibes un objeto. Tendrás que crear un arreglo de arreglos.
+  // Cada elemento del arreglo padre será un nuevo arreglo que contendrá dos elementos.
+  // Estos elementos deben ser cada par clave:valor del objeto recibido.
+  // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
+  // Tu código:
+  const arregloDeArreglos = [];
+  for (const clave in objeto){
+    arregloDeArreglos.push([clave, objeto[clave]])
+  }
+  return arregloDeArreglos;
+}
+
+const objeto = {
+  D: 1, 
+  B: 2, 
+  C: 3
+}
+
+const arrayDeArrays = deObjetoAarray(objeto);
+console.log(arrayDeArrays);
+
+function numberOfCharacters(string) {
+  // La función recibe un string. Debes recorrerlo y retornar un objeto donde cada propiedad es una de las
+  // letras del string, y su valor es la cantidad de veces que se repite en el string.
+  // Las letras deben estar en orden alfabético.
+  // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
+  // Tu código:
+  const contadorDeletras = {};
+
+  //recorremos cada carácter en el string
+}
+
+const resultado = numberOfCharacters("Martín Herman");
+console.log(resultado);
+
+function capToFront(string) {
+  // Recibes un string con algunas letras en mayúscula y otras en minúscula.
+  // Debes enviar todas las letras en mayúscula al comienzo del string.
+  // Retornar el string.
+  // [EJEMPLO]: soyHENRY ---> HENRYsoy
+  // Tu código:
+}
+
+function asAmirror(frase) {
+  // Recibes una frase. Tu tarea es retornar un nuevo string en el que el orden de las palabras sea el mismo.
+  // La diferencia es que cada palabra estará escrita al inverso.
+  // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
+  // Tu código:
+}
+
+function capicua(numero) {
+  // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
+  // Caso contrario: "No es capicua".
+  // Tu código:
+}
+
+function deleteAbc(string) {
+  // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
+  // Retorna el string sin estas letras.
+  // Tu código:
+}
+
+function sortArray(arrayOfStrings) {
+  // Recibes un arreglo de strings.
+  // Debe retornar un nuevo arreglo, pero con las palabras ordenadas en orden creciente a partir
+  // de la longitud de cada string.
+  // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
+  // Tu código:
+}
+
+function buscoInterseccion(array1, array2) {
+  // Recibes dos arreglos de números.
+  // Debes retornar un nuevo arreglo en el que se guarden los elementos en común entre ambos arreglos.
+  // [EJEMPLO]: [4,2,3] U [1,3,4] = [3,4].
+  // Si no tienen elementos en común, retornar un arreglo vacío.
+  // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
   // Tu código:
 }
 
