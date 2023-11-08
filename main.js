@@ -2416,100 +2416,101 @@ function estaEnRango(num) {
 // const resultadoSuma = operacionMatematica(4, 10, sumaCallback);
 // console.log(resultadoSuma);
 
-function sumarArray(arrayOfNumbers, callback) {
-  // Recibes un arreglo de números y un callback.
-  // Suma todos los números del arreglo.
-  // Este resultado debes pasárselo como argumento al callback recibido.
-  // [NOTA]: no debes reotrnar nada.
-  // Tu código:
-  const suma = arrayOfNumbers.reduce((reductor, numero) => reductor + numero, 0);
-  //invocar al callback paásanole la suma como argumento
-  callback(suma);
-}
+// function sumarArray(arrayOfNumbers, callback) {
+//   // Recibes un arreglo de números y un callback.
+//   // Suma todos los números del arreglo.
+//   // Este resultado debes pasárselo como argumento al callback recibido.
+//   // [NOTA]: no debes reotrnar nada.
+//   // Tu código:
+//   const suma = arrayOfNumbers.reduce((reductor, numero) => reductor + numero, 0);
+//   //invocar al callback paásanole la suma como argumento
+//   callback(suma);
+// }
 
-function nuevoCallBack(resultado) {
-  console.log("El resultado de sumar todos los elementos es: " + resultado);
-}
+// function nuevoCallBack(resultado) {
+//   console.log("El resultado de sumar todos los elementos es: " + resultado);
+// }
 
-const otrosNumeros = [1,2,3,4,5];
-sumarArray(otrosNumeros, nuevoCallBack);
-
-
-function forEach(array, callback) {
-  // Recibes un arreglo y un callback.
-  // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
-  // Debes pasarle el elemento como argumento al callback.
-  // Tu código:
-  //instaciamos el for que va a recorrer cada elemento del array y va a mostrar el valor de cada una de las posiciones, mediante un callback
-  for (let i = 0; i < array.length; i++){
-    //invocamos al callback que muestra los valores de i del array
-    callback(array[i]);
-  };
-}
-
-function nuevoCallBack(elemento) {
-  console.log("El Elemento es: " + elemento);
-}
-
-//creamos el array de números
-const nuevosNumeros = ["Juan","María","Lorena","Martín","Hernán"];
-//le enviamos como argumentos a la función el array y el callback
-forEach(nuevosNumeros, nuevoCallBack);
+// const otrosNumeros = [1,2,3,4,5];
+// sumarArray(otrosNumeros, nuevoCallBack);
 
 
-//SEGUIR PULIÉNDOLO
-function map(array, cb) {
-  // Debes iterar sobre el arreglo, y cada elemento pasárselo como arguemento al callback.
-  // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
-  // Retorna el nuevo arreglo.
-  // Tu código:
-  const nuevoArray = [];
-  // for (let i = 0; i < array.length; i++){
+// function forEach(array, callback) {
+//   // Recibes un arreglo y un callback.
+//   // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
+//   // Debes pasarle el elemento como argumento al callback.
+//   // Tu código:
+//   //instaciamos el for que va a recorrer cada elemento del array y va a mostrar el valor de cada una de las posiciones, mediante un callback
+//   for (let i = 0; i < array.length; i++){
+//     //invocamos al callback que muestra los valores de i del array
+//     callback(array[i]);
+//   };
+// }
 
-  // }
+// function nuevoCallBack(elemento) {
+//   console.log("El Elemento es: " + elemento);
+// }
 
-  let dobles = array.map(function (x) {
-    const resultado =  x * 2;
-    nuevoArray.push(resultado)
-  })
+// //creamos el array de números
+// const nuevosNumeros = ["Juan","María","Lorena","Martín","Hernán"];
+// //le enviamos como argumentos a la función el array y el callback
+// forEach(nuevosNumeros, nuevoCallBack);
+
+
+// //SEGUIR PULIÉNDOLO
+// function map(array, cb) {
+//   // Debes iterar sobre el arreglo, y cada elemento pasárselo como arguemento al callback.
+//   // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
+//   // Retorna el nuevo arreglo.
+//   // Tu código:
+//   const nuevoArray = [];
+//   // for (let i = 0; i < array.length; i++){
+
+//   // }
+
+//   let dobles = array.map(function (x) {
+//     const resultado =  x * 2;
+//     nuevoArray.push(resultado)
+//   })
   
-  return nuevoArray;
+//   return nuevoArray;
 
-}
+// }
 
-function nuevoCallBack(nuevoArray) {
-  console.log("El Elemento es: " + nuevoArray);
-}
-
-
-//intaciamos el array
-const arrayOriginal = [1,2,3,4,5];
-map(arrayOriginal, nuevoCallBack);
+// function nuevoCallBack(nuevoArray) {
+//   console.log("El Elemento es: " + nuevoArray);
+// }
 
 
-function filter(arrayOfStrings) {
-  // Debes identificar todos los elementos del arreglo que comiencen con la letra "a".
-  // Luego retorna un nuevo arreglo con estos elementos.
-  // Tu código:
-  const comienzaConLetraA = [];
-  for (let i = 0; i < arrayOfStrings.length; i++){
-    const jugador = arrayOfStrings[i];
+// //intaciamos el array
+// const arrayOriginal = [1,2,3,4,5];
+// map(arrayOriginal, nuevoCallBack);
 
-    if(jugador.toUpperCase().startsWith('A')){
-      comienzaConLetraA.push(jugador);
-    }
-  }
-  return comienzaConLetraA;
-}
 
-const arrayDeJugadores = ["Messi", "Ronaldo", "Arano", "Aguero", "Ortega"];
-const arrayFiltrado = filter(arrayDeJugadores);
-console.log(arrayFiltrado);
+// function filter(arrayOfStrings) {
+//   // Debes identificar todos los elementos del arreglo que comiencen con la letra "a".
+//   // Luego retorna un nuevo arreglo con estos elementos.
+//   // Tu código:
+//   const comienzaConLetraA = [];
+//   for (let i = 0; i < arrayOfStrings.length; i++){
+//     const jugador = arrayOfStrings[i];
+
+//     if(jugador.toUpperCase().startsWith('A')){
+//       comienzaConLetraA.push(jugador);
+//     }
+//   }
+//   return comienzaConLetraA;
+// }
+
+// const arrayDeJugadores = ["Messi", "Ronaldo", "Arano", "Aguero", "Ortega"];
+// const arrayFiltrado = filter(arrayDeJugadores);
+// console.log(arrayFiltrado);
 
 
 /*-----------------HENRY09------------------*/
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
+//Buscar más ejercicios de transformacion de objetos en arrays
 function deObjetoAarray(objeto) {
   // Recibes un objeto. Tendrás que crear un arreglo de arreglos.
   // Cada elemento del arreglo padre será un nuevo arreglo que contendrá dos elementos.
@@ -2518,7 +2519,7 @@ function deObjetoAarray(objeto) {
   // Tu código:
   const arregloDeArreglos = [];
   for (const clave in objeto){
-    arregloDeArreglos.push([clave, objeto[clave]])
+    arregloDeArreglos.push([clave, objeto[clave]]);
   }
   return arregloDeArreglos;
 }
@@ -2538,13 +2539,36 @@ function numberOfCharacters(string) {
   // Las letras deben estar en orden alfabético.
   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   // Tu código:
-  const contadorDeletras = {};
 
-  //recorremos cada carácter en el string
+  const contadorLetras = {};
+
+  // recorremos cada carácter en el string
+  for( let i = 0; i < string.length; i++){
+    const letra = string[i].toLowerCase(); // consideramos las letras minúsculas
+    
+    //contamos la cantidad de carácteres
+    if (/[a-z]/.test(letra)){
+      if(contadorLetras[letra] === undefined){
+        contadorLetras[letra] = 1;
+      } else {
+        contadorLetras[letra]++;
+      }
+    }
+  }
+
+  // ordenamos las propiedades del objeto alfabeticamente
+  const contadorDeLetrasOrdenado = {};
+  Object.keys(contadorLetras).sort().forEach(function (llave){
+    contadorDeLetrasOrdenado[llave] = contadorLetras[llave];
+  });
+
+  return contadorDeLetrasOrdenado; 
+
 }
 
-const resultado = numberOfCharacters("Martín Herman");
+const resultado = numberOfCharacters("Martin Herman");
 console.log(resultado);
+
 
 function capToFront(string) {
   // Recibes un string con algunas letras en mayúscula y otras en minúscula.
@@ -2552,14 +2576,49 @@ function capToFront(string) {
   // Retornar el string.
   // [EJEMPLO]: soyHENRY ---> HENRYsoy
   // Tu código:
+  let mayusculas = '';
+  let minusculas = '';
+
+  for ( let i = 0; i < string.length; i++){
+    const letra = string[i];
+
+    if(/[A-Z]/.test(letra)){
+      mayusculas += letra;
+    } else {
+      minusculas += letra;
+    }
+  }
+
+  return mayusculas + minusculas;
 }
+
+const resultadoFinal = capToFront("juanMA!UEL");
+console.log(resultadoFinal);
 
 function asAmirror(frase) {
   // Recibes una frase. Tu tarea es retornar un nuevo string en el que el orden de las palabras sea el mismo.
   // La diferencia es que cada palabra estará escrita al inverso.
   // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
   // Tu código:
+
+  //dividir la frase en palabras separadas por espacios
+  const palabras = frase.split(' ');
+
+  //iteramos a través de las palabras y las invertimos
+  const palabrasAlReves = palabras.map(function (palabra){
+    return palabra.split('').reverse().join('');
+  })
+
+  //unimos las palabras invertidas con espacios y formamos la nueva frase
+  const fraseInvertida = palabrasAlReves.join(' ');
+  
+  return fraseInvertida;
+
 }
+
+const nuevoResultado = asAmirror("The Henry Challenge is close!");
+// palabras = ["The", "Henry", "Challenge", "is", "close"!]
+console.log(nuevoResultado);
 
 function capicua(numero) {
   // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
